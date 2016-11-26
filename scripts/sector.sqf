@@ -100,6 +100,7 @@ SCTR_setClear = {
 
 SCTR_tryDeSpawn = {
 	params ["_logic"];
+	
 	if (_logic getVariable ["buildingsSpawned", False]) then {
 		_buildings = _logic getVariable ["sectorBuildings", []];
 		{deleteVehicle _x} forEach _buildings;

@@ -1,34 +1,26 @@
-shopVehicleContent = [
-	["rhsusf_m1025_w", 1000],
-	["rhsusf_m1025_w_m2", 3000],
-	["rhsusf_m1025_w_mk19", 5000],
-	["rhsusf_m113_usarmy", 7000],
-	["rhsusf_M1117_W", 10000],
-	["rhsusf_m113_usarmy_M240", 10000],
-	["rhsusf_m113_usarmy_MK19", 13000],
-	["RHS_M2A3_BUSKIII_wd", 20000],
-	["rhsusf_m1a2sep1tuskiiwd_usarmy", 50000]
-];
+SHOP_itemInfo = {
+	params ["_class", "_value"];
+	_result = "";
+	{
+		_result = getText (configFile >> _x >> _class >> _value);
+		if ("" != _result) exitWith {_result};
+	} forEach ["CfgWeapons", "CfgVehicles"];
+	
+	_result
+};
 
-shopItemsContent = [
-	["ItemCompass", 50],
-	["FirstAidKit", 200],
-	["acc_flashlight", 250],
-	["ItemMap", 500],
-	["V_HarnessO_gry", 500],
-	["NVGoggles_OPFOR", 1000],
-	["bipod_02_F_blk", 1000],
-	["ItemGPS", 1000],
-	["ItemRadio", 1000],
-	["V_TacVest_blk", 1000],
-	["H_HelmetB_light", 1000],
-	["H_HelmetB", 2000],
-	["V_PlateCarrier1_blk", 2000],
-	["Rangefinder", 3000],
-	["H_HelmetSpecB", 3000],
-	["V_PlateCarrier2_blk", 4000],
-	["V_PlateCarrierSpec_blk", 7000]
-];
+SHOP_loadItem = {
+	params ["_index"];
+	_item = shopsContent select shopIndex select _index;
+	_dialog = uiNameSpace getVariable "shopUnified";
+	
+	_description = Format ["%1<br/>Cost: %2", [_item select 0, "descriptionShort"] call SHOP_itemInfo, _item select 1];
+	if (shopIndex == 2) then {_description = Format ["%1<br/>Ammo cost: %2", _description, _item select 2]};
+	
+	(_dialog displayCtrl 1101) ctrlSetStructuredText parseText Format ["<t size='1.5' align='center'>%1</t>", [_item select 0, "displayName"] call SHOP_itemInfo];
+	(_dialog displayCtrl 1100) ctrlSetStructuredText parseText _description;
+	(_dialog displayCtrl 1200) ctrlSetText ([_item select 0, "picture"] call SHOP_itemInfo);
+};
 
 SHOP_canBuy = {
 	params ["_price"];
@@ -36,166 +28,98 @@ SHOP_canBuy = {
 	_money >= _price
 };
 
-SHOP_buyItem = {
-	params ["_id"];
-	_item = shopItemsContent select _id;
-	_price = _item select 1;
-	
-	if (_price call SHOP_canBuy) then {
-		call TRADER_lastCrate addItemCargoGlobal [_item select 0, 1];
-		_price call FNC_subMoney;
-		playSound "bought";
-	};
-};
-
-SHOP_buySight = {
-	params ["_id"];
-	_weapon = (1 / (chaosLevel - 0.15)) call FNC_SW_sights select _id;
-	_price = round (_weapon select 1) * 1000;
-	
-	if (_price call SHOP_canBuy) then {
-		call TRADER_lastCrate addItemCargoGlobal [_weapon select 0, 1];
-		_price call FNC_subMoney;
-		playSound "bought";
-	};
-};
-
-SHOP_buyVehicle = {
-	params ["_id"];
-	
-	_item = shopVehicleContent select _id;
-	_price = _item select 1;
-	
-	if (_price call SHOP_canBuy) then {
-		_pos = getMarkerPos "shopVehicleDrop";
-		_pos = [_pos select 0, _pos select 1, 200];
-	
-		_vehicle = (_item select 0) createVehicle [0, 0, 0];
-		_vehicle setPos _pos;
-		[objNull, _vehicle] call BIS_fnc_curatorObjectEdited;
-	
-		_price call FNC_subMoney;
-		playSound "bought";
-	};
-};
-
-SHOP_buyWeapon = {
-	params ["_id"];
-	_weapon = (1 / (chaosLevel - 0.15)) call FNC_SW_weapons select _id;
-	_price = round (_weapon select 1) * 1000;
-	
-	if (_price call SHOP_canBuy) then {
-		call TRADER_lastCrate addWeaponCargoGlobal [_weapon select 0, 1];
-		_price call FNC_subMoney;
-		playSound "bought";
-	};
-};
-
-SHOP_buyAmmo = {
-	params ["_id"];
-	_weapon = (1 / (chaosLevel - 0.15)) call FNC_SW_weapons select _id;
-	_price = round (((_weapon select 1) * 1000) / 8);
-	
-	if (_price call SHOP_canBuy) then {
-		call TRADER_lastCrate addMagazineCargoGlobal [(_weapon select 0) call SHOP_ammoType, 1];
-		_price call FNC_subMoney;
-		playSound "bought";
-	};
-};
-
-
-SHOP_sightPicture = {
-	params ["_class"];
-	getText (configFile >> "CfgWeapons" >> _class >> "picture")
-};
-
-SHOP_vehiclePicture = {
-	params ["_class"];
-	getText (configFile >> "CfgVehicles" >> _class >> "picture")
-};
-
 SHOP_ammoType = {
 	params ["_weapon"];
 	getArray (configfile >> "CfgWeapons" >> _weapon >> "magazines") select 0
 };
 
-SHOP_weaponInit = {
-	_dialog = uiNameSpace getVariable "shopWeapon";
+SHOP_buyVehicle = {
+	params ["_type"];
+	_pos = getMarkerPos "shopVehicleDrop";
+	_pos = [_pos select 0, _pos select 1, 200];
+
+	_vehicle = _type createVehicle [0, 0, 0];
+	_vehicle setPos _pos;
+	[objNull, _vehicle] call BIS_fnc_curatorObjectEdited;
 	
-	_items = (1 / (chaosLevel - 0.15)) call FNC_SW_weapons;
-	_count = count _items;
+	clearWeaponCargoGlobal _vehicle;
+	clearMagazineCargoGlobal _vehicle;
+	clearItemCargoGlobal _vehicle;
+};
+
+SHOP_buyItem = {
+	params ["_priceIndex"];
 	
-	for "_i" from 0 to _count - 1 do {
-		_item = _items select _i;
-		_price = round (_item select 1) * 1000;
-		_priceAmmo = round (_price / 8);
+	_index = lbCurSel 1500;
+	_item = shopsContent select shopIndex select _index;
+	_type = getNumber (configFile >> "CfgWeapons" >> _item select 0 >> "type");
+	
+	if (_priceIndex == 2) then {_type = 0};
+	if (shopIndex == 0) then {_type = 1337};
+	
+	_price = _item select _priceIndex;
+	_crate = call TRADER_lastCrate;
+	
+	if (not (_price call SHOP_canBuy)) exitWith {};
+
+	_class = _item select 0;
+	switch (_type) do {
+		case 1337 : {_class call SHOP_buyVehicle};
+		case 0 : {_crate addMagazineCargoGlobal [_class call SHOP_ammoType, 1]};
+		default {_crate addItemCargoGlobal [_class, 1]};
+	};
+
+	_price call FNC_subMoney;
+	playSound "bought";	
+};
+
+SHOP_Init = {
+	//shopIndex = 2;
+	shopsContent = [
+		// VEHICLES
+		[["rhsusf_m1025_w", 1000],
+		["rhsusf_m1025_w_m2", 3000],
+		["rhsusf_m1025_w_mk19", 5000],
+		["rhsusf_m113_usarmy", 7000],
+		["rhsusf_M1117_W", 10000],
+		["rhsusf_m113_usarmy_M240", 10000],
+		["rhsusf_m113_usarmy_MK19", 13000],
+		["RHS_M2A3_BUSKIII_wd", 20000],
+		["rhsusf_m1a2sep1tuskiiwd_usarmy", 50000]],
 		
-		(_dialog displayCtrl 1200 + _i) ctrlSetText ((_item select 0) call SHOP_sightPicture);
-		(_dialog displayCtrl 1600 + _i) ctrlSetText Format ["%1$", _price];
-		(_dialog displayCtrl 1625 + _i) ctrlSetText Format ["%1$", _priceAmmo];
-	};
-	
-	// DISABLE OTHER
-	for "_i" from _count to 24 do {
-		(_dialog displayCtrl 1200 + _i) ctrlShow False;
-		(_dialog displayCtrl 1600 + _i) ctrlShow False;
-		(_dialog displayCtrl 1625 + _i) ctrlShow False;
-	};
-};
+		// ITEMS
+		[["ItemCompass", 50],
+		["FirstAidKit", 200],
+		["acc_flashlight", 250],
+		["ItemMap", 500],
+		["V_HarnessO_gry", 500],
+		["NVGoggles_OPFOR", 1000],
+		["bipod_02_F_blk", 1000],
+		["ItemGPS", 1000],
+		["ItemRadio", 1000],
+		["V_TacVest_blk", 1000],
+		["H_HelmetB_light", 1000],
+		["H_HelmetB", 2000],
+		["V_PlateCarrier1_blk", 2000],
+		["Rangefinder", 3000],
+		["H_HelmetSpecB", 3000],
+		["V_PlateCarrier2_blk", 4000],
+		["V_PlateCarrierSpec_blk", 7000]],
+		
+		// WEAPONS
+		((1 / (chaosLevel - 0.15)) call FNC_SW_weapons apply {[_x select 0, round ((_x select 1) * 1000), round ((_x select 1) * 125)]}),
+		
+		// SIGHTS
+		((1 / (chaosLevel - 0.15)) call FNC_SW_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
+	];
+	(shopsContent select 2) pushBack ["rhs_weap_M136", 500, 1E10];
 
-SHOP_sightInit = {
-	_dialog = uiNameSpace getVariable "shopSight";
+	waitUntil {not (displayNull isEqualTo (uiNameSpace getVariable "shopUnified"))};
+	{
+		lbAdd [1500, [_x select 0, "displayName"] call SHOP_itemInfo];
+		lbSetPicture [1500, _forEachIndex, [_x select 0, "picture"] call SHOP_itemInfo];
+	} forEach (shopsContent select shopIndex);
 	
-	_items = (1 / (chaosLevel - 0.15)) call FNC_SW_sights;
-	_count = count _items;
-	
-	for "_i" from 0 to _count - 1 do {
-		_item = _items select _i;
-		(_dialog displayCtrl 1200 + _i) ctrlSetText ((_item select 0) call SHOP_sightPicture);
-		(_dialog displayCtrl 1600 + _i) ctrlSetText Format ["%1$", round (_item select 1) * 1000];
-	};
-	
-	// DISABLE OTHER
-	for "_i" from _count to 24 do {
-		(_dialog displayCtrl 1200 + _i) ctrlShow False;
-		(_dialog displayCtrl 1600 + _i) ctrlShow False;
-		(_dialog displayCtrl 1623 + _i) ctrlShow False;
-	};
-};
-
-SHOP_itemsInit = {
-	_dialog = uiNameSpace getVariable "shopItems";
-	
-	_items = shopItemsContent;
-	_count = count _items;
-	
-	for "_i" from 0 to _count - 1 do {
-		_item = _items select _i;
-		(_dialog displayCtrl 1200 + _i) ctrlSetText ((_item select 0) call SHOP_sightPicture);
-		(_dialog displayCtrl 1600 + _i) ctrlSetText Format ["%1$", _item select 1];
-	};
-	
-	// DISABLE OTHER
-	for "_i" from _count to 24 do {
-		(_dialog displayCtrl 1200 + _i) ctrlShow False;
-		(_dialog displayCtrl 1600 + _i) ctrlShow False;
-		(_dialog displayCtrl 1623 + _i) ctrlShow False;
-	};
-};
-
-SHOP_vehicleInit = {
-	_dialog = uiNameSpace getVariable "shopVehicle";
-	_count = count shopVehicleContent;
-	
-	for "_i" from 0 to _count - 1 do {
-		_item = shopVehicleContent select _i;
-		(_dialog displayCtrl 1200 + _i) ctrlSetText ((_item select 0) call SHOP_vehiclePicture);
-		(_dialog displayCtrl 1600 + _i) ctrlSetText Format ["%1$", _item select 1];
-	};
-	
-	// DISABLE OTHER
-	for "_i" from _count to 19 do {
-		(_dialog displayCtrl 1200 + _i) ctrlShow False;
-		(_dialog displayCtrl 1600 + _i) ctrlShow False;
-	};
+	ctrlShow [1602, shopIndex == 2];
+	lbSetCurSel [1500, 0];
 };

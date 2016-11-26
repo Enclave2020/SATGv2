@@ -22,6 +22,7 @@ TRADER_create = {
 	
 	_unit = call TRADER_group createUnit ["C_man_1", _position, [], 0, "NONE"];
 	_unit disableAI "FSM";
+	_unit disableAI "MOVE";
 	_unit setUnitLoadout [[],[],[],["U_BG_Guerilla2_1",[]],["V_PlateCarrier2_blk",[]],[],"","",[],["","","","","ItemWatch",""]];
 	_unit setVariable ["TraderAction", _actionCode, True];
 	_unit setVariable ["TraderCrate", _crate, True];
