@@ -1,0 +1,150 @@
+#include "dialogs\defines.hpp"
+#include "dialogs\dialogs.hpp"
+#include "dialogs\hud.hpp"
+#include "dialogs\shopV2.hpp"
+
+respawnOnStart = -1;
+
+class CfgSounds
+{
+	class money
+	{
+		sound[] = {"\fx\money.ogg", 10, 1};
+		titles[] = {0,""};
+	};
+	class bought
+	{
+		sound[] = {"\fx\bought.ogg", 10, 1};
+		titles[] = {0,""};
+	};
+};
+
+class CfgRadio
+{
+	class actor_a_1
+	{
+		sound[] = {"\voice\actor_a_1.ogg", db, 1.0}; 
+		title = "";
+		// $STR_ACTOR_A_1
+	};
+
+	class actor_a_2
+	{
+		sound[] = {"\voice\actor_a_2.ogg", db, 1.0}; 
+		title = "";
+	};
+
+	class actor_a_3
+	{
+		sound[] = {"\voice\actor_a_3.ogg", db, 1.0}; 
+		title = "";
+	};
+};
+
+class CfgMusic
+{
+	class intro
+	{
+		sound[] = {"\music\intro.ogg", db, 1.0};
+	};
+
+	// DYNAMIC
+
+	class dynamic0
+	{
+		sound[] = {"\dynamic\0.ogg", db+0, 1.0};
+	};
+	class dynamic1
+	{
+		sound[] = {"\dynamic\1.ogg", db+0, 1.0};
+	};
+	class dynamic2
+	{
+		sound[] = {"\dynamic\2.ogg", db+0, 1.0};
+	};
+	class dynamic3
+	{
+		sound[] = {"\dynamic\3.ogg", db+0, 1.0};
+	};
+	class dynamic4
+	{
+		sound[] = {"\dynamic\4.ogg", db+0, 1.0};
+	};
+	class dynamic5
+	{
+		sound[] = {"\dynamic\5.ogg", db+0, 1.0};
+	};
+	class dynamic6
+	{
+		sound[] = {"\dynamic\6.ogg", db+0, 1.0};
+	};
+	class dynamic7
+	{
+		sound[] = {"\dynamic\7.ogg", db+0, 1.0};
+	};
+	class dynamic8
+	{
+		sound[] = {"\dynamic\8.ogg", db+0, 1.0};
+	};
+	class dynamic9
+	{
+		sound[] = {"\dynamic\9.ogg", db+0, 1.0};
+	};
+
+	// RADIO
+
+	class stray
+	{
+		sound[] = {"\radio\stray.ogg", db+1, 2.0};
+	};
+
+	class radio0
+	{
+		sound[] = {"\radio\0.ogg", db+0, 1.0};
+	};
+	
+	class radio1
+	{
+		sound[] = {"\radio\1.ogg", db+0, 1.0};
+	};
+	
+	class radio2
+	{
+		sound[] = {"\radio\2.ogg", db+0, 1.0};
+	};
+	
+	class radio3
+	{
+		sound[] = {"\radio\3.ogg", db+0, 1.0};
+	};
+
+	class radio4
+	{
+		sound[] = {"\radio\4.ogg", db+0, 1.0};
+	};
+
+	class radio5
+	{
+		sound[] = {"\radio\5.ogg", db+0, 1.0};
+	};
+
+	class radio6
+	{
+		sound[] = {"\radio\6.ogg", db+0, 1.0};
+	};
+
+	class radio7
+	{
+		sound[] = {"\radio\7.ogg", db+0, 1.0};
+	};
+
+	class radio8
+	{
+		sound[] = {"\radio\8.ogg", db+0, 1.0};
+	};
+
+	class radio9
+	{
+		sound[] = {"\radio\9.ogg", db+0, 1.0};
+	};
+};
