@@ -86,7 +86,7 @@ class RscTitles
 						shadow = false;
 						shadowColor = "#000000";
 						underline = false;
-						size = "5";
+						size = "4";
 					}; 
 				};
 		};

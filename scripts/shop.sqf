@@ -38,13 +38,22 @@ SHOP_buyVehicle = {
 	_pos = getMarkerPos "shopVehicleDrop";
 	_pos = [_pos select 0, _pos select 1, 200];
 
-	_vehicle = _type createVehicle [0, 0, 0];
-	_vehicle setPos _pos;
-	[objNull, _vehicle] call BIS_fnc_curatorObjectEdited;
+	_isHeli = getNumber (configFile >> "CfgVehicles" >> _type >> "type") == 2;
+	private ["_vehicle"];
 	
+	if (_isHeli) then {
+		_pos = position heliSpawn findEmptyPosition [0, 20, _type];
+		_vehicle = _type createVehicle _pos;
+	} else {
+		_vehicle = _type createVehicle [0, 0, 0];
+		_vehicle setPos _pos;
+		[objNull, _vehicle] call BIS_fnc_curatorObjectEdited;
+	};
+
 	clearWeaponCargoGlobal _vehicle;
 	clearMagazineCargoGlobal _vehicle;
 	clearItemCargoGlobal _vehicle;
+	clearBackpackCargoGlobal _vehicle;
 };
 
 SHOP_buyItem = {
@@ -74,7 +83,6 @@ SHOP_buyItem = {
 };
 
 SHOP_Init = {
-	//shopIndex = 2;
 	shopsContent = [
 		// VEHICLES
 		[["rhsusf_m1025_w", 1000],
@@ -83,7 +91,9 @@ SHOP_Init = {
 		["rhsusf_m113_usarmy", 7000],
 		["rhsusf_M1117_W", 10000],
 		["rhsusf_m113_usarmy_M240", 10000],
+		["RHS_MELB_H6M", 10000],
 		["rhsusf_m113_usarmy_MK19", 13000],
+		["RHS_UH60M", 15000],
 		["RHS_M2A3_BUSKIII_wd", 20000],
 		["rhsusf_m1a2sep1tuskiiwd_usarmy", 50000]],
 		
@@ -107,10 +117,10 @@ SHOP_Init = {
 		["V_PlateCarrierSpec_blk", 7000]],
 		
 		// WEAPONS
-		((1 / (chaosLevel - 0.15)) call FNC_SW_weapons apply {[_x select 0, round ((_x select 1) * 1000), round ((_x select 1) * 125)]}),
-		
+		((1 / (chaosLevel * 0.2)) call FNC_SW_weapons apply {[_x select 0, round ((_x select 1) * 1000), round ((_x select 1) * 125)]}),
+
 		// SIGHTS
-		((1 / (chaosLevel - 0.15)) call FNC_SW_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
+		((1 / (chaosLevel * 0.2)) call FNC_SW_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
 	];
 	(shopsContent select 2) pushBack ["rhs_weap_M136", 500, 1E10];
 

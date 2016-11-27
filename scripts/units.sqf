@@ -1,4 +1,13 @@
-chaosLevel = 0.2;
+FNC_bodyManagerInit = {
+	params ["_unit"];
+	_unit addEventHandler ["Killed", {(_this param [0]) setVariable ["DeathTime", Time]}];
+};
+
+FNC_bodyManagerClear = {
+	{
+		if (Time - (_x getVariable ["DeathTime", 0]) > 1800) exitWith {deleteVehicle _x};
+	} forEach (allDeadMen select {(_x getVariable ["DeathTime", 0]) > 0});
+};
 
 SATG_spawnSquad = {
 	params ["_logic"];
@@ -43,6 +52,7 @@ SATG_spawnSquad = {
 	
 	{
 		_x addEventHandler ["Killed", {call SATG_unitKilled}];
+		_x call FNC_bodyManagerInit;
 	} forEach units _group;
 	
 	_group

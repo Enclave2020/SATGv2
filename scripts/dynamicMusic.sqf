@@ -1,3 +1,10 @@
+FNC_DM_eventInit = {
+	waitUntil{player == player};
+	player addEventHandler ['Fired',{DM_State = DM_State_Combat; combatDecay = time + DM_TimeOut}];
+	player addEventHandler ['FiredNear',{DM_State = DM_State_Combat; combatDecay = time + DM_TimeOut}];
+	player addEventHandler ['Explosion',{DM_State = DM_State_Combat; combatDecay = time + DM_TimeOut}];
+};
+
 FNC_DM_Init = {	
 	DM_Music = ["EventTrack01_F_EPA", "EventTrack01a_F_EPA", "EventTrack02_F_EPA", "EventTrack02_F_EPC", "EventTrack02a_F_EPA", "EventTrack02b_F_EPC", "EventTrack03_F_EPA", "EventTrack03_F_EPC", "EventTrack03a_F_EPA", "LeadTrack01a_F_EPB", "LeadTrack02_F", "LeadTrack02_F_EPA", "LeadTrack02_F_EPB", "LeadTrack02_F_EPC", "LeadTrack02a_F_EPA", "LeadTrack02a_F_EPB", "LeadTrack02b_F_EPA", "LeadTrack02b_F_EPB", "LeadTrack03_F", "LeadTrack03_F_EPA", "LeadTrack04_F", "LeadTrack04a_F", "LeadTrack05_F", "LeadTrack05_F_EPC", "LeadTrack06_F"];
 
@@ -9,9 +16,7 @@ FNC_DM_Init = {
 
 	ace_hearing_disableVolumeUpdate = true;
 	
-	player addEventHandler ['Fired',{DM_State = DM_State_Combat; combatDecay = time + DM_TimeOut}];
-	player addEventHandler ['FiredNear',{DM_State = DM_State_Combat; combatDecay = time + DM_TimeOut}];
-	player addEventHandler ['Explosion',{DM_State = DM_State_Combat; combatDecay = time + DM_TimeOut}];
+	call FNC_DM_eventInit;
 	
 	addMusicEventHandler ["MusicStop", {call DM_PlayMusic}];
 

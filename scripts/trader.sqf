@@ -5,6 +5,7 @@ TRADER_group = {
 		_traderGroup setVariable ["Traders", True, True];
 	} else {_traderGroup = _traderGroup select 0};
 	
+	_traderGroup setBehaviour "CARELESS";
 	_traderGroup
 };
 
@@ -34,6 +35,8 @@ TRADER_create = {
 	_unit allowDamage False;
 	//_unit switchMove "Acts_AidlPercMstpSnonWnonDnon_warmup_1_loop";
 	//_unit switchMove "HubBriefing_lookAround1";
+	
+	// [this,"SIT3","LIGHT",sit_table_2] call BIS_fnc_ambientAnim;
 };
 
 TRADER_addActions = {

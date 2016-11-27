@@ -1,5 +1,7 @@
 cutText ["","BLACK FADED"];
 
+call compileFinal preprocessFileLineNumbers "FAR_revive\FAR_revive_init.sqf";
+
 #include "scripts\randomEquip.sqf"
 #include "scripts\scoreManager.sqf"
 #include "scripts\GuerillaWarfare.sqf"
@@ -14,5 +16,3 @@ cutText ["","BLACK FADED"];
 #include "scripts\FM.sqf"
 #include "scripts\shop.sqf"
 #include "scripts\player.sqf"
-
-player allowDamage (not isMultiplayer);

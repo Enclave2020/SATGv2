@@ -1,6 +1,4 @@
-﻿#define MsgProb 80
-
-TEMP_World = {
+﻿TEMP_World = {
 	_timeWarm = 0 max (8 - abs(14 - (date param[3])));
 	_snowWarm = 12 - thirsk_snowDens;
 	_overcastWarm = (1 - overCast) / 0.12;
@@ -12,10 +10,21 @@ TEMP_dropWeapon = {
 	player action ["DropWeapon", _holder, currentWeapon player];
 };
 
-RandomExec = {
-	params ["_prob", "_code"];
-	if (ceil random 100 < _prob) exitWith {};
-	call _code;
+TEMP_makeCamp = {
+	_lastCamp = profileNamespace getVariable ["SATGv2LastCamp", 0];
+	// 30 MINS = 0.00005
+	if (dateToNumber date - _lastCamp > (0.00005 * 4)) exitWith {
+		player playAction "PutDown";
+		"Campfire_burning_F" createVehicle position player;
+		profileNamespace setVariable ["SATGv2LastCamp", dateToNumber date];
+		hint "Щас будет огонь!";
+		sleep 2;
+		hint "";
+	};
+	
+	hint "Дровогенератор не готов!";
+	sleep 2;
+	hint "";
 };
 
 TEMP_Player_Handler = {
@@ -27,8 +36,12 @@ TEMP_Player_Handler = {
 	
 	while {true} do {
 		_tempPlayer = player getVariable ["temperature", 36];
-		// NOT IN CAR
-		if (vehicle player != player) then {
+		
+		_inVehicle = vehicle player != player;
+		_nearCampFire = count nearestObjects [position player, ["Campfire_burning_F"], 4] > 0;
+		_inBuilding = getPosATL player select 2 > 0.4;
+		
+		if (_inVehicle or _nearCampFire or _inBuilding) then {
 			player setVariable ["temperature", 36 min (_tempPlayer + (4.2 / _timeCoeff))];
 		} else {
 			// 0.056
@@ -38,18 +51,9 @@ TEMP_Player_Handler = {
 			
 			_coef =  1 min (1 - (30 - _tempPlayer) * 0.033);
 			
-			// OLD SATURATION
-			//_coef call TEMP_Saturation;
-			
-			// NEW
 			player setAnimSpeedCoef _coef;
 		};
 		[1.5 - (36 - _tempPlayer) * 0.09] call TEMP_Saturation;
-		
-		
-		if ((_tempPlayer < 34) and (_tempPlayer > 30)) then {[MsgProb, {systemChat selectRandom ["Мне немного прохладно.", "Прохладненько."]}] call RandomExec};
-		if ((_tempPlayer < 30) and (_tempPlayer > 25)) then {[MsgProb, {systemChat selectRandom ["Меня морозит.", "Мои пальцы дубенеют.", "Я не чувствую нос.", "Надо бы согреться."]}] call RandomExec};
-		if (_tempPlayer < 25) then {[MsgProb, {systemChat selectRandom ["Мне очень холодно.", "Мои ноги замерзли, мне сложно идти.", "Мне слишком холодно.. прилечь бы..."]}] call RandomExec};
 		
 		if (isMultiplayer) then {if (_tempPlayer < 20) then {player setDammage 1}};
 		
@@ -70,10 +74,9 @@ TEMP_Saturation = {
 	]; 
 	
 	ppeTemp ppEffectCommit 0; 
-	
-	//hint Format ["Settings saturation to %1. %2", _saturation, time];
 };
 
-if (hasInterface) then {	
+if (hasInterface) then {
+	[46, [false, true, false], {[] spawn TEMP_makeCamp}] call CBA_fnc_addKeyHandler;
 	[] spawn TEMP_Player_Handler;
 };

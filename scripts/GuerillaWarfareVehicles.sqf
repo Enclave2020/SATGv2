@@ -47,7 +47,7 @@ FNC_GW_LoadDamage = {
 FNC_GW_SaveVehicles = {
 	params ["_name"];
 	_data = [];
-	{_data pushBack [typeOf _x, position _x, _x call FNC_GW_SaveDamage, direction _x, _x call FNC_GW_SaveCargo, fuel _x, vectorUp _x]} forEach call FNC_GW_vehicles;
+	{_data pushBack [typeOf _x, getPosATL _x, _x call FNC_GW_SaveDamage, direction _x, _x call FNC_GW_SaveCargo, fuel _x, vectorUp _x]} forEach call FNC_GW_vehicles;
 	profileNamespace setVariable [_name + "_Vehicles", _data];
 };
 
@@ -87,15 +87,12 @@ FNC_GW_SavePlayer = {
 	
 	if (!alive player) exitWith {};
 	
-	//[player, [profileNamespace, _name + "_Inventory"]] call BIS_fnc_saveInventory;
-	
-	_data = [getPosATL player, damage player, direction player, getUnitLoadout player, player getVariable ["Food", [0, 0]], player getVariable ["temperature", 36]];
+	_data = [getPosATL player, damage player, direction player, getUnitLoadout player, player getVariable ["Food", [0, 0]], player getVariable ["temperature", 36], player getVariable ["far_isunconscious", 0] == 1];
 	profileNamespace setVariable [_name + "_Player", _data];
 };
 
 FNC_GW_LoadPlayer = {
 	params ["_name"];	
-	//[player, [profileNamespace, _name + "_Inventory"]] call BIS_fnc_loadInventory;
 
 	if (objNull isEqualTo (profileNamespace getVariable [_name + "_Player", objNull])) exitWith {"SAVES: Client saves not found" remoteExec ["systemChat"]};
 	
@@ -107,6 +104,10 @@ FNC_GW_LoadPlayer = {
 	player setUnitLoadout (_data select 3);
 	player setVariable ["Food", (_data select 4)];
 	player setVariable ["temperature", (_data select 5)];
+	
+	if (isMultiplayer) then {
+		if (_data select 6) then {[player, objNull] spawn FAR_Player_Unconscious};
+	};
 };
 
 FNC_GW_SaveWorld = {
@@ -123,7 +124,6 @@ FNC_GW_Save = {
 		_name call FNC_GW_SaveVehicles;
 		_name call FNC_GW_SaveWorld;
 	};
-	//saveProfileNamespace;
 };
 
 FNC_GW_Load = {

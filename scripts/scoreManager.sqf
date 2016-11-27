@@ -7,7 +7,7 @@ FNC_Score_Increase = {
 
 FNC_Score_Callback = {
 	sleep 0.2;
-	100 call FNC_addMoney;
+	150 call FNC_addMoney;
 };
 
 FNC_addMoney = {

@@ -59,9 +59,6 @@ FM_VehicleAddAction = {
 };
 
 FM_ClientInit = {
-	// NARCOMAN FIX
-	//[] spawn {playMusic "radio6"; sleep 1; playMusic ""};
-	
 	FM_TurnOn = "<t color='#00ff00'>TanoaFM</t>";
 	FM_TurnOff = "<t color='#ff0000'>TanoaFM</t>";
 	

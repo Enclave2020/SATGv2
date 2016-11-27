@@ -74,9 +74,9 @@ SCTR_chaosCost = {
 	_grade = _logic getVariable "sectorGrade";
 	_cost = 0;	
 	switch (_grade) do {
-		case 1: {_cost = 0.015};
-		case 2: {_cost = 0.02};
-		case 3: {_cost = 0.03};
+		case 1: {_cost = 0.005};
+		case 2: {_cost = 0.01};
+		case 3: {_cost = 0.02};
 		case 4: {_cost = 0.1};
 		case 5: {_cost = 0.3};
 	};	
@@ -90,10 +90,12 @@ SCTR_setClear = {
 	if (_logic getVariable ["cleaned", False]) exitWith {};
 	
 	missionNamespace setVariable ["chaosLevel", chaosLevel + (_logic call SCTR_chaosCost), True];
-	[_logic call SCTR_gradeCost] remoteExec ["FNC_addMoney"];
+	_money = _logic call SCTR_gradeCost;
+	[_money] remoteExec ["FNC_addMoney"];
 	
 	(_logic getVariable "Marker") setMarkerColor "colorOpfor";
-	["TaskSucceeded",["", "Сектор зачищен"]] call bis_fnc_showNotification;
+	
+	["SectorCaptured",[str _money]] remoteExec ["bis_fnc_showNotification"];
 	
 	_logic setVariable ["cleaned", True];
 };
@@ -116,6 +118,8 @@ SCTR_tryDeSpawn = {
 		_logic setVariable ["sectorBuildings", nil];
 		_logic setVariable ["buildingsSpawned", nil];
 	};
+	
+	call FNC_bodyManagerClear;
 };
 
 SCTR_triggerOwner = {

@@ -36,7 +36,7 @@ if (isServer) then {
 if (hasInterface) then {
 	[] spawn {
 		cutText ["Загрузка...","BLACK FADED"];
-		sleep 2;
+		sleep 1;
 		[GW_SaveName, True] call FNC_GW_Load;
 		sleep 1;
 		cutText ["","BLACK IN"];

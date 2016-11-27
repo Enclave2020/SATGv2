@@ -4,6 +4,17 @@
 
 respawnOnStart = -1;
 
+class CfgNotifications
+{
+	class SectorCaptured
+	{
+		title = "SECTOR CAPTURED";
+		iconPicture = "images\notificationCaptured.paa";
+		description = "+%1$";
+		color[] = {0.44,0.96,0,1};
+	};
+};
+
 class CfgSounds
 {
 	class money
