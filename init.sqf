@@ -11,7 +11,6 @@ call compileFinal preprocessFileLineNumbers "FAR_revive\FAR_revive_init.sqf";
 #include "scripts\weather.sqf"
 #include "scripts\randomVehicles.sqf"
 #include "scripts\hud.sqf"
-#include "scripts\trader.sqf"
 #include "scripts\dynamicMusic.sqf"
 #include "scripts\FM.sqf"
 #include "scripts\shop.sqf"

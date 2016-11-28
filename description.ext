@@ -20,6 +20,13 @@ class CfgNotifications
 		description = "You have additional respawn point avaible!";
 		color[] = {1,1,1,1};
 	};
+	class ShopInfo
+	{
+		title = "SHOP";
+		iconPicture = "images\notificationShop.paa";
+		description = "%1";
+		color[] = {1,1,1,1};
+	};
 };
 
 class CfgSounds
