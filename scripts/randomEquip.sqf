@@ -144,7 +144,11 @@ FNC_SW_RandomWeapon = {
 	for "_i" from 1 to 5 do {_unit addItemToVest _magazine};
 	_unit addWeapon _weapon;
 	
-	if (random 1 > (1 - (chaosLevel * 0.7))) then {_unit addWeapon "rhs_weap_M136"};
+	if (random 1 > (1 - (chaosLevel * 0.7))) then {
+		_unit addBackpack "B_AssaultPack_khk";
+		_unit addWeapon "launch_NLAW_F";
+		_unit addMagazines ["NLAW_F", 2];
+	};
 };
 
 FNC_SW_RandomSight = {

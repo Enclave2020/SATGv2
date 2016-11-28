@@ -10,7 +10,9 @@ FNC_campCreate = {
 	[missionNamespace, position _object] call BIS_fnc_addRespawnPosition;
 	"_cwa_lamp" createVehicle position _object;
 	_respawnPoints = missionNamespace getVariable ["SATGv2Respawns", []];
-	missionNamespace setVariable ["SATGv2Respawns", _respawnPoints pushBack position _object, True];
+	_respawnPoints pushBack position _object;
+	
+	missionNamespace setVariable ["SATGv2Respawns", _respawnPoints, True];
 	["SpawnCreated"] remoteExec ["bis_fnc_showNotification"];
 };
 

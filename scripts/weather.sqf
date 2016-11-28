@@ -1,5 +1,3 @@
-//THIRSK_snowstormSoundThing = False;
-
 WEATHER_fogAndSnow = {
 	_snow = 0 max ((overcast - 0.4) * 20);
 	_fogSnow = _snow / 12;
@@ -39,6 +37,10 @@ WEATHER_Handler = {
 		call WEATHER_fogAndSnow;
 		sleep 60;
 	};
+};
+
+if (hasInterface) then {
+	[objNull, 8] exec "scripts\THIRSK_Snow.sqs";
 };
 
 if (isServer) then {
