@@ -1,3 +1,27 @@
+FNC_campCreate = {
+	params ["_object"];
+	waitUntil{
+		sleep 0.1; 
+		_vel = velocity _object;
+		_speed = ((_vel select 0) + (_vel select 1) + (_vel select 2));
+		_speed == 0
+	};
+	
+	[missionNamespace, position _object] call BIS_fnc_addRespawnPosition;
+	"_cwa_lamp" createVehicle position _object;
+	_respawnPoints = missionNamespace getVariable ["SATGv2Respawns", []];
+	missionNamespace setVariable ["SATGv2Respawns", _respawnPoints pushBack position _object, True];
+	["SpawnCreated"] remoteExec ["bis_fnc_showNotification"];
+};
+
+FNC_campInit = {
+	player addEventHandler ["Fired", {
+		if (typeOf param[6] == "B_IRStrobe") then {
+			[param[6]] spawn FNC_campCreate;
+		};
+	}];
+};
+
 FNC_repackMagazines = {
 	player playAction "PutDown";
 	
@@ -35,10 +59,14 @@ FNC_shareMoney = {
 
 if (hasInterface) then {
 	waitUntil{player == player};
+	
+	call FNC_campInit;
+	
 	player addEventHandler ["Respawn", {
 		call FNC_DM_eventInit;
+		call FNC_campInit;
 		player setVariable ["temperature", 36];
-		player setUnitLoadout [["SMG_01_F","","","",["30Rnd_45ACP_Mag_SMG_01",30],[],""],[],[],["rhs_uniform_vdv_emr",[["FirstAidKit",1],["30Rnd_45ACP_Mag_SMG_01",30,3]]],[],[],"","",[],["ItemMap","","","","",""]];
+		player setUnitLoadout [["SMG_01_F","","","",["30Rnd_45ACP_Mag_SMG_01",30],[],""],[],[],["U_BG_Guerrilla_6_1",[["FirstAidKit",1],["30Rnd_45ACP_Mag_SMG_01",30,3]]],[],[],"","",[],["ItemMap","","","","",""]];
 	}];
 
 	player addEventHandler ["HandleDamage", {
@@ -54,6 +82,7 @@ if (hasInterface) then {
 		GW_SaveName call FNC_GW_Save;
 	}];
 	
+	// HotKeys
 	[25, [false, false, false], {[] spawn FNC_shareMoney}] call CBA_fnc_addKeyHandler;
 	[25, [false, true, false], {[] spawn FNC_repackMagazines}] call CBA_fnc_addKeyHandler;
 };

@@ -85,17 +85,19 @@ SHOP_buyItem = {
 SHOP_Init = {
 	shopsContent = [
 		// VEHICLES
-		[["rhsusf_m1025_w", 1000],
-		["rhsusf_m1025_w_m2", 3000],
-		["rhsusf_m1025_w_mk19", 5000],
-		["rhsusf_m113_usarmy", 7000],
-		["rhsusf_M1117_W", 10000],
-		["rhsusf_m113_usarmy_M240", 10000],
-		["RHS_MELB_H6M", 10000],
-		["rhsusf_m113_usarmy_MK19", 13000],
-		["RHS_UH60M", 15000],
-		["RHS_M2A3_BUSKIII_wd", 20000],
-		["rhsusf_m1a2sep1tuskiiwd_usarmy", 50000]],
+		[["B_Quadbike_01_F", 500],
+		["B_LSV_01_unarmed_F", 1000],
+		["B_LSV_01_armed_F", 2000],
+		["B_Truck_01_transport_F", 2000],
+		["B_Truck_01_covered_F", 3000],
+		["B_MRAP_01_F", 4000],
+		["B_MRAP_01_hmg_F", 6000],
+		["B_MRAP_01_gmg_F", 8000],
+		["B_Heli_Light_01_F", 10000],
+		["B_APC_Wheeled_01_cannon_F", 15000],
+		["B_Heli_Transport_01_F", 15000],
+		["B_APC_Tracked_01_rcws_F", 20000],
+		["B_MBT_01_cannon_F", 50000]],
 		
 		// ITEMS
 		[["ItemCompass", 50],
