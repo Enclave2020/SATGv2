@@ -19,6 +19,20 @@ FNC_repackMagazines = {
 	hint "";
 };
 
+FNC_shareMoneyServer = {
+	params ["_object"];
+	1000 remoteExec ["FNC_addMoney", owner _object];
+};
+
+FNC_shareMoney = {
+	_moneyPlayer = profileNamespace getVariable ["SATGMoney", 0];
+	if (_moneyPlayer < 1000) exitWith {};
+	if (not isPlayer cursorObject) exitWith {};
+	
+	cursorObject remoteExec ["FNC_shareMoneyServer", 2];
+	1000 call FNC_subMoney;
+};
+
 if (hasInterface) then {
 	waitUntil{player == player};
 	player addEventHandler ["Respawn", {
@@ -40,6 +54,7 @@ if (hasInterface) then {
 		GW_SaveName call FNC_GW_Save;
 	}];
 	
+	[25, [false, false, false], {[] spawn FNC_shareMoney}] call CBA_fnc_addKeyHandler;
 	[25, [false, true, false], {[] spawn FNC_repackMagazines}] call CBA_fnc_addKeyHandler;
 };
 

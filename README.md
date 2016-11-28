@@ -1,8 +1,8 @@
-##Storm At The Gates V2
+###Storm At The Gates V2
 Storm At The Gates V2 is Capture The Island scenario with dynamically increasing difficulty.
 
 Features:
-* Shops (vehicleS, weapons, items, clothes).
+* Shops (vehicles, weapons, items, clothes).
 * Dynamic combat music.
 * Radio in vehicles.
 * Save system (all vehicles with items on the map; players position, health, equipment; weather, date, and time).
@@ -20,4 +20,4 @@ Features:
 * [RHS: AFRF](http://www.rhsmods.org/mod/1)
 * [RHS: USAF](http://www.rhsmods.org/mod/2)
 * [TRYK's Multi-Play Uniforms](http://www.armaholic.com/page.php?id=26661)
-* [THIRSK](https://steamcommunity.com/sharedfiles/filedetails/?id=501589008)
+* [Thirsk Island](https://steamcommunity.com/sharedfiles/filedetails/?id=501589008)

@@ -1,16 +1,10 @@
 HUD_Update = {
 	_display = uiNameSpace getVariable "SATGv2Hud";
 	_setText = _display displayCtrl 1001;
-	
-	//_water = (player getVariable ["Food", [0, 0]]) param [0];
-	//_food = (player getVariable ["Food", [0, 0]]) param [1];
 	_temp = round (player getVariable ["temperature", 36]);
 	
-	//_setText ctrlSetStructuredText (parseText format ["<img size='4' image='images\hudWater.paa'/>x%1  <img size='4' image='images\hudFood.paa'/>x%2<img size='4.5' image='images\hudTemp.paa'/>%%3°", _water, _food, _temp]);
-	
-	//_setText ctrlSetStructuredText (parseText format ["<img size='4' image='images\hudWater.paa'/>x%1  <img size='4' image='images\hudFood.paa'/>x%2", _water, _food]);
-	
-	_setText ctrlSetStructuredText (parseText format ["<img size='4.5' image='images\hudTemp.paa'/>%1°", _temp]);
+	// _setText ctrlSetStructuredText (parseText format ["<img size='4.5' image='images\hudTemp.paa'/>%1°", _temp]);
+	_setText ctrlSetStructuredText (parseText format ["<img size='4.5' image='images\hudTemp%1.paa'/>", round ((36 - _temp) / 3.2) min 5]);
 	
 	// MONEY
 	_moneyText = _display displayCtrl 1002;

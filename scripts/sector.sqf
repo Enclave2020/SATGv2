@@ -43,7 +43,8 @@ SCTR_trySpawn = {
 	if (_logic getVariable ["cleaned", False]) exitWith {};
 	
 	if (not (_logic getVariable ["buildingsSpawned", False])) then {
-		_buildings = call compile loadFile (_logic getVariable ["sectorGrade", 0] call SCTR_buildingClass);
+		_buildings = [];
+		_buildings pushBack (call compile loadFile (_logic getVariable ["sectorGrade", 0] call SCTR_buildingClass));
 		_buildings pushBack ([position _logic, _logic getVariable "sectorGrade"] call FNC_SW_randomEquipCrate);
 	
 		_logic setVariable ["sectorBuildings", _buildings];
