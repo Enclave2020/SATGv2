@@ -71,7 +71,7 @@ FNC_GW_LoadVehicles = {
 	
 	if (_remove) then {{deleteVehicle _x} forEach call FNC_GW_vehicles};
 	{
-			if (not ((_x select 2) call FNC_GW_VehicleDestroyed)) then {		
+			if (not ((_x select 2) call FNC_GW_VehicleDestroyed)) then {	
 				_vehicle = createVehicle [_x select 0, _x select 1, [], 0, "CAN_COLLIDE"];
 				[_vehicle, _x select 2] call FNC_GW_LoadDamage;		
 				_vehicle setDir (_x select 3);
@@ -94,8 +94,6 @@ FNC_GW_SavePlayer = {
 FNC_GW_LoadPlayer = {
 	params ["_name"];	
 
-	if (objNull isEqualTo (profileNamespace getVariable [_name + "_Player", objNull])) exitWith {"SAVES: Client saves not found" remoteExec ["systemChat"]};
-	
 	_data = profileNamespace getVariable _name + "_Player";
 	
 	player setPosATL (_data select 0);
@@ -108,13 +106,16 @@ FNC_GW_LoadPlayer = {
 	if (isMultiplayer) then {
 		if (_data select 6) then {[player, objNull] spawn FAR_Player_Unconscious};
 	};
+	
+	if (uniform player == "") then {player forceAddUniform "U_BG_Guerrilla_6_1"};
 };
 
 FNC_GW_SaveWorld = {
 	params ["_name"];
 	
 	_clearedSectors = (units groupLogic) select {_x getVariable "Cleaned"} apply {_x getVariable "Name"};
-	profileNamespace setVariable [_name + "_World", [date, overcast, _clearedSectors, chaosLevel]];
+	_respawnPoints = missionNamespace getVariable ["SATGv2Respawns", []];
+	profileNamespace setVariable [_name + "_World", [date, overcast, _clearedSectors, chaosLevel, _respawnPoints]];
 };
 
 FNC_GW_Save = {
@@ -131,6 +132,14 @@ FNC_GW_Load = {
 	if (hasInterface) then {_name call FNC_GW_LoadPlayer};	
 	if (isServer) then {
 		[_name, _remove] call FNC_GW_LoadVehicles;
-		missionNamespace setVariable ["chaosLevel", (profileNamespace getVariable [GW_SaveName + "_World", [0, 0, [], 0.2]]) param [3], True];
+		_worldSave = profileNamespace getVariable [GW_SaveName + "_World", [0, 0, [], 0.2, []]];
+		missionNamespace setVariable ["chaosLevel", _worldSave param [3], True];
+		
+		_respawnPoints = _worldSave param [4];
+		missionNamespace setVariable ["SATGv2Respawns", _respawnPoints, True];
+		{
+			[missionNamespace, _x] call BIS_fnc_addRespawnPosition;
+			"_cwa_lamp" createVehicle _x;
+		} forEach _respawnPoints;
 	};
 };

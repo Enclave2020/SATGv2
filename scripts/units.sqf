@@ -23,25 +23,25 @@ SATG_spawnSquad = {
 		_position = [position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
 		
 		
-		[[_position select 0, _position select 1, 100], 0, "RHS_AH64D_wd", _group] call bis_fnc_spawnvehicle;
+		[[_position select 0, _position select 1, 100], 0, "B_Heli_Attack_01_F", _group] call bis_fnc_spawnvehicle;
 		_points = _points - 150;
 	};
 	
 	// TANKS
 	while {_points > 50} do {
-		[[position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos, 0, "rhsusf_m1a1aimwd_usarmy", _group] call bis_fnc_spawnvehicle;
+		[[position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos, 0, "B_MBT_01_cannon_F", _group] call bis_fnc_spawnvehicle;
 		_points = _points - 50;
 	};	
 	
 	// APC
 	while {_points > 25} do {
-		[[position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos, 0, "RHS_M2A2_wd", _group] call bis_fnc_spawnvehicle;
+		[[position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos, 0, "B_APC_Wheeled_01_cannon_F", _group] call bis_fnc_spawnvehicle;
 		_points = _points - 25;
 	};	
 	
 	// MAN
 	while {_points > 0} do {
-		"rhsusf_army_ocp_rifleman" createUnit [position _logic, _group];
+		"B_Soldier_F" createUnit [position _logic, _group];
 		_points = _points - 1;
 	};	
 	

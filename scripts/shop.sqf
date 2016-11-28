@@ -4,7 +4,7 @@ SHOP_itemInfo = {
 	{
 		_result = getText (configFile >> _x >> _class >> _value);
 		if ("" != _result) exitWith {_result};
-	} forEach ["CfgWeapons", "CfgVehicles"];
+	} forEach ["CfgWeapons", "CfgVehicles", "CfgMagazines"];
 	
 	_result
 };
@@ -85,21 +85,25 @@ SHOP_buyItem = {
 SHOP_Init = {
 	shopsContent = [
 		// VEHICLES
-		[["rhsusf_m1025_w", 1000],
-		["rhsusf_m1025_w_m2", 3000],
-		["rhsusf_m1025_w_mk19", 5000],
-		["rhsusf_m113_usarmy", 7000],
-		["rhsusf_M1117_W", 10000],
-		["rhsusf_m113_usarmy_M240", 10000],
-		["RHS_MELB_H6M", 10000],
-		["rhsusf_m113_usarmy_MK19", 13000],
-		["RHS_UH60M", 15000],
-		["RHS_M2A3_BUSKIII_wd", 20000],
-		["rhsusf_m1a2sep1tuskiiwd_usarmy", 50000]],
+		[["B_Quadbike_01_F", 1000],
+		["B_Truck_01_transport_F", 2000],
+		["B_LSV_01_unarmed_F", 2000],
+		["B_Truck_01_covered_F", 3000],
+		["B_LSV_01_armed_F", 3000],
+		["B_MRAP_01_F", 4000],
+		["B_MRAP_01_hmg_F", 6000],
+		["B_MRAP_01_gmg_F", 8000],
+		["B_Heli_Light_01_F", 10000],
+		["B_APC_Wheeled_01_cannon_F", 15000],
+		["B_Heli_Transport_01_F", 15000],
+		["B_APC_Tracked_01_rcws_F", 20000],
+		["B_MBT_01_cannon_F", 50000]],
 		
 		// ITEMS
 		[["ItemCompass", 50],
-		["FirstAidKit", 200],
+		["SmokeShell", 50],
+		["MiniGrenade", 100],
+		["FirstAidKit", 150],
 		["acc_flashlight", 250],
 		["ItemMap", 500],
 		["V_HarnessO_gry", 500],
@@ -109,6 +113,7 @@ SHOP_Init = {
 		["ItemRadio", 1000],
 		["V_TacVest_blk", 1000],
 		["H_HelmetB_light", 1000],
+		["B_IR_Grenade", 2000],
 		["H_HelmetB", 2000],
 		["V_PlateCarrier1_blk", 2000],
 		["Rangefinder", 3000],
@@ -122,7 +127,7 @@ SHOP_Init = {
 		// SIGHTS
 		((1 / (chaosLevel * 0.2)) call FNC_SW_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
 	];
-	(shopsContent select 2) pushBack ["rhs_weap_M136", 500, 1E10];
+	(shopsContent select 2) pushBack ["launch_NLAW_F", 2000, 500];
 
 	waitUntil {not (displayNull isEqualTo (uiNameSpace getVariable "shopUnified"))};
 	{
