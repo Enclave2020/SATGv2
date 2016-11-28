@@ -9,13 +9,27 @@ SHOP_itemInfo = {
 	_result
 };
 
+SHOP_itemConfig = {
+	params ["_type"];
+	
+	_result = "";
+	{
+		if (not isNull (configFile >> _x >> _type)) exitWith {_result = _x}; 
+	} forEach ["CfgWeapons", "CfgVehicles", "CfgMagazines"];
+	
+	_result
+};
+
 SHOP_loadItem = {
 	params ["_index"];
-	_item = shopsContent select shopIndex select _index;
-	_dialog = uiNameSpace getVariable "shopUnified";
 	
-	_description = Format ["%1<br/>Cost: %2", [_item select 0, "descriptionShort"] call SHOP_itemInfo, _item select 1];
-	if (shopIndex == 2) then {_description = Format ["%1<br/>Ammo cost: %2", _description, _item select 2]};
+	_item = shopContent select _index;
+	_haveAmmo = count getArray (configfile >> "CfgWeapons" >> _item select 0 >> "magazines") > 0;
+	ctrlShow [1602, _haveAmmo];
+	
+	_dialog = uiNameSpace getVariable "shopUnified";
+	_description = Format ["%1<br/>Cost: %2", [_item select 0, "descriptionShort"] call SHOP_itemInfo, (_item select 1) * shopMul];
+	if (_haveAmmo) then {_description = Format ["%1<br/>Ammo cost: %2", _description, _item select 2]};
 	
 	(_dialog displayCtrl 1101) ctrlSetStructuredText parseText Format ["<t size='1.5' align='center'>%1</t>", [_item select 0, "displayName"] call SHOP_itemInfo];
 	(_dialog displayCtrl 1100) ctrlSetStructuredText parseText _description;
@@ -60,30 +74,29 @@ SHOP_buyItem = {
 	params ["_priceIndex"];
 	
 	_index = lbCurSel 1500;
-	_item = shopsContent select shopIndex select _index;
-	_type = getNumber (configFile >> "CfgWeapons" >> _item select 0 >> "type");
-	
-	if (_priceIndex == 2) then {_type = 0};
-	if (shopIndex == 0) then {_type = 1337};
-	
-	_price = _item select _priceIndex;
-	_crate = call TRADER_lastCrate;
+	_item = shopContent select _index;
+	_type = (_item select 0) call SHOP_itemConfig;
+	_price = (_item select _priceIndex) * shopMul;
 	
 	if (not (_price call SHOP_canBuy)) exitWith {};
-
+	
 	_class = _item select 0;
-	switch (_type) do {
-		case 1337 : {_class call SHOP_buyVehicle};
-		case 0 : {_crate addMagazineCargoGlobal [_class call SHOP_ammoType, 1]};
-		default {_crate addItemCargoGlobal [_class, 1]};
+
+	if (_priceIndex == 2) then {
+		shopCrate addMagazineCargoGlobal [_class call SHOP_ammoType, 1];
+	} else {
+		switch (_type) do {
+			case "CfgVehicles" : {_class call SHOP_buyVehicle};
+			default {shopCrate addItemCargoGlobal [_class, 1]};
+		};
 	};
 
 	_price call FNC_subMoney;
 	playSound "bought";	
 };
 
-SHOP_Init = {
-	shopsContent = [
+SHOP_Update = {
+	_shopsContent = [
 		// VEHICLES
 		[["B_Quadbike_01_F", 1000],
 		["B_Truck_01_transport_F", 2000],
@@ -127,14 +140,60 @@ SHOP_Init = {
 		// SIGHTS
 		((1 / (chaosLevel * 0.2)) call FNC_SW_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
 	];
-	(shopsContent select 2) pushBack ["launch_NLAW_F", 2000, 500];
+	(_shopsContent select 2) pushBack ["launch_NLAW_F", 2000, 500];
+	
+	shopContent = [];
+	{
+		for "_i" from 0 to floor random count _x do {
+			private "_item";
+			waitUntil{
+				_item = selectRandom _x;
+				not (_item in shopContent);
+			};
+			shopContent pushBack _item;
+		};
+	} forEach _shopsContent;
+};
 
+SHOP_Init = {
 	waitUntil {not (displayNull isEqualTo (uiNameSpace getVariable "shopUnified"))};
 	{
 		lbAdd [1500, [_x select 0, "displayName"] call SHOP_itemInfo];
 		lbSetPicture [1500, _forEachIndex, [_x select 0, "picture"] call SHOP_itemInfo];
-	} forEach (shopsContent select shopIndex);
+	} forEach shopContent;
 	
-	ctrlShow [1602, shopIndex == 2];
 	lbSetCurSel [1500, 0];
+};
+
+if (isServer) then {
+	[trader, "SIT3", "ASIS"] call BIS_fnc_ambientAnim;
+	missionNamespace setVariable ["shopMul", 1, True];
+	
+	// UPDATE ASSORT
+	[] spawn {
+		while {true} do {
+			call SHOP_Update;
+			sleep 1800;
+			["ShopInfo",["Ассортимент обновлен."]] remoteExec ["bis_fnc_showNotification"];
+		};
+	};
+	
+	// SALES
+	[] spawn {
+		while {true} do {
+			sleep 1200;
+			if (random 1 > 0.7) then {
+				_sales = random 0.5;
+				["ShopInfo",[Format ["Распродажа на 10 минут! -%1%%", _sales]]] remoteExec ["bis_fnc_showNotification"];
+				missionNamespace setVariable ["shopMul", 1 - _sales, True];
+				sleep 600;
+				["ShopInfo",["Распродажа закончилась."]] remoteExec ["bis_fnc_showNotification"];
+				missionNamespace setVariable ["shopMul", 1, True];
+			};
+		};
+	};
+};
+
+if (hasInterface) then {
+	trader addAction ["Trade", {createDialog "shopUnified"}];
 };
