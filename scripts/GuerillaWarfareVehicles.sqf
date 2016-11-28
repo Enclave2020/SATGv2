@@ -58,7 +58,8 @@ FNC_GW_VehicleDestroyed = {
 };
 
 FNC_GW_vehicles = {
-	vehicles select {(_x isKindOf "Car") or (_x isKindOf "Air") or (_x isKindOf "Tank")}
+	_result = vehicles select {(_x isKindOf "Car") or (_x isKindOf "Air") or (_x isKindOf "Tank")};
+	(_result select {side _x != WEST})
 };
 
 FNC_GW_LoadVehicles = {

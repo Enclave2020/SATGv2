@@ -1,3 +1,17 @@
+FNC_friendlyFireEx = {
+	params ["_object"];
+	500 remoteExec ["FNC_subMoney", owner _object];
+};
+
+FNC_friendlyFireInit = {
+	player addEventHandler ["Hit", {
+		_traitor = param [3];
+		if (side _traitor == side player) then {
+			_traitor remoteExec ["FNC_friendlyFireEx", 2];
+		};
+	}];
+};
+
 FNC_campCreate = {
 	params ["_object"];
 	waitUntil{
@@ -63,8 +77,10 @@ if (hasInterface) then {
 	waitUntil{player == player};
 	
 	call FNC_campInit;
+	//call FNC_friendlyFireInit;
 	
 	player addEventHandler ["Respawn", {
+		//call FNC_friendlyFireInit;
 		call FNC_DM_eventInit;
 		call FNC_campInit;
 		player setVariable ["temperature", 36];
