@@ -80,23 +80,26 @@ SHOP_buyItem = {
 	
 	if (not (_price call SHOP_canBuy)) exitWith {};
 	
-	_class = _item select 0;
-
-	if (_priceIndex == 2) then {
-		shopCrate addMagazineCargoGlobal [_class call SHOP_ammoType, 1];
-	} else {
-		switch (_type) do {
-			case "CfgVehicles" : {_class call SHOP_buyVehicle};
-			default {shopCrate addItemCargoGlobal [_class, 1]};
+	_price call FNC_subMoney;
+	playSound "bought";		
+	
+	_class = _item select 0;	
+	
+	if (_priceIndex == 2) exitWith {shopCrate addMagazineCargoGlobal [_class call SHOP_ammoType, 1]};
+	if (_type == "CfgVehicles") exitWith {
+		if ([_class, "vehicleClass"] call SHOP_itemInfo == "Backpacks") then {
+			shopCrate addBackpackCargoGlobal [_class, 1];
+		} else {
+			_class call SHOP_buyVehicle;
 		};
 	};
-
-	_price call FNC_subMoney;
-	playSound "bought";	
+	
+	shopCrate addItemCargoGlobal [_class, 1];
 };
 
 SHOP_Update = {
 	_shopsContent = [
+	
 		// VEHICLES
 		[["B_Quadbike_01_F", 1000],
 		["B_Truck_01_transport_F", 2000],
@@ -111,6 +114,14 @@ SHOP_Update = {
 		["B_Heli_Transport_01_F", 15000],
 		["B_APC_Tracked_01_rcws_F", 20000],
 		["B_MBT_01_cannon_F", 50000]],
+		
+		// BACKPACKS
+		[["B_AssaultPack_blk", 1000],
+		["B_FieldPack_blk", 2000],
+		["B_TacticalPack_blk", 3000],
+		["B_Kitbag_rgr", 4000],
+		["B_Carryall_oli", 5000],
+		["B_Bergen_hex_F", 10000]],
 		
 		// ITEMS
 		[["ItemCompass", 50],
@@ -153,6 +164,8 @@ SHOP_Update = {
 			shopContent pushBack _item;
 		};
 	} forEach _shopsContent;
+	
+	missionNamespace setVariable ["shopContent", shopContent, True];
 };
 
 SHOP_Init = {
@@ -166,7 +179,6 @@ SHOP_Init = {
 };
 
 if (isServer) then {
-	[trader, "SIT3", "ASIS"] call BIS_fnc_ambientAnim;
 	missionNamespace setVariable ["shopMul", 1, True];
 	
 	// UPDATE ASSORT
@@ -197,3 +209,6 @@ if (isServer) then {
 if (hasInterface) then {
 	trader addAction ["Trade", {createDialog "shopUnified"}];
 };
+
+// EVERYONE
+[trader, "SIT3", "ASIS"] call BIS_fnc_ambientAnim;
