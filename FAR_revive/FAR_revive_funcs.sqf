@@ -94,14 +94,16 @@ FAR_Player_Unconscious =
 	// Call this code only on players
 	if (isPlayer _unit) then 
 	{
-		_bleedOut = time + FAR_BleedOut;
+		_bleedOut = time + param [2, FAR_BleedOut];
 		
 		while { !isNull _unit && alive _unit && _unit getVariable "FAR_isUnconscious" == 1 && _unit getVariable "FAR_isStabilized" == 0 && (FAR_BleedOut <= 0 || time < _bleedOut) } do
 		{
+			profileNameSpace setVariable ["SATGv2_FARBleed", _bleedOut - time];
 			hintSilent format["Bleedout in %1 seconds\n\n%2", round (_bleedOut - time), call FAR_CheckFriendlies];
 			
 			sleep 0.5;
 		};
+		profileNameSpace setVariable ["SATGv2_FARBleed", nil];
 		
 		if (_unit getVariable "FAR_isStabilized" == 1) then {
 			//Unit has been stabilized. Disregard bleedout timer and umute player

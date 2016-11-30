@@ -14,13 +14,13 @@ $[
 */
 
 
-// onLBSelChanged = "(lbCurSel 1500) call SHOP_loadItem";
+// onLBSelChanged = "(lbCurSel 1500) call SATGv2_Shop_fnc_loadItem";
 
 class shopUnified
 {
     idd = 1400;
     movingEnable = true;
-	onLoad = "uiNameSpace setVariable ['shopUnified', _this select 0]; [] spawn SHOP_Init;";
+	onLoad = "uiNameSpace setVariable ['shopUnified', _this select 0]; [] spawn SATGv2_Shop_fnc_show;";
     class Controls
     {
 		
@@ -43,7 +43,7 @@ class shopUnified
 			y = 2 * GUI_GRID_H + GUI_GRID_Y;
 			w = 10.5 * GUI_GRID_W;
 			h = 21 * GUI_GRID_H;
-			onLBSelChanged = "(lbCurSel 1500) call SHOP_loadItem";
+			onLBSelChanged = "(lbCurSel 1500) call SATGv2_Shop_fnc_loadItem";
 		};
 		class RscPicture_1200: RscPicture
 		{
@@ -57,17 +57,17 @@ class shopUnified
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "BUY"; //--- ToDo: Localize;
+			text = $STR_SATGv2_shopBuy;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			action = "1 call SHOP_buyItem";
+			action = "1 call SATGv2_Shop_fnc_buyItem";
 		};
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "CLOSE"; //--- ToDo: Localize;
+			text = $STR_SATGv2_shopClose;
 			x = 30.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
@@ -85,7 +85,7 @@ class shopUnified
 		class RscStructuredText_1101: RscStructuredText
 		{
 			idc = 1101;
-			text = "CAPTION"; //--- ToDo: Localize;
+			//text = "CAPTION"; //--- ToDo: Localize;
 			x = 12.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 2 * GUI_GRID_H + GUI_GRID_Y;
 			w = 25.5 * GUI_GRID_W;
@@ -94,12 +94,12 @@ class shopUnified
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			text = "AMMO"; //--- ToDo: Localize;
+			text = $STR_SATGv2_shopAmmo;
 			x = 21.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 8 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			action = "2 call SHOP_buyItem";
+			action = "2 call SATGv2_Shop_fnc_buyItem";
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END

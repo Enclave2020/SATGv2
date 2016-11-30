@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="SATGv2">
+	<Package name="Text">
+		<Container name="Main">
+			<Key ID="str_SATGv2_campFireDone">
+				<Original>You placed some campfire.</Original>
+				<Russian>Вы развели костер.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_campFireWait">
+				<Original>You can't place campfire now.</Original>
+				<Russian>Вы не можете развести костер сейчас.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoRepacked">
+				<Original>You repacked mags from you'r primary weapon.</Original>
+				<Russian>Вы перепаковали магазины основного оружия.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_toolkitUse">
+				<Original>You fixed this dolly-tub.</Original>
+				<Russian>Вы починили это корыто.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_toolkitCantUse">
+				<Original>Looks like I can broke this!</Original>
+				<Russian>Думаю я могу это сломать!</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shareFail">
+				<Original>Throw money away?</Original>
+				<Russian>Деньги на ветер?</Russian>
+			</Key>				
+		</Container>
+		
+		<Container name="Shop">
+			<Key ID="str_SATGv2_shopUpdated">
+				<Original>Shop's got new stuff.</Original>
+				<Russian>Ассортимент обновлен.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopSales">
+				<Original>Flash sale, 10 minutes only. -%1%%.</Original>
+				<Russian>Распродажа на 10 минут! -%1%%.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopSalesEnd">
+				<Original>Sale is over.</Original>
+				<Russian>Распродажа закончилась.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopBuy">
+				<Original>BUY</Original>
+				<Russian>КУПИТЬ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopAmmo">
+				<Original>AMMO</Original>
+				<Russian>ПАТРОНЫ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopClose">
+				<Original>Close</Original>
+				<Russian>Закрыть</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopCost">
+				<Original>%1&lt;br/&gt;Price: %2</Original>
+				<Russian>%1'&lt;br/&gt;Цена: %2</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shopCostAmmo">
+				<Original>%1&lt;br/&gt;Mag cost: %2</Original>
+				<Russian>%1&lt;br/&gt;Цена обоймы: %2</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopAction">
+				<Original>Exchange</Original>
+				<Russian>Торговать</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopTeaNeedMoney">
+				<Original>You can't afford this tea!</Original>
+				<Russian>Вы не можете позволить себе этот чай!</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopTeaAction">
+				<Original>Drink tea (5000$)</Original>
+				<Russian>Выпить чаю (5000$)</Russian>
+			</Key>			
+			<Key ID="str_SATGv2_shopToolsAction">
+				<Original>Buy toolkit (6000$)</Original>
+				<Russian>Купить ремкомплект (6000$)</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shopToolsNeedMoney">
+				<Original>I need more money!</Original>
+				<Russian>Мне нужно больше денег!</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopToolsBought">
+				<Original>You bought toolkit.</Original>
+				<Russian>Вы купили ремкомплект.</Russian>
+			</Key>					
+		</Container>		
+		
+		<Container name="Notifications">
+			<Key ID="str_SATGv2_notfCapturedTitle">
+				<Original>SECTOR CLEAR</Original>
+				<Russian>СЕКТОР ЗАХВАЧЕН</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfSpawnTitle">
+				<Original>RESPAWN POINTS</Original>
+				<Russian>ТОЧКИ ВОЗРОЖДЕНИЯ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfSpawnText">
+				<Original>New spawn points is available.</Original>
+				<Russian>Доступен новый лагерь для возрождения!</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfShopTitle">
+				<Original>SHOP INFO</Original>
+				<Russian>МАГАЗИН</Russian>
+			</Key>
+		
+		<Container name="Menu">
+			<Key ID="str_SATGv2_menuClose">
+				<Original>Close</Original>
+				<Russian>Закрыть</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuMakeCamp">
+				<Original>Make campfire</Original>
+				<Russian>Развести огонь</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuRepackMags">
+				<Original>Repack mags</Original>
+				<Russian>Перепаковать магазины</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuRepair">
+				<Original>Use repair kit</Original>
+				<Russian>Использовать ремкомплект</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuShare">
+				<Original>Share 1000$</Original>
+				<Russian>Передать 1000$</Russian>
+			</Key>
+		</Container>
+	</Package>
+</Project>
