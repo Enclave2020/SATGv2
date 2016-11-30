@@ -4,11 +4,7 @@
 		player playAction "PutDown";
 		"Campfire_burning_F" createVehicle position player;
 		profileNamespace setVariable ["SATGv2LastCamp", dateToNumber date];
-		hint "ўас будет огонь!";
-		sleep 2;
-		hint "";
+		titleText [localize "str_SATGv2_campFireDone", "PLAIN", 1];
 	};
 	
-	hint "ƒровогенератор не готов!";
-	sleep 2;
-	hint "";
+	titleText [localize "str_SATGv2_campFireWait", "PLAIN", 1];

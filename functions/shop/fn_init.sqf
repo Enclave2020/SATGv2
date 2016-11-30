@@ -6,7 +6,7 @@ if (isServer) then {
 		while {true} do {
 			call SATGv2_Shop_fnc_Update;
 			sleep 1800;
-			["ShopInfo",["Ассортимент обновлен."]] remoteExec ["bis_fnc_showNotification"];
+			["ShopInfo",[localize "str_SATGv2_shopUpdated"]] remoteExec ["bis_fnc_showNotification"];
 		};
 	};
 	
@@ -16,10 +16,10 @@ if (isServer) then {
 			sleep 1200;
 			if (random 1 > 0.7) then {
 				_sales = random 0.5;
-				["ShopInfo",[Format ["Распродажа на 10 минут! -%1%%", round _sales]]] remoteExec ["bis_fnc_showNotification"];
+				["ShopInfo",[Format [localize "str_SATGv2_shopSales", round _sales]]] remoteExec ["bis_fnc_showNotification"];
 				missionNamespace setVariable ["shopMul", 1 - _sales, True];
 				sleep 600;
-				["ShopInfo",["Распродажа закончилась."]] remoteExec ["bis_fnc_showNotification"];
+				["ShopInfo",[localize "str_SATGv2_shopSalesEnd"]] remoteExec ["bis_fnc_showNotification"];
 				missionNamespace setVariable ["shopMul", 1, True];
 			};
 		};
@@ -27,7 +27,7 @@ if (isServer) then {
 };
 
 if (hasInterface) then {
-	trader addAction ["Trade", {createDialog "shopUnified"}];
+	trader addAction [localize "str_SATGv2_shopAction", {createDialog "shopUnified"}];
 };
 
 // EVERYONE

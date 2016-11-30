@@ -13,6 +13,4 @@
 	player addMagazines [_current, _fullMagazines];
 	if (_lastMagazine > 0) then {player addMagazine [_current, _lastMagazine]};
 	
-	hint "Ammo repacked";
-	sleep 2;
-	hint "";
+	titleText [localize "str_SATGv2_ammoRepacked", "PLAIN", 1];

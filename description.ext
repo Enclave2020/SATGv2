@@ -12,21 +12,21 @@ class CfgNotifications
 {
 	class SectorCaptured
 	{
-		title = "SECTOR CAPTURED";
+		title = $str_SATGv2_notfCapturedTitle;
 		iconPicture = "images\notificationCaptured.paa";
 		description = "+%1$";
 		color[] = {0.44,0.96,0,1};
 	};
 	class SpawnCreated
 	{
-		title = "RESPAWN POINT ADDED";
+		title = $str_SATGv2_notfSpawnTitle;
 		iconPicture = "images\notificationTent.paa";
-		description = "You have additional respawn point avaible!";
+		description = $str_SATGv2_notfSpawnText;
 		color[] = {1,1,1,1};
 	};
 	class ShopInfo
 	{
-		title = "SHOP";
+		title = $str_SATGv2_notfShopTitle;
 		iconPicture = "images\notificationShop.paa";
 		description = "%1";
 		color[] = {1,1,1,1};

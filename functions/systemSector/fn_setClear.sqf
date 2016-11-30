@@ -4,7 +4,7 @@
 	
 	missionNamespace setVariable ["chaosLevel", chaosLevel + (_logic call SATGv2_Sector_fnc_chaosCost), True];
 	_money = _logic call SATGv2_Sector_fnc_gradeCost;
-	[_money] remoteExec ["FNC_addMoney"];
+	[_money] remoteExec ["SATGv2_fnc_addMoney"];
 	
 	(_logic getVariable "Marker") setMarkerColor "colorOpfor";
 	

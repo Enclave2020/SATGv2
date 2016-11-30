@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="SATGv2">
+	<Package name="Text">
+		<Container name="Main">
+			<Key ID="str_SATGv2_campFireDone">
+				<Original>You placed some campfire.</Original>
+				<Russian>Вы развели костер.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_campFireWait">
+				<Original>You can't place campfire now.</Original>
+				<Russian>Вы не можете развести костер сейчас.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoRepacked">
+				<Original>You repacked mags from you'r primary weapon.</Original>
+				<Russian>Вы перепаковали магазины основного оружия.</Russian>
+			</Key>
+		</Container>
+		
+		<Container name="Shop">
+			<Key ID="str_SATGv2_shopUpdated">
+				<Original>Shop's got new stuff.</Original>
+				<Russian>Ассортимент обновлен.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopSales">
+				<Original>Flash sale, 10 minutes only. -%1%%.</Original>
+				<Russian>Распродажа на 10 минут! -%1%%.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopSalesEnd">
+				<Original>Sale is over.</Original>
+				<Russian>Распродажа закончилась.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopBuy">
+				<Original>BUY</Original>
+				<Russian>КУПИТЬ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopAmmo">
+				<Original>AMMO</Original>
+				<Russian>ПАТРОНЫ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopClose">
+				<Original>Close</Original>
+				<Russian>Закрыть</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopCost">
+				<Original>%1&lt;br/&gt;Price: %2</Original>
+				<Russian>%1'&lt;br/&gt;Цена: %2</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shopCostAmmo">
+				<Original>%1&lt;br/&gt;Mag cost: %2</Original>
+				<Russian>%1&lt;br/&gt;Цена обоймы: %2</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopAction">
+				<Original>Exchange</Original>
+				<Russian>Торговать</Russian>
+			</Key>					
+		</Container>		
+		
+		<Container name="Notifications">
+			<Key ID="str_SATGv2_notfCapturedTitle">
+				<Original>SECTOR CLEAR</Original>
+				<Russian>СЕКТОР ЗАХВАЧЕН</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfSpawnTitle">
+				<Original>RESPAWN POINTS</Original>
+				<Russian>ТОЧКИ ВОЗРОЖДЕНИЯ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfSpawnText">
+				<Original>New spawn points is available.</Original>
+				<Russian>Доступен новый лагерь для возрождения!</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfShopTitle">
+				<Original>SHOP INFO</Original>
+				<Russian>МАГАЗИН</Russian>
+			</Key>
+		</Container>
+	</Package>
+</Project>

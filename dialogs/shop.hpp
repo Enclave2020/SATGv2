@@ -57,7 +57,7 @@ class shopUnified
 		class RscButton_1600: RscButton
 		{
 			idc = 1600;
-			text = "BUY"; //--- ToDo: Localize;
+			text = $STR_SATGv2_shopBuy;
 			x = 13 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
@@ -67,7 +67,7 @@ class shopUnified
 		class RscButton_1601: RscButton
 		{
 			idc = 1601;
-			text = "CLOSE"; //--- ToDo: Localize;
+			text = $STR_SATGv2_shopClose;
 			x = 30.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
@@ -85,7 +85,7 @@ class shopUnified
 		class RscStructuredText_1101: RscStructuredText
 		{
 			idc = 1101;
-			text = "CAPTION"; //--- ToDo: Localize;
+			//text = "CAPTION"; //--- ToDo: Localize;
 			x = 12.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 2 * GUI_GRID_H + GUI_GRID_Y;
 			w = 25.5 * GUI_GRID_W;
@@ -94,7 +94,7 @@ class shopUnified
 		class RscButton_1602: RscButton
 		{
 			idc = 1602;
-			text = "AMMO"; //--- ToDo: Localize;
+			text = $STR_SATGv2_shopAmmo;
 			x = 21.5 * GUI_GRID_W + GUI_GRID_X;
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 8 * GUI_GRID_W;
