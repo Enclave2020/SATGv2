@@ -14,13 +14,13 @@ $[
 */
 
 
-// onLBSelChanged = "(lbCurSel 1500) call SHOP_loadItem";
+// onLBSelChanged = "(lbCurSel 1500) call SATGv2_Shop_fnc_loadItem";
 
 class shopUnified
 {
     idd = 1400;
     movingEnable = true;
-	onLoad = "uiNameSpace setVariable ['shopUnified', _this select 0]; [] spawn SHOP_Init;";
+	onLoad = "uiNameSpace setVariable ['shopUnified', _this select 0]; [] spawn SATGv2_Shop_fnc_show;";
     class Controls
     {
 		
@@ -43,7 +43,7 @@ class shopUnified
 			y = 2 * GUI_GRID_H + GUI_GRID_Y;
 			w = 10.5 * GUI_GRID_W;
 			h = 21 * GUI_GRID_H;
-			onLBSelChanged = "(lbCurSel 1500) call SHOP_loadItem";
+			onLBSelChanged = "(lbCurSel 1500) call SATGv2_Shop_fnc_loadItem";
 		};
 		class RscPicture_1200: RscPicture
 		{
@@ -62,7 +62,7 @@ class shopUnified
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 7.5 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			action = "1 call SHOP_buyItem";
+			action = "1 call SATGv2_Shop_fnc_buyItem";
 		};
 		class RscButton_1601: RscButton
 		{
@@ -99,7 +99,7 @@ class shopUnified
 			y = 21 * GUI_GRID_H + GUI_GRID_Y;
 			w = 8 * GUI_GRID_W;
 			h = 2 * GUI_GRID_H;
-			action = "2 call SHOP_buyItem";
+			action = "2 call SATGv2_Shop_fnc_buyItem";
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END

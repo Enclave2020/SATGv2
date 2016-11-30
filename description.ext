@@ -1,8 +1,12 @@
 #include "dialogs\defines.hpp"
 #include "dialogs\hud.hpp"
 #include "dialogs\shop.hpp"
+#include "functions.cpp"
 
 respawnOnStart = -1;
+
+allowFunctionsLog = 1;
+allowFunctionsRecompile = 1;
 
 class CfgNotifications
 {
