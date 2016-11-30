@@ -13,4 +13,4 @@
 	player addMagazines [_current, _fullMagazines];
 	if (_lastMagazine > 0) then {player addMagazine [_current, _lastMagazine]};
 	
-	titleText [localize "str_SATGv2_ammoRepacked", "PLAIN", 1];
+	titleText [localize "str_SATGv2_ammoRepacked", "PLAIN DOWN", 1];

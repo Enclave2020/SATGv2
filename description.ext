@@ -1,6 +1,7 @@
 #include "dialogs\defines.hpp"
 #include "dialogs\hud.hpp"
 #include "dialogs\shop.hpp"
+#include "dialogs\menu.hpp"
 #include "functions.cpp"
 
 respawnOnStart = -1;
@@ -30,5 +31,34 @@ class CfgNotifications
 		iconPicture = "images\notificationShop.paa";
 		description = "%1";
 		color[] = {1,1,1,1};
+	};
+};
+
+class CfgHints
+{
+	class SATGv2
+	{
+		class Temperature
+		{
+			displayName = "Температура тела";
+			description = "Находясь на улице, температура Вашего тела падает. На %11 влияет несколько факторов:<br/>%2Время суток.<br/>%2Снежность.<br/>%2Скорость перемещения.<br/><br/>Переохлаждение влияет на скорость движения и действий, вплоть до смерти.<br/>Следите за %12 в правом нижнем углу экрана!";
+			tip = "Чтобы согреться побегайте, разведите костер или побудьте в помещении.";
+			arguments[] = {
+                {"температуру мира"},
+				{"индикатором"},
+			};
+			image = "images\hudTemp0.paa";
+		};
+		class Trader
+		{
+			displayName = "ТОРГОВЛЯ";
+			description = "";
+			tip = "Чтобы согреться побегайте, разведите костер или побудьте в помещении.";
+			arguments[] = {
+                {"температуру мира"},
+				{"индикатором"},
+			};
+			image = "images\notificationShop.paa";
+		};
 	};
 };

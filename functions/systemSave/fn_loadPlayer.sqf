@@ -15,7 +15,9 @@
 	player setVariable ["temperature", (_data select 5)];
 	
 	if (isMultiplayer) then {
-		if (_data select 6) then {[player, objNull] spawn FAR_Player_Unconscious};
+		if (_data select 6) then {[player, objNull, profileNameSpace getVariable ["SATGv2_FARBleed", 300]] spawn FAR_Player_Unconscious};
 	};
+	
+	player setVariable ["toolkitCount", (_data select 7)];
 	
 	if (uniform player == "") then {player forceAddUniform "U_BG_Guerrilla_6_1"};

@@ -25,5 +25,10 @@
 			};
 		}
 	};
+	
+	// И аптечек сюда
+	for "_i" from 1 to floor random (10 * chaosLevel) do {
+		_result param [1] pushBack "FirstAidKit";
+	};
 
 	_result

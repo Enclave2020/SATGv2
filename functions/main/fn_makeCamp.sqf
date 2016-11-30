@@ -4,7 +4,7 @@
 		player playAction "PutDown";
 		"Campfire_burning_F" createVehicle position player;
 		profileNamespace setVariable ["SATGv2LastCamp", dateToNumber date];
-		titleText [localize "str_SATGv2_campFireDone", "PLAIN", 1];
+		titleText [localize "str_SATGv2_campFireDone", "PLAIN DOWN", 1];
 	};
 	
-	titleText [localize "str_SATGv2_campFireWait", "PLAIN", 1];
+	titleText [localize "str_SATGv2_campFireWait", "PLAIN DOWN", 1];

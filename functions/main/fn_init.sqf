@@ -26,9 +26,10 @@ if (hasInterface) then {
 	}];
 	
 	// HotKeys
-	[25, [false, false, false], {[] spawn SATGv2_fnc_shareMoney}] call CBA_fnc_addKeyHandler;
-	[25, [false, true, false], {[] spawn SATGv2_fnc_repackMagazines}] call CBA_fnc_addKeyHandler;
-	[46, [false, true, false], {[] spawn SATGv2_fnc_makeCamp}] call CBA_fnc_addKeyHandler;
+	//[25, [false, false, false], {[] spawn SATGv2_fnc_shareMoney}] call CBA_fnc_addKeyHandler;
+	//[25, [false, true, false], {[] spawn SATGv2_fnc_repackMagazines}] call CBA_fnc_addKeyHandler;
+	//[46, [false, true, false], {[] spawn SATGv2_fnc_makeCamp}] call CBA_fnc_addKeyHandler;
+	[25, [false, false, false], {createDialog "SATGv2Menu"}] call CBA_fnc_addKeyHandler;
 	
 	// Silent mode
 	enableSentences False;

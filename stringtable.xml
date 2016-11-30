@@ -14,6 +14,18 @@
 				<Original>You repacked mags from you'r primary weapon.</Original>
 				<Russian>Вы перепаковали магазины основного оружия.</Russian>
 			</Key>
+			<Key ID="str_SATGv2_toolkitUse">
+				<Original>You fixed this dolly-tub.</Original>
+				<Russian>Вы починили это корыто.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_toolkitCantUse">
+				<Original>Looks like I can broke this!</Original>
+				<Russian>Думаю я могу это сломать!</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shareFail">
+				<Original>Throw money away?</Original>
+				<Russian>Деньги на ветер?</Russian>
+			</Key>				
 		</Container>
 		
 		<Container name="Shop">
@@ -52,6 +64,26 @@
 			<Key ID="str_SATGv2_shopAction">
 				<Original>Exchange</Original>
 				<Russian>Торговать</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopTeaNeedMoney">
+				<Original>You can't afford this tea!</Original>
+				<Russian>Вы не можете позволить себе этот чай!</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopTeaAction">
+				<Original>Drink tea (5000$)</Original>
+				<Russian>Выпить чаю (5000$)</Russian>
+			</Key>			
+			<Key ID="str_SATGv2_shopToolsAction">
+				<Original>Buy toolkit (6000$)</Original>
+				<Russian>Купить ремкомплект (6000$)</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shopToolsNeedMoney">
+				<Original>I need more money!</Original>
+				<Russian>Мне нужно больше денег!</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopToolsBought">
+				<Original>You bought toolkit.</Original>
+				<Russian>Вы купили ремкомплект.</Russian>
 			</Key>					
 		</Container>		
 		
@@ -71,6 +103,28 @@
 			<Key ID="str_SATGv2_notfShopTitle">
 				<Original>SHOP INFO</Original>
 				<Russian>МАГАЗИН</Russian>
+			</Key>
+		
+		<Container name="Menu">
+			<Key ID="str_SATGv2_menuClose">
+				<Original>Close</Original>
+				<Russian>Закрыть</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuMakeCamp">
+				<Original>Make campfire</Original>
+				<Russian>Развести огонь</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuRepackMags">
+				<Original>Repack mags</Original>
+				<Russian>Перепаковать магазины</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuRepair">
+				<Original>Use repair kit</Original>
+				<Russian>Использовать ремкомплект</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuShare">
+				<Original>Share 1000$</Original>
+				<Russian>Передать 1000$</Russian>
 			</Key>
 		</Container>
 	</Package>

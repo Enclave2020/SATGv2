@@ -45,7 +45,11 @@
 		["Rangefinder", 3000],
 		["H_HelmetSpecB", 3000],
 		["V_PlateCarrier2_blk", 4000],
-		["V_PlateCarrierSpec_blk", 7000]],
+		["V_PlateCarrierSpec_blk", 7000],
+		
+		// UNIFORMS
+		["U_O_CombatUniform_oucamo", 500],
+		["U_O_FullGhillie_sard", 3000]],
 		
 		// WEAPONS
 		((1 / (chaosLevel * 0.2)) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, round ((_x select 1) * 1000), round ((_x select 1) * 125)]}),

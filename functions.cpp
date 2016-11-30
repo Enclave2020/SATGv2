@@ -98,7 +98,10 @@ class CfgFunctions
 			class randomEquipCrate {};		
 			class randomizeSide {};
 			class randomSight  {};
-			class randomWeapon {};		
+			class randomWeapon {};	
+			class randomVest {};
+			class randomHelmet {};
+			class randomItems {};
 			class removeMagazines {};
 			class selectRandom  {};
 			class sights {};		
@@ -156,6 +159,9 @@ class CfgFunctions
 			class showMoney  {};
 			class subMoney  {};
 			class destroyBonus {};
+			class skipTime {};
+			class toolkitBuy {};
+			class toolkitUse {};
 			class init {postInit = 1;};								
 		};
 	};	
