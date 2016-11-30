@@ -21,6 +21,7 @@
 		["B_TacticalPack_blk", 3000],
 		["B_Kitbag_rgr", 4000],
 		["B_Carryall_oli", 5000],
+		["O_UAV_01_backpack_F", 7000],
 		["B_Bergen_hex_F", 10000]],
 		
 		// ITEMS
@@ -40,6 +41,7 @@
 		["B_IR_Grenade", 2000],
 		["H_HelmetB", 2000],
 		["V_PlateCarrier1_blk", 2000],
+		["O_UavTerminal", 3000],
 		["Rangefinder", 3000],
 		["H_HelmetSpecB", 3000],
 		["V_PlateCarrier2_blk", 4000],

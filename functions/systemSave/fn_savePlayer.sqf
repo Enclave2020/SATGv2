@@ -2,5 +2,5 @@
 	
 	if (!alive player) exitWith {};
 	
-	_data = [getPosATL player, damage player, direction player, getUnitLoadout player, player getVariable ["Food", [0, 0]], player getVariable ["temperature", 36], player getVariable ["far_isunconscious", 0] == 1];
+	_data = [getPosATL player, damage player, direction player, getUnitLoadout player, (call TFAR_fnc_activeSwRadio) call TFAR_fnc_getSwFrequency, player getVariable ["temperature", 36], player getVariable ["far_isunconscious", 0] == 1];
 	profileNamespace setVariable [_name + "_Player", _data];

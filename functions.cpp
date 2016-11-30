@@ -155,6 +155,7 @@ class CfgFunctions
 			class addMoney  {};
 			class showMoney  {};
 			class subMoney  {};
+			class destroyBonus {};
 			class init {postInit = 1;};								
 		};
 	};	

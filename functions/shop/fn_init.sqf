@@ -16,7 +16,7 @@ if (isServer) then {
 			sleep 1200;
 			if (random 1 > 0.7) then {
 				_sales = random 0.5;
-				["ShopInfo",[Format ["Распродажа на 10 минут! -%1%%", _sales]]] remoteExec ["bis_fnc_showNotification"];
+				["ShopInfo",[Format ["Распродажа на 10 минут! -%1%%", round _sales]]] remoteExec ["bis_fnc_showNotification"];
 				missionNamespace setVariable ["shopMul", 1 - _sales, True];
 				sleep 600;
 				["ShopInfo",["Распродажа закончилась."]] remoteExec ["bis_fnc_showNotification"];

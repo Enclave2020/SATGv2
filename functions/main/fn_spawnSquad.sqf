@@ -6,6 +6,11 @@
 	_grade = _logic getVariable ["sectorGrade", 0];
 	_points = (_grade + 1) ^ 3 * chaosLevel;
 	
+	// BEHAVIOUR
+	if (chaosLevel < 0.3) then {_group setBehaviour "SAFE"};	
+	if (chaosLevel > 0.4) then {_group setBehaviour "COMBAT"};
+	
+	
 	// COPTERS
 	while {_points > 150} do {
 		_position = [position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
@@ -42,5 +47,10 @@
 		_x addEventHandler ["Killed", {call SATGv2_fnc_unitKilled}];
 		_x call SATGv2_fnc_bodyInit;
 	} forEach units _group;
+	
+	_groupVehicles = (units _group) select {vehicle _x != _x};
+	{
+		_x addEventHandler ["Killed", {call SATGv2_fnc_destroyBonus}];
+	} forEach _groupVehicles;
 	
 	_group

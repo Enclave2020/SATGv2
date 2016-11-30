@@ -1,7 +1,7 @@
 if (hasInterface) then {
 	waitUntil{player == player};
 	
-	call SATGv2_fnc_campInit;
+	//call SATGv2_fnc_campInit;
 	//call FNC_friendlyFireInit;
 	
 	player addEventHandler ["Respawn", {

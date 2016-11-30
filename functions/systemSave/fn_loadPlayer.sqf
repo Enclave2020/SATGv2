@@ -6,7 +6,12 @@
 	player setDammage (_data select 1);
 	player setDir (_data select 2);
 	player setUnitLoadout (_data select 3);
-	player setVariable ["Food", (_data select 4)];
+
+	(_data param [4, "100"]) spawn {
+		sleep 5;
+		[call TFAR_fnc_activeSwRadio, 1, _this] call TFAR_fnc_SetChannelFrequency;
+	};
+	
 	player setVariable ["temperature", (_data select 5)];
 	
 	if (isMultiplayer) then {
