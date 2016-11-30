@@ -4,7 +4,6 @@ Storm At The Gates V2 is Capture The Island scenario with dynamically increasing
 Features:
 * Shops (vehicles, weapons, items, clothes).
 * Dynamic combat music.
-* Radio in vehicles.
 * Save system (all vehicles with items on the map; players position, health, equipment; weather, date, and time).
 * Dedicated server support.
 * Dynamic weather (including snow).

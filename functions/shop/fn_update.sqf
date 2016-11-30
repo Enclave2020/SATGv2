@@ -64,5 +64,4 @@
 			shopContent pushBack _item;
 		};
 	} forEach _shopsContent;
-	
-	missionNamespace setVariable ["shopContent", shopContent, True];
+	publicVariable "shopContent";

@@ -18,7 +18,7 @@
 	[_trigger, _logic] call SATGv2_Sector_fnc_triggerSetOwner;
 	
 	// SPAWN AND DESPAWN
-	_trigger setTriggerArea [700 / 2, 70 / 2, 0, True];
+	_trigger setTriggerArea [700 / 2, 700 / 2, 0, True];
 	_trigger setTriggerActivation ["EAST", "PRESENT", True];
 	_trigger setTriggerStatements ["this", "(thisTrigger call SATGv2_Sector_fnc_triggerOwner) call SATGv2_Sector_fnc_trySpawn", "(thisTrigger call SATGv2_Sector_fnc_triggerOwner) call SATGv2_Sector_fnc_tryDeSpawn"];	
 

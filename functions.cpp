@@ -51,7 +51,7 @@ class CfgFunctions
 			class showMoney {};
 			class showMoneySub {};
 			class update {};
-			class init {preInit = 1;};		
+			class init {postInit = 1;};		
 		};
 	};	
 	

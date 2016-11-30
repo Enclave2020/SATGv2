@@ -1,3 +1,4 @@
+	disableSerialization;
 	_delta = round param [0, 0];
 	
 	_display = uiNameSpace getVariable "SATGv2Hud";
