@@ -5,6 +5,9 @@
 
 respawnOnStart = -1;
 
+allowFunctionsLog = 1;
+allowFunctionsRecompile = 1;
+
 class CfgNotifications
 {
 	class SectorCaptured

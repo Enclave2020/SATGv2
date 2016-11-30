@@ -4,7 +4,7 @@ if (isServer) then {
 	// UPDATE ASSORT
 	[] spawn {
 		while {true} do {
-			call SHOP_Update;
+			call SATGv2_Shop_fnc_Update;
 			sleep 1800;
 			["ShopInfo",["Ассортимент обновлен."]] remoteExec ["bis_fnc_showNotification"];
 		};

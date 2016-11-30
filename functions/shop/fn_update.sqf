@@ -46,10 +46,10 @@
 		["V_PlateCarrierSpec_blk", 7000]],
 		
 		// WEAPONS
-		((1 / (chaosLevel * 0.2)) call FNC_SW_weapons apply {[_x select 0, round ((_x select 1) * 1000), round ((_x select 1) * 125)]}),
+		((1 / (chaosLevel * 0.2)) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, round ((_x select 1) * 1000), round ((_x select 1) * 125)]}),
 
 		// SIGHTS
-		((1 / (chaosLevel * 0.2)) call FNC_SW_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
+		((1 / (chaosLevel * 0.2)) call SATGv2_RandomEquip_fnc_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
 	];
 	(_shopsContent select 2) pushBack ["launch_NLAW_F", 2000, 500];
 	

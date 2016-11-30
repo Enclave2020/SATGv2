@@ -3,4 +3,4 @@
 	if (not isPlayer cursorObject) exitWith {};
 	
 	cursorObject remoteExec ["SATGv2_fnc_shareMoneyServer", 2];
-	1000 call FNC_subMoney;
+	1000 call SATGv2_fnc_subMoney;

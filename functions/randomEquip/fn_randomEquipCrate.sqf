@@ -1,6 +1,6 @@
 	params ["_position", "_grade"];
 	
-	_items = _grade call FNC_SW_randomEquip;
+	_items = _grade call SATGv2_RandomEquip_fnc_randomEquip;
 	
 	_crate = "B_CargoNet_01_ammo_F" createVehicle _position;
 	

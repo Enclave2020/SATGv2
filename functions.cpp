@@ -22,7 +22,7 @@ class CfgFunctions
 			class loadCargoItem {};
 			class loadCargo {};
 			class load {};
-			class init {postInit = 1};		
+			class init {postInit = 1;};		
 		};
 	};
 	
@@ -40,7 +40,7 @@ class CfgFunctions
 			class triggerSetOwner {};
 			class tryDeSpawn {};
 			class trySpawn {};
-			class init {postInit = 1};		
+			class init {preInit = 1;};		
 		};
 	};	
 	
@@ -51,7 +51,7 @@ class CfgFunctions
 			class showMoney {};
 			class showMoneySub {};
 			class update {};
-			class init {postInit = 1};		
+			class init {preInit = 1;};		
 		};
 	};	
 	
@@ -62,7 +62,7 @@ class CfgFunctions
 			class changer {};
 			class fogAndSnow  {};
 			class load {};
-			class init {postInit = 1};		
+			class init {preInit = 1;};		
 		};
 	};	
 	
@@ -72,7 +72,7 @@ class CfgFunctions
 		{
 			class saturation {};
 			class world  {};
-			class init {postInit = 1};		
+			class init {postInit = 1;};		
 		};
 	};
 	
@@ -119,7 +119,7 @@ class CfgFunctions
 			class loadItem {};
 			class show {};
 			class update {};
-			class init {postInit = 1};		
+			class init {postInit = 1;};		
 		};
 	};	
 	
@@ -131,7 +131,7 @@ class CfgFunctions
 			class handler {};
 			class nextMusic {};
 			class status {};
-			class init {postInit = 1};		
+			class init {postInit = 1;};		
 		};
 	};	
 	
@@ -155,7 +155,7 @@ class CfgFunctions
 			class addMoney  {};
 			class showMoney  {};
 			class subMoney  {};
-			class init {postInit = 1};								
+			class init {postInit = 1;};								
 		};
 	};	
 };

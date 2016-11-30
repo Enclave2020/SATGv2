@@ -1,3 +1,4 @@
+	disableSerialization;
 	_display = uiNameSpace getVariable "SATGv2Hud";
 	_setText = _display displayCtrl 1001;
 	_temp = round (player getVariable ["temperature", 36]);

@@ -4,7 +4,7 @@
 		{deleteVehicle _x} forEach vehicles;
 		profileNamespace setVariable [_name + "_Vehicles", nil];
 		profileNamespace setVariable [_name + "_World", nil];
-		call VEH_Spawn;
+		call SATGv2_fnc_randomVehicles;
 		
 		"restart" call BIS_fnc_endMissionServer;
 	};

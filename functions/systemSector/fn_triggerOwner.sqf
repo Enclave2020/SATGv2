@@ -1,2 +1,2 @@
-	params [_trigger];
+	params ["_trigger"];
 	_trigger getVariable ["owner", objNull]

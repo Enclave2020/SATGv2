@@ -8,10 +8,10 @@
 
 	ace_hearing_disableVolumeUpdate = true;
 	
-	call FNC_DM_eventInit;
+	call SATGv2_DynamicMusic_fnc_eventInit;
 	
-	addMusicEventHandler ["MusicStop", {call DM_PlayMusic}];
+	addMusicEventHandler ["MusicStop", {call SATGv2_DynamicMusic_fnc_playMusic}];
 
 	combatDecay = 0;
-	[] spawn FNC_DM_Status;
-	[] spawn FNC_DM_Handler;
+	[] spawn SATGv2_DynamicMusic_fnc_status;
+	[] spawn SATGv2_DynamicMusic_fnc_handler;

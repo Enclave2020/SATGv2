@@ -33,8 +33,8 @@
 		_points = _points - 1;
 	};	
 	
-	WEST call FNC_SW_RandomizeSide;
-	call FNC_Score_Init;
+	WEST call SATGv2_RandomEquip_fnc_RandomizeSide;
+	call SATGv2_Score_fnc_Init;
 	
 	[_group, position _logic, 100] call CBA_fnc_taskDefend;
 	

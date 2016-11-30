@@ -2,22 +2,22 @@
 	
 	_index = lbCurSel 1500;
 	_item = shopContent select _index;
-	_type = (_item select 0) call SHOP_itemConfig;
+	_type = (_item select 0) call SATGv2_Shop_fnc_itemConfig;
 	_price = (_item select _priceIndex) * shopMul;
 	
-	if (not (_price call SHOP_canBuy)) exitWith {};
+	if (not (_price call SATGv2_Shop_fnc_canBuy)) exitWith {};
 	
 	_price call FNC_subMoney;
 	playSound "bought";		
 	
 	_class = _item select 0;	
 	
-	if (_priceIndex == 2) exitWith {shopCrate addMagazineCargoGlobal [_class call SHOP_ammoType, 1]};
+	if (_priceIndex == 2) exitWith {shopCrate addMagazineCargoGlobal [_class call SATGv2_Shop_fnc_ammoType, 1]};
 	if (_type == "CfgVehicles") exitWith {
-		if ([_class, "vehicleClass"] call SHOP_itemInfo == "Backpacks") then {
+		if ([_class, "vehicleClass"] call SATGv2_Shop_fnc_itemInfo == "Backpacks") then {
 			shopCrate addBackpackCargoGlobal [_class, 1];
 		} else {
-			_class call SHOP_buyVehicle;
+			_class call SATGv2_Shop_fnc_buyVehicle;
 		};
 	};
 	

@@ -1,13 +1,13 @@
 if (hasInterface) then {
 	waitUntil{player == player};
 	
-	call FNC_campInit;
+	call SATGv2_fnc_campInit;
 	//call FNC_friendlyFireInit;
 	
 	player addEventHandler ["Respawn", {
 		//call FNC_friendlyFireInit;
-		call FNC_DM_eventInit;
-		call FNC_campInit;
+		call SATGv2_DynamicMusic_fnc_eventInit;
+		call SATGv2_fnc_campInit;
 		player setVariable ["temperature", 36];
 		player setUnitLoadout [["SMG_01_F","","","",["30Rnd_45ACP_Mag_SMG_01",30],[],""],[],[],["U_BG_Guerrilla_6_1",[["FirstAidKit",1],["30Rnd_45ACP_Mag_SMG_01",30,3]]],[],[],"","",[],["ItemMap","","","","",""]];
 	}];
@@ -22,13 +22,13 @@ if (hasInterface) then {
 	}];
 	
 	addMissionEventHandler ["PlayerDisconnected", {
-		GW_SaveName call FNC_GW_Save;
+		"SATGv2" call SATGv2_Saves_fnc_Save;
 	}];
 	
 	// HotKeys
-	[25, [false, false, false], {[] spawn FNC_shareMoney}] call CBA_fnc_addKeyHandler;
-	[25, [false, true, false], {[] spawn FNC_repackMagazines}] call CBA_fnc_addKeyHandler;
-	[46, [false, true, false], {[] spawn TEMP_makeCamp}] call CBA_fnc_addKeyHandler;
+	[25, [false, false, false], {[] spawn SATGv2_fnc_shareMoney}] call CBA_fnc_addKeyHandler;
+	[25, [false, true, false], {[] spawn SATGv2_fnc_repackMagazines}] call CBA_fnc_addKeyHandler;
+	[46, [false, true, false], {[] spawn SATGv2_fnc_makeCamp}] call CBA_fnc_addKeyHandler;
 };
 
 if (isServer) then {

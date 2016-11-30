@@ -4,6 +4,7 @@ if (hasInterface) then {
 
 if (isServer) then {
 	setTimeMultiplier 4;
+	thirsk_snowdens = 0;
 		[] spawn {
 		sleep 1;
 		
