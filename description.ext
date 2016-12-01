@@ -9,6 +9,8 @@ respawnOnStart = -1;
 allowFunctionsLog = 1;
 allowFunctionsRecompile = 1;
 
+loadScreen = "logo.paa";
+
 class CfgNotifications
 {
 	class SectorCaptured
