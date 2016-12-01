@@ -1,6 +1,7 @@
 	if (isNull cursorObject) exitWith {};
 	if (isPlayer cursorObject) exitWith {};
 	if (damage cursorObject == 0) exitWith {titleText [localize "str_SATGv2_toolkitCantUse", "PLAIN DOWN"];};
+	if ((player getVariable ["ToolkitCount", 0]) == 0) exitWith {};
 	
 	player playAction "PutDown";
 	_toolkits = player getVariable ["ToolkitCount", 0];
