@@ -162,6 +162,7 @@ class CfgFunctions
 			class skipTime {};
 			class toolkitBuy {};
 			class toolkitUse {};
+			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};								
 		};
 	};	

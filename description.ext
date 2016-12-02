@@ -9,7 +9,12 @@ respawnOnStart = -1;
 allowFunctionsLog = 1;
 allowFunctionsRecompile = 1;
 
+OnLoadName = "SATGv2";
 loadScreen = "logo.paa";
+
+skipLobby = 1;
+disableRandomization[] = {"All"};
+showSquadRadar = 1;
 
 class CfgNotifications
 {
