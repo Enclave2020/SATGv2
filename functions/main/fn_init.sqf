@@ -1,4 +1,5 @@
 if (hasInterface) then {
+	tf_no_auto_long_range_radio = True;
 	waitUntil{player == player};
 	
 	//call SATGv2_fnc_campInit;

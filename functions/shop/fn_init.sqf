@@ -24,6 +24,8 @@ if (isServer) then {
 			};
 		};
 	};
+	
+	[[trader, "SIT2", "ASIS"], BIS_fnc_ambientAnim] remoteExec ["call"];
 };
 
 if (hasInterface) then {
