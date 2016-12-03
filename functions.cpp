@@ -138,6 +138,20 @@ class CfgFunctions
 		};
 	};	
 	
+	class SATGv2_Quest
+	{
+		class questSystem
+		{
+			class begin {};
+			class avaible {};
+			class startRandom {};
+			class complete {};
+			class canStart {};
+			class campBravo {};
+			class oldFriend {};
+		};
+	};
+	
 	class SATGv2
 	{
 		class main
@@ -162,6 +176,7 @@ class CfgFunctions
 			class skipTime {};
 			class toolkitBuy {};
 			class toolkitUse {};
+			class spawnUnits {};
 			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};								
 		};
