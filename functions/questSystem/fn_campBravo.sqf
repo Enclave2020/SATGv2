@@ -1,8 +1,8 @@
 ﻿	[
-		["Торговец", "Значит так, вы не первые и не последние кто пытается свергнуть текущую власть.", 1], 
-		["Торговец", "Лет пять назад, когда ополчение было в силе, у них был свой лагерь - неприступная крепость.", 7], 
-		["Торговец", "Называли его просто лагерь 'Браво'.", 11], 
-		["Торговец", "Так как вы мне заплатили, я сведу вас с человеком что знает о его местоположении.", 15]
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questCampBravo1", 1], 
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questCampBravo2", 7], 
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questCampBravo3", 11], 
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questCampBravo4", 15]
 	] remoteExec ["BIS_fnc_EXP_camp_playSubtitles"];
 	
 	_group = createGroup CIVILIAN;
@@ -45,5 +45,7 @@
 	
 	waitUntil {sleep 1; {side _x == WEST} count ([4029.93,11659.1,-9.15527e-005] nearEntities ["Man", 150]) < 2};
 	["questCampBravoCapture", "SUCCEEDED", True] call BIS_FNC_taskSetState;		
+	
+	resp call SATGv2_fnc_campCreate;
 	
 	call SATGv2_Quest_fnc_complete;

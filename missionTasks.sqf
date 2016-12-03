@@ -3,7 +3,7 @@
 		[
 			EAST, 
 			_taskID, 
-			["", "Найдите информатора знающего о лагере 'Браво'."], 
+			["", localize "str_SATGv2_questCampTask1"], 
 			[5946.65,11197.2,0.000213623], 
 			"", 
 			1, 
@@ -19,7 +19,7 @@ case "questCampBravoSearchIntel2": {
 		[
 			EAST, 
 			_taskID, 
-			["", "Найдите данные о местоположении лагеря."], 
+			["", localize "str_SATGv2_questCampTask2"], 
 			[5946.65,11197.2,0.000213623], 
 			"", 
 			1, 
@@ -35,7 +35,7 @@ case "questCampBravoMovePointA": {
 		[
 			EAST, 
 			_taskID, 
-			["", "Проверьте местоположение А."], 
+			["", localize "str_SATGv2_questCampTask3"], 
 			[5305.81,5522.42,3.05176e-005], 
 			"", 
 			1, 
@@ -51,7 +51,7 @@ case "questCampBravoMovePointB": {
 		[
 			EAST, 
 			_taskID, 
-			["", "Проверьте местоположение B."], 
+			["", localize "str_SATGv2_questCampTask4"], 
 			[9752.35,12407.3,0.000213623], 
 			"", 
 			1, 
@@ -69,7 +69,7 @@ case "questCampBravoMovePointC": {
 		[
 			EAST, 
 			_taskID, 
-			["", "Проверьте местоположение C."], 
+			["", localize "str_SATGv2_questCampTask5"], 
 			[4029.93,11659.1,-9.15527e-005], 
 			"", 
 			1, 
@@ -85,7 +85,7 @@ case "questCampBravoCapture": {
 		[
 			EAST, 
 			_taskID, 
-			["", "Захватите лагерь 'Браво'."], 
+			["", localize "str_SATGv2_questCampTask6"], 
 			[0, 0, 0], 
 			"", 
 			1, 
@@ -101,7 +101,7 @@ case "questOldFriendMove": {
 		[
 			EAST, 
 			_taskID, 
-			["", "Найдите поставщика."], 
+			["", localize "str_SATGv2_questOldTask1"], 
 			[3120.17,9235.14,0.00143433], 
 			"", 
 			1, 
@@ -117,7 +117,7 @@ case "questOldFriendRescue": {
 		[
 			EAST, 
 			_taskID, 
-			["", "Доставьте поставщика к продавцу."], 
+			["", localize "str_SATGv2_questOldTask2"], 
 			position trader, 
 			"", 
 			1, 

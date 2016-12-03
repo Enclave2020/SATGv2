@@ -111,7 +111,7 @@
 				<Russian>Закрыть</Russian>
 			</Key>
 			<Key ID="str_SATGv2_menuMakeCamp">
-				<Original>Make campfire</Original>
+				<Original>Set a campfire</Original>
 				<Russian>Развести огонь</Russian>
 			</Key>
 			<Key ID="str_SATGv2_menuRepackMags">
@@ -126,6 +126,80 @@
 				<Original>Share 1000$</Original>
 				<Russian>Передать 1000$</Russian>
 			</Key>
+		</Container>
+		
+		<Container name="Quest">
+			<Key ID="str_SATGv2_questName">
+				<Original>Trader</Original>
+				<Russian>Торговец</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo1">
+				<Original>All right lads, you ain't first who's trying to bring down current folks in high places.</Original>
+				<Russian>Значит так, вы не первые и не последние кто пытается свергнуть текущую власть.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo2">
+				<Original>Around five years ago, when local guerrilla forces was in good stance they have their own HQ.</Original>
+				<Russian>Лет пять назад, когда ополчение было в силе, у них был свой лагерь - неприступная крепость.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo3">
+				<Original>Bravo. Bloody simple name for a place like that.</Original>
+				<Russian>Называли его просто - лагерь 'Браво'</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo4">
+				<Original>I will pull some strings to make an arrangement with a informator.</Original>
+				<Russian>Я сведу вас с человеком что знает о его местоположении.</Russian>
+			</Key>
+			
+			<Key ID="str_SATGv2_questCampTask1">
+				<Original>Learn whereabouts of informator.</Original>
+				<Russian>Найдите информатора знающего о лагере 'Браво'.</Russian>
+			</Key>			
+			<Key ID="str_SATGv2_questCampTask2">
+				<Original>Find data about camp 'Bravo' position.</Original>
+				<Russian>Найдите данные о местоположении лагеря.</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_questCampTask3">
+				<Original>Recon site A.</Original>
+				<Russian>Проверьте местоположение A.</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_questCampTask4">
+				<Original>Recon site B.</Original>
+				<Russian>Проверьте местоположение B.</Russian>
+			</Key>				
+			<Key ID="str_SATGv2_questCampTask5">
+				<Original>Recon site C.</Original>
+				<Russian>Проверьте местоположение C.</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_questCampTask6">
+				<Original>Secure Bravo camp.</Original>
+				<Russian>Захватите лагерь 'Браво'.</Russian>
+			</Key>	
+			
+			<Key ID="str_SATGv2_questOldFriend1">
+				<Original>I have one good supplier.</Original>
+				<Russian>У меня есть хороший поставщик.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldFriend2">
+				<Original>... he droped me some goods with reasonable prices.</Original>
+				<Russian>... он продавал мне товар по хорошим ценам.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldFriend3">
+				<Original>Not long time ago he was caught, this fool was trying to sell fighter jet.</Original>
+				<Russian>Недавно его разоблачили. Не стоило продавать истребитель.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldFriend4">
+				<Original>Rescue him.</Original>
+				<Russian>Спасите его.</Russian>
+			</Key>
+			
+			<Key ID="str_SATGv2_questOldTask1">
+				<Original>Find dealer.</Original>
+				<Russian>Найдите поставщика.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldTask2">
+				<Original>Deliver dealer to Trader.</Original>
+				<Russian>Доставьте поставщика к продавцу.</Russian>
+			</Key>			
 		</Container>
 	</Package>
 </Project>

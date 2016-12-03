@@ -1,8 +1,8 @@
 ﻿	[
-		["Торговец", "У меня есть хороший поставщик.", 1], 
-		["Торговец", ".. он продавал мне товар по хорошим ценам.", 7], 
-		["Торговец", "Недавно его разоблачили. Не стоило продавать истребитель.", 11], 
-		["Торговец", "Спасите его.", 15]
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questOldFriend1", 1], 
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questOldFriend2", 7], 
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questOldFriend3", 11], 
+		[localize "str_SATGv2_questName", localize "str_SATGv2_questOldFriend4", 15]
 	] remoteExec ["BIS_fnc_EXP_camp_playSubtitles"];
 	
 	["questOldFriendMove"] call BIS_fnc_missionTasks;

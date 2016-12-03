@@ -1,7 +1,7 @@
 	
 	_money = switch (SATGv2CurrentQuest) do {
-		case 0 : {2000};
-		case 1 : {4000};
+		case 0 : {3000};
+		case 1 : {5000};
 	};
 	
 	_money remoteExec ["SATGv2_fnc_addMoney"];

@@ -25,16 +25,6 @@ if (isServer) then {
 		};
 	};
 	
-	// QUESTS
-	[] spawn {
-		while {true} do {
-			sleep 3600;
-			if (random 1 > 0.6) then {
-				[] call SATGv2_Quest_fnc_startRandom;
-			};
-		};
-	};	
-	
 	[[trader, "SIT2", "ASIS"], BIS_fnc_ambientAnim] remoteExec ["call"];
 };
 

@@ -76,7 +76,7 @@ class RscTitles
 					size = 0.020;
 					colorBackground[] = {0,0,0,0};
 					colorText[] = {1,1,1,1};
-					text = "SATGv2 Alpha";
+					text = "SATGv2";
 					font = "PuristaSemiBold";
 					class Attributes{
 						font = "PuristaSemiBold";
