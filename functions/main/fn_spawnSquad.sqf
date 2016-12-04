@@ -32,21 +32,7 @@
 		_points = _points - 25;
 	};	
 	
-	// MAN
-	while {_points > 0} do {
-		"B_Soldier_F" createUnit [position _logic, _group];
-		_points = _points - 1;
-	};	
-	
-	WEST call SATGv2_RandomEquip_fnc_RandomizeSide;
-	call SATGv2_Score_fnc_Init;
-	
-	[_group, position _logic, 100] call CBA_fnc_taskDefend;
-	
-	{
-		_x addEventHandler ["Killed", {call SATGv2_fnc_unitKilled}];
-		_x call SATGv2_fnc_bodyInit;
-	} forEach units _group;
+	[_group, position _logic, _points, 100] call SATGv2_fnc_spawnUnits;
 	
 	_groupVehicles = (units _group) select {vehicle _x != _x};
 	{
