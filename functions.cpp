@@ -106,6 +106,7 @@ class CfgFunctions
 			class selectRandom  {};
 			class sights {};		
 			class weapons {};
+			class haveGL {};
 		};
 	};
 	

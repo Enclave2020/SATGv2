@@ -20,21 +20,21 @@ class CfgNotifications
 {
 	class SectorCaptured
 	{
-		title = $str_SATGv2_notfCapturedTitle;
+		title = $STR_SATGv2_notfCapturedTitle;
 		iconPicture = "images\notificationCaptured.paa";
 		description = "+%1$";
 		color[] = {0.44,0.96,0,1};
 	};
 	class SpawnCreated
 	{
-		title = $str_SATGv2_notfSpawnTitle;
+		title = $STR_SATGv2_notfSpawnTitle;
 		iconPicture = "images\notificationTent.paa";
 		description = $str_SATGv2_notfSpawnText;
 		color[] = {1,1,1,1};
 	};
 	class ShopInfo
 	{
-		title = $str_SATGv2_notfShopTitle;
+		title = $STR_SATGv2_notfShopTitle;
 		iconPicture = "images\notificationShop.paa";
 		description = "%1";
 		color[] = {1,1,1,1};

@@ -14,6 +14,7 @@ if (hasInterface) then {
 		call SATGv2_DynamicMusic_fnc_eventInit;
 		call SATGv2_fnc_campInit;
 		player setVariable ["temperature", 36];
+		player setUnitLoadout [["hgun_PDW2000_F","","","",["30Rnd_9x21_Mag",29],[],""],[],[],["U_BG_Guerrilla_6_1",[["FirstAidKit",1],["30Rnd_9x21_Mag",2,30]]],[],[],"","",[],["ItemMap","","","ItemCompass","",""]];
 	}];
 
 	player addEventHandler ["HandleDamage", {
@@ -60,6 +61,7 @@ if (hasInterface) then {
 };
 
 if (isServer) then {
+	// Remove body on disconnect
 	addMissionEventHandler ["HandleDisconnect", {
 		deleteVehicle param[0];
 	}];

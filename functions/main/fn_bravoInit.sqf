@@ -18,9 +18,9 @@
 	// AMMO BOX
 	ammoBox addAction [localize "str_SATGv2_actionAmmo", {
 		if (Time - (missionNameSpace getVariable ["LastAmmo", 0]) < 1800) exitWith {titleText [localize "str_SATGv2_ammoTimeout", "PLAIN DOWN"];};
+		missionNameSpace setVariable ["LastAmmo", Time];
 		if (random 1 < 0.7) exitWith {titleText [localize "str_SATGv2_ammoFail", "PLAIN DOWN"];};
 		
-		missionNameSpace setVariable ["LastAmmo", Time];
 		_ammoType = (currentWeapon player) call SATGv2_Shop_fnc_ammoType;
 		player addMagazine _ammoType;
 		titleText [localize "str_SATGv2_ammoOkay", "PLAIN DOWN"];
