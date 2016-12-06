@@ -1,6 +1,9 @@
 if (hasInterface) then {
-	tf_no_auto_long_range_radio = True;
-	tf_same_sw_frequencies_for_side = True;
+	if (call SATGv2_fnc_tfarInstalled) then {
+		tf_no_auto_long_range_radio = True;
+		tf_same_sw_frequencies_for_side = True;
+	};
+	
 	waitUntil{player == player};
 	
 	//call SATGv2_fnc_campInit;
@@ -47,10 +50,25 @@ if (hasInterface) then {
 			};
 		};
 	}];
+	
+	// Bravo camp init
+	call SATGv2_fnc_bravoInit;
+	
+	// PARA DROPS
+	[player, "Quad"] call BIS_fnc_addCommMenuItem;
+	[player, "Ammo"] call BIS_fnc_addCommMenuItem;
 };
 
 if (isServer) then {
 	addMissionEventHandler ["HandleDisconnect", {
 		deleteVehicle param[0];
 	}];
+		
+	// Money every hour
+	[] spawn {
+		while {true} do {
+			sleep 3600;
+			2000 remoteExec ["SATGv2_fnc_addMoney"];
+		};
+	};
 };

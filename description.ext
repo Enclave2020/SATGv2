@@ -72,12 +72,16 @@ class CfgHints
 
 class CfgCommunicationMenu
 {
-	class Attack;
-	class Bravo: Attack
+	class Quad
 	{
-		text = "Send in Bravo Team";
-		expression = "BIS_bravoGo = TRUE;";
-		icon = "\a3\ui_f\data\map\markers\nato\b_inf.paa";
-		removeAfterExpressionCall = 1;
+		text = $STR_SATGv2_dropQuad;
+		expression = "0 call SATGv2_fnc_paraDrop";
+		icon = "\A3\Soft_F\Quadbike_01\Data\UI\map_Quad_CA.paa";
+	};
+	class Ammo
+	{
+		text = $STR_SATGv2_dropAmmo;
+		expression = "1 call SATGv2_fnc_paraDrop";
+		icon = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
 	};
 };

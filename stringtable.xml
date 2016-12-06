@@ -200,6 +200,96 @@
 				<Original>Deliver dealer to Trader.</Original>
 				<Russian>Доставьте поставщика к продавцу.</Russian>
 			</Key>			
+			
+		<Container name="Repair">
+			<Key ID="str_SATGv2_actionRepair">
+				<Original>Repair</Original>
+				<Russian>Починить</Russian>
+			</Key>
+			<Key ID="str_SATGv2_repairNoVehicles">
+				<Original>No vehicles nearby.</Original>
+				<Russian>Нет техники рядом.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_repairNoDamaged">
+				<Original>All vehicles is okay.</Original>
+				<Russian>Нет поврежденной техники рядом.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_repairFixed">
+				<Original>Fixed using blue tape.</Original>
+				<Russian>Заизолированно синей изолентой.</Russian>
+			</Key>
 		</Container>
+		
+		<Container name="Heal">
+			<Key ID="str_SATGv2_actionHeal">
+				<Original>Bandage finger</Original>
+				<Russian>Перевязать палец</Russian>
+			</Key>
+			<Key ID="str_SATGv2_healOkay">
+				<Original>Uhm.. I'm allready fine.</Original>
+				<Russian>Хм.. передумал, мне и так хорошо.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_healFinished">
+				<Original>I'm ready!</Original>
+				<Russian>Годен!</Russian>
+			</Key>
+		</Container>
+
+		<Container name="Ammo">
+			<Key ID="str_SATGv2_actionAmmo">
+				<Original>Search for ammo</Original>
+				<Russian>Поискать патроны</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoTimeout">
+				<Original>I'm don't want search now.</Original>
+				<Russian>Я недавно искал, не хочу в опять.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoFail">
+				<Original>Only trash here.</Original>
+				<Russian>Тут только один мусор.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoOkay">
+				<Original>Yees! Ammo!</Original>
+				<Russian>Кооороообоооочкааааа!</Russian>
+			</Key>
+		</Container>
+		
+		<Container name="Skip">
+			<Key ID="str_SATGv2_actionSkip">
+				<Original>Watch YouTube. (10 hours)</Original>
+				<Russian>Посмотреть YouTube. (10 часов)</Russian>
+			</Key>
+			<Key ID="str_SATGv2_skipTimeout">
+				<Original>Only old videos avaible.</Original>
+				<Russian>Новых видео нет.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_skipNotLeader">
+				<Original>I need to ask %1.</Original>
+				<Russian>Нужно спросить у %1.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_skipOkay">
+				<Original>AHAHAHA! Oh.. time to go.</Original>
+				<Russian>АХАХАХАХХА! Ох.. пора идти.</Russian>
+			</Key>
+		</Container>
+		
+		<Container name="Drop">
+			<Key ID="str_SATGv2_dropQuad">
+				<Original>Quadbike paradrop (3000$)</Original>
+				<Russian>Сброс квадроцикла (3000$)</Russian>
+			</Key>
+			<Key ID="str_SATGv2_dropAmmo">
+				<Original>Ammo drop (8000$)</Original>
+				<Russian>Сброс патронов (8000$)</Russian>
+			</Key>
+			<Key ID="str_SATGv2_dropNeedMoney">
+				<Original>I need a dollar.</Original>
+				<Russian>Нужно больше золота.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_dropOkay">
+				<Original>Package inbound.</Original>
+				<Russian>Посылка в пути.</Russian>
+			</Key>
+		</Container>		
 	</Package>
 </Project>

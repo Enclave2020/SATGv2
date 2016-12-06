@@ -192,6 +192,9 @@ class CfgFunctions
 			class toolkitBuy {};
 			class toolkitUse {};
 			class spawnUnits {};
+			class TFARInstalled {};
+			class bravoInit {};
+			class paraDrop {};
 			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};								
 		};

@@ -21,6 +21,8 @@
 		["B_TacticalPack_blk", 3000],
 		["B_Kitbag_rgr", 4000],
 		["B_Carryall_oli", 5000],
+		["O_Mortar_01_support_F", 5000],
+		["O_Mortar_01_weapon_F", 5000],
 		["O_UAV_01_backpack_F", 7000],
 		["B_Bergen_hex_F", 10000]],
 		

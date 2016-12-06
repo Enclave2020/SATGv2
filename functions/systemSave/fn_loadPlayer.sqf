@@ -15,4 +15,14 @@
 	
 	player setVariable ["toolkitCount", (_data select 7)];
 	
+	if (call SATGv2_fnc_tfarInstalled) then {
+		_radioData = _data param [8, []];
+		_radioData spawn {
+			if (_this isEqualTo []) exitWith {};
+			sleep 5;
+			if (not call TFAR_fnc_haveSWRadio) exitWith {};
+			[call TFAR_fnc_activeSwRadio, _this] call TFAR_fnc_setSwSettings;
+		};
+	};
+	
 	if (uniform player == "") then {player forceAddUniform "U_BG_Guerrilla_6_1"};

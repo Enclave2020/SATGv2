@@ -18,3 +18,14 @@
 	clearMagazineCargoGlobal _vehicle;
 	clearItemCargoGlobal _vehicle;
 	clearBackpackCargoGlobal _vehicle;
+	
+	// TRACKER
+	_vehicle spawn {
+		_marker = createMarker [str random 1000, [0, 0, 0]];
+		_marker setMarkerText ([typeOf _this, "displayName"] call SATGv2_Shop_fnc_itemInfo);
+		_marker setMarkerType "respawn_motor";
+		while {(position _this select 2) > 1} do {
+			_marker setMarkerPos position _this;
+			sleep 1;
+		};
+	};
