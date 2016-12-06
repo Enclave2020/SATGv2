@@ -34,8 +34,8 @@
 				<Russian>Ассортимент обновлен.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_shopSales">
-				<Original>Flash sale, 10 minutes only. -%1%%.</Original>
-				<Russian>Распродажа на 10 минут! -%1%%.</Russian>
+				<Original>Flash sale, 10 minutes only. -%1%2.</Original>
+				<Russian>Распродажа на 10 минут! -%1%2.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_shopSalesEnd">
 				<Original>Sale is over.</Original>

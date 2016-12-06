@@ -69,3 +69,15 @@ class CfgHints
 		};
 	};
 };
+
+class CfgCommunicationMenu
+{
+	class Attack;
+	class Bravo: Attack
+	{
+		text = "Send in Bravo Team";
+		expression = "BIS_bravoGo = TRUE;";
+		icon = "\a3\ui_f\data\map\markers\nato\b_inf.paa";
+		removeAfterExpressionCall = 1;
+	};
+};

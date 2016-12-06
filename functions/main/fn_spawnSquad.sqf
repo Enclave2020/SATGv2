@@ -28,7 +28,7 @@
 	
 	// APC
 	while {_points > 25} do {
-		[[position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos, 0, "B_APC_Wheeled_01_cannon_F", _group] call bis_fnc_spawnvehicle;
+		[[position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos, 0, selectRandom ["B_APC_Wheeled_01_cannon_F", "B_APC_Tracked_01_rcws_F"], _group] call bis_fnc_spawnvehicle;
 		_points = _points - 25;
 	};	
 	
@@ -37,6 +37,10 @@
 	_groupVehicles = (units _group) select {vehicle _x != _x};
 	{
 		_x addEventHandler ["Killed", {call SATGv2_fnc_destroyBonus}];
+		clearWeaponCargoGlobal _x;
+		clearMagazineCargoGlobal _x;
+		clearItemCargoGlobal _x;
+		clearBackpackCargoGlobal _x;
 	} forEach _groupVehicles;
 	
 	_group
