@@ -19,7 +19,7 @@
 	
 	// SPAWN AND DESPAWN
 	_trigger setTriggerArea [700 / 2, 700 / 2, 0, True];
-	_trigger setTriggerActivation ["independent", "PRESENT", True];
+	_trigger setTriggerActivation ["GUER", "PRESENT", True];
 	_trigger setTriggerStatements ["this", "(thisTrigger call SATGv2_Sector_fnc_triggerOwner) call SATGv2_Sector_fnc_trySpawn", "(thisTrigger call SATGv2_Sector_fnc_triggerOwner) call SATGv2_Sector_fnc_tryDeSpawn"];	
 
 	_logic setVariable ["Marker", [position _logic, False] call SATGv2_Sector_fnc_createMarker];
