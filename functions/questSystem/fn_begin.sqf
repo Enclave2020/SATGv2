@@ -5,4 +5,5 @@
 	switch (_index) do {
 		case 0 : {remoteExec ["SATGv2_Quest_fnc_campBravo", 2]};
 		case 1 : {remoteExec ["SATGv2_Quest_fnc_oldFriend", 2]};
+		case 2 : {remoteExec ["SATGv2_Quest_fnc_towerDemolition", 2]}
 	};

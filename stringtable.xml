@@ -25,7 +25,7 @@
 			<Key ID="str_SATGv2_shareFail">
 				<Original>Throw money away?</Original>
 				<Russian>Деньги на ветер?</Russian>
-			</Key>				
+			</Key>							
 		</Container>
 		
 		<Container name="Shop">
@@ -84,7 +84,15 @@
 			<Key ID="str_SATGv2_shopToolsBought">
 				<Original>You bought toolkit.</Original>
 				<Russian>Вы купили ремкомплект.</Russian>
-			</Key>					
+			</Key>		
+			<Key ID="str_SATGv2_shopVehiclePoint">
+				<Original>Choose drop point (SHIFT + LMB).</Original>
+				<Russian>Выберите точку сброса (SHIFT + ЛКМ).</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopVehicleDroped">
+				<Original>Vehicle droped.</Original>
+				<Russian>Техника сброшена.</Russian>
+			</Key>							
 		</Container>		
 		
 		<Container name="Notifications">
@@ -199,7 +207,25 @@
 			<Key ID="str_SATGv2_questOldTask2">
 				<Original>Deliver dealer to Trader.</Original>
 				<Russian>Доставьте поставщика к продавцу.</Russian>
-			</Key>			
+			</Key>		
+			
+			<Key ID="str_SATGv2_questTowerDemolition">
+				<Original>Destroy radiotower.</Original>
+				<Russian>Уничтожьте радиовышку.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_questTowerDemolition1">
+				<Original>I reported about one radio tower.</Original>
+				<Russian>Мне тут сообщили об одной радиовышке.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_questTowerDemolition2">
+				<Original>Trought this tower enemy forces have link with out world.</Original>
+				<Russian>Через неё вражеские силы держат связь с внешним миром.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_questTowerDemolition3">
+				<Original>Destroy it to lower enemy force.</Original>
+				<Russian>Если уничтожите её, то ослабите их влияние.</Russian>
+			</Key>		
+		</Container>			
 			
 		<Container name="Repair">
 			<Key ID="str_SATGv2_actionRepair">
@@ -275,8 +301,8 @@
 		
 		<Container name="Drop">
 			<Key ID="str_SATGv2_dropQuad">
-				<Original>Quadbike paradrop (3000$)</Original>
-				<Russian>Сброс квадроцикла (3000$)</Russian>
+				<Original>Quadbike paradrop (2000$)</Original>
+				<Russian>Сброс квадроцикла (2000$)</Russian>
 			</Key>
 			<Key ID="str_SATGv2_dropAmmo">
 				<Original>Ammo drop (8000$)</Original>
@@ -290,6 +316,18 @@
 				<Original>Package inbound.</Original>
 				<Russian>Посылка в пути.</Russian>
 			</Key>
+			<Key ID="str_SATGv2_dropArt">
+				<Original>Mortar fire. (5000$)</Original>
+				<Russian>Арт. обстрел. (5000$)</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_dropArtSelect">
+				<Original>Choose fire point (SHIFT + LMB).</Original>
+				<Russian>Выберите точку обстрела (SHIFT + ЛКМ).</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_dropArtFire">
+				<Original>Support in the way!</Original>
+				<Russian>Поддержка в пути!</Russian>
+			</Key>				
 		</Container>		
 	</Package>
 </Project>

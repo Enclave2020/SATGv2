@@ -1,5 +1,4 @@
-	params ["_type"];
-	_pos = getMarkerPos "shopVehicleDrop";
+	params ["_type", "_pos"];
 	_pos = [_pos select 0, _pos select 1, 200];
 
 	_isHeli = getNumber (configFile >> "CfgVehicles" >> _type >> "type") == 2;
@@ -21,7 +20,7 @@
 	
 	// TRACKER
 	_vehicle spawn {
-		_marker = createMarker [str random 1000, [0, 0, 0]];
+		_marker = createMarker [str random 1000, position _this];
 		_marker setMarkerText ([typeOf _this, "displayName"] call SATGv2_Shop_fnc_itemInfo);
 		_marker setMarkerType "respawn_motor";
 		while {(position _this select 2) > 1} do {
@@ -29,3 +28,5 @@
 			sleep 1;
 		};
 	};
+	
+	titleText [localize "str_SATGv2_shopVehicleDroped", "PLAIN DOWN"];

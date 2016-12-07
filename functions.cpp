@@ -123,6 +123,7 @@ class CfgFunctions
 			class loadItem {};
 			class show {};
 			class update {};
+			class buyVehicleEx {};
 			class init {postInit = 1;};		
 		};
 	};	
@@ -150,6 +151,7 @@ class CfgFunctions
 			class canStart {};
 			class campBravo {};
 			class oldFriend {};
+			class towerDemolition {};
 			class init {postInit = 1;};
 		};
 	};
@@ -196,6 +198,8 @@ class CfgFunctions
 			class TFARInstalled {};
 			class bravoInit {};
 			class paraDrop {};
+			class artShot {};
+			class artShotEx {};
 			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};								
 		};

@@ -58,6 +58,7 @@ if (hasInterface) then {
 	// PARA DROPS
 	[player, "Quad"] call BIS_fnc_addCommMenuItem;
 	[player, "Ammo"] call BIS_fnc_addCommMenuItem;
+	//[player, "Art"] call BIS_fnc_addCommMenuItem;
 };
 
 if (isServer) then {

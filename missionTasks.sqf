@@ -1,7 +1,7 @@
 ﻿case "questCampBravoSearchIntel": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questCampTask1"], 
 			[5946.65,11197.2,0.000213623], 
@@ -17,7 +17,7 @@
 case "questCampBravoSearchIntel2": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questCampTask2"], 
 			[5946.65,11197.2,0.000213623], 
@@ -33,7 +33,7 @@ case "questCampBravoSearchIntel2": {
 case "questCampBravoMovePointA": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questCampTask3"], 
 			[5305.81,5522.42,3.05176e-005], 
@@ -49,7 +49,7 @@ case "questCampBravoMovePointA": {
 case "questCampBravoMovePointB": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questCampTask4"], 
 			[9752.35,12407.3,0.000213623], 
@@ -67,7 +67,7 @@ case "questCampBravoMovePointB": {
 case "questCampBravoMovePointC": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questCampTask5"], 
 			[4029.93,11659.1,-9.15527e-005], 
@@ -83,7 +83,7 @@ case "questCampBravoMovePointC": {
 case "questCampBravoCapture": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questCampTask6"], 
 			[0, 0, 0], 
@@ -99,7 +99,7 @@ case "questCampBravoCapture": {
 case "questOldFriendMove": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questOldTask1"], 
 			[3120.17,9235.14,0.00143433], 
@@ -115,7 +115,7 @@ case "questOldFriendMove": {
 case "questOldFriendRescue": {
 	if (_taskState == "") then {
 		[
-			EAST, 
+			independent, 
 			_taskID, 
 			["", localize "str_SATGv2_questOldTask2"], 
 			position trader, 
@@ -123,6 +123,22 @@ case "questOldFriendRescue": {
 			1, 
 			True, 
 			"move", 
+			True
+		] call BIS_fnc_taskCreate;
+	};
+};
+
+case "questTowerDemolition": {
+	if (_taskState == "") then {
+		[
+			independent, 
+			_taskID, 
+			["", localize "str_SATGv2_questTowerDemolition"], 
+			[6564.14, 3404.02, 0], 
+			"", 
+			1, 
+			True, 
+			"destroy", 
 			True
 		] call BIS_fnc_taskCreate;
 	};

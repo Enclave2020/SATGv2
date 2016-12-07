@@ -84,4 +84,10 @@ class CfgCommunicationMenu
 		expression = "1 call SATGv2_fnc_paraDrop";
 		icon = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
 	};
+	class Art
+	{
+		text = $STR_SATGv2_dropArt;
+		expression = "call SATGv2_fnc_artShotEx";
+		icon = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\mortar_ca.paa";
+	};
 };
