@@ -16,6 +16,10 @@
 	for "_i" from 1 to 5 do {_unit addItemToVest _magazine};
 	_unit addWeapon _weapon;
 	
+	if (_weapon call SATGv2_RandomEquip_fnc_haveGL) then {
+		_unit addMagazines ["1Rnd_HE_Grenade_shell", floor random 4 + 1];
+	};
+	
 	if (random 1 > (1 - (chaosLevel * 0.5))) then {
 		_unit addBackpack "B_AssaultPack_khk";
 		_unit addWeapon "launch_NLAW_F";

@@ -1,7 +1,9 @@
+	if ((player getVariable ["ToolkitCount", 0]) == 0) exitWith {};
 	if (isNull cursorObject) exitWith {};
 	if (isPlayer cursorObject) exitWith {};
-	if (damage cursorObject == 0) exitWith {titleText [localize "str_SATGv2_toolkitCantUse", "PLAIN DOWN"];};
-	if ((player getVariable ["ToolkitCount", 0]) == 0) exitWith {};
+	_damaged = selectMax (getAllHitPointsDamage cursorObject select 2) > 0;
+	if (not _damaged) exitWith {titleText [localize "str_SATGv2_toolkitCantUse", "PLAIN DOWN"];};
+	
 	
 	player playAction "PutDown";
 	_toolkits = player getVariable ["ToolkitCount", 0];

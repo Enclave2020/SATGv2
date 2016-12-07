@@ -34,7 +34,7 @@
 	["questCampBravoMovePointB"] call BIS_fnc_missionTasks;
 	["questCampBravoMovePointC"] call BIS_fnc_missionTasks;
 	
-	waitUntil {sleep 1; {side _x == EAST} count ([4029.93,11659.1,-9.15527e-005] nearEntities ["Man", 30]) > 0};
+	waitUntil {sleep 1; {side _x == independent} count ([4029.93,11659.1,-9.15527e-005] nearEntities ["Man", 30]) > 0};
 	
 	["questCampBravoMovePointC", "SUCCEEDED", True] call BIS_FNC_taskSetState;
 	["questCampBravoMovePointA", "SUCCEEDED", True] call BIS_FNC_taskSetState;

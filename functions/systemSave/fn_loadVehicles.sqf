@@ -12,5 +12,12 @@
 				[_vehicle, _x select 4] call SATGv2_Save_fnc_loadCargo;
 				_vehicle setFuel (_x select 5);
 				_vehicle setVectorUp (_x select 6);
+				
+				// AMMO
+				_ammoInfo = _x param [7, []];
+				if (count _ammoInfo > 0) then {
+					_vehicle setVehicleAmmo 0;
+					{_vehicle addMagazineTurret [_x select 0, _x select 1, _x select 2]} forEach _ammoInfo;
+				};
 			};
 	} forEach _data;

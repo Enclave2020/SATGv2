@@ -106,6 +106,7 @@ class CfgFunctions
 			class selectRandom  {};
 			class sights {};		
 			class weapons {};
+			class haveGL {};
 		};
 	};
 	
@@ -122,6 +123,7 @@ class CfgFunctions
 			class loadItem {};
 			class show {};
 			class update {};
+			class buyVehicleEx {};
 			class init {postInit = 1;};		
 		};
 	};	
@@ -149,6 +151,7 @@ class CfgFunctions
 			class canStart {};
 			class campBravo {};
 			class oldFriend {};
+			class towerDemolition {};
 			class init {postInit = 1;};
 		};
 	};
@@ -192,6 +195,13 @@ class CfgFunctions
 			class toolkitBuy {};
 			class toolkitUse {};
 			class spawnUnits {};
+			class TFARInstalled {};
+			class bravoInit {};
+			class paraDrop {};
+			class artShot {};
+			class artShotEx {};
+			class ammoBuy {};
+			class ammoUse {};
 			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};								
 		};

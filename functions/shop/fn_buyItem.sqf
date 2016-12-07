@@ -16,7 +16,7 @@
 		if ([_class, "vehicleClass"] call SATGv2_Shop_fnc_itemInfo == "Backpacks") then {
 			shopCrate addBackpackCargoGlobal [_class, 1];
 		} else {
-			_class call SATGv2_Shop_fnc_buyVehicle;
+			_class call SATGv2_Shop_fnc_buyVehicleEx;
 		};
 	};
 	

@@ -139,7 +139,7 @@ FAR_Player_Unconscious =
 			
 			_unit enableSimulation true;
 			_unit allowDamage true;
-			_unit setDamage 0;
+			_unit setDamage 0.7;
 			_unit setCaptive false;
 			
 			_unit playMove "amovppnemstpsraswrfldnon";

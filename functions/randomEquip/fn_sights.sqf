@@ -8,4 +8,5 @@
 	["optic_DMS", 0.92 * _mul],
 	["optic_KHS_blk", 0.95 * _mul],
 	["optic_LRPS", 0.99 * _mul],
-	["optic_tws_mg", 0.995 * _mul]]
+	["optic_tws_mg", 0.995 * _mul],
+	["optic_Nightstalker", 0.999 * _mul]]

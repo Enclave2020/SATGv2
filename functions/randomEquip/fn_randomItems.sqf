@@ -12,7 +12,6 @@
 		["Laserdesignator_02", 0.90]
 	] apply {[_x select 0, (_x select 1) * (0.7 / chaosLevel)]};
 	
-	
 	removeAllItems _unit;
 	removeAllAssignedItems _unit;
 	

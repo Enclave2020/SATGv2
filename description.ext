@@ -20,21 +20,21 @@ class CfgNotifications
 {
 	class SectorCaptured
 	{
-		title = $str_SATGv2_notfCapturedTitle;
+		title = $STR_SATGv2_notfCapturedTitle;
 		iconPicture = "images\notificationCaptured.paa";
 		description = "+%1$";
 		color[] = {0.44,0.96,0,1};
 	};
 	class SpawnCreated
 	{
-		title = $str_SATGv2_notfSpawnTitle;
+		title = $STR_SATGv2_notfSpawnTitle;
 		iconPicture = "images\notificationTent.paa";
 		description = $str_SATGv2_notfSpawnText;
 		color[] = {1,1,1,1};
 	};
 	class ShopInfo
 	{
-		title = $str_SATGv2_notfShopTitle;
+		title = $STR_SATGv2_notfShopTitle;
 		iconPicture = "images\notificationShop.paa";
 		description = "%1";
 		color[] = {1,1,1,1};
@@ -67,5 +67,27 @@ class CfgHints
 			};
 			image = "images\notificationShop.paa";
 		};
+	};
+};
+
+class CfgCommunicationMenu
+{
+	class Quad
+	{
+		text = $STR_SATGv2_dropQuad;
+		expression = "0 call SATGv2_fnc_paraDrop";
+		icon = "\A3\Soft_F\Quadbike_01\Data\UI\map_Quad_CA.paa";
+	};
+	class Ammo
+	{
+		text = $STR_SATGv2_dropAmmo;
+		expression = "1 call SATGv2_fnc_paraDrop";
+		icon = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
+	};
+	class Art
+	{
+		text = $STR_SATGv2_dropArt;
+		expression = "call SATGv2_fnc_artShotEx";
+		icon = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\mortar_ca.paa";
 	};
 };
