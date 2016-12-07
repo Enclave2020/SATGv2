@@ -1,5 +1,4 @@
 	params ["_group", "_position", "_count", "_defendRadius"];	
-
 	for "_i" from 1 to _count do {"B_Soldier_F" createUnit [_position, _group]};	
 	
 	WEST call SATGv2_RandomEquip_fnc_RandomizeSide;
