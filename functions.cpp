@@ -200,6 +200,8 @@ class CfgFunctions
 			class paraDrop {};
 			class artShot {};
 			class artShotEx {};
+			class ammoBuy {};
+			class ammoUse {};
 			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};								
 		};

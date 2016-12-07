@@ -25,4 +25,4 @@
 		};
 	};
 	
-	if (uniform player == "") then {player forceAddUniform "U_BG_Guerrilla_6_1"};
+	player setVariable ["ammoCount", (_data select 9)];

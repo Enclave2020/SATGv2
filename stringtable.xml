@@ -92,7 +92,19 @@
 			<Key ID="str_SATGv2_shopVehicleDroped">
 				<Original>Vehicle droped.</Original>
 				<Russian>Техника сброшена.</Russian>
-			</Key>							
+			</Key>		
+			<Key ID="str_SATGv2_shopAmmoAction">
+				<Original>Buy vehicle ammo (10000$)</Original>
+				<Russian>Купить боеприпасы для техники (10000$)</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_ammoUse">
+				<Original>Just not let down ammo crate.</Original>
+				<Russian>Чуть не уронил ящик с ракетами...</Russian>
+			</Key>			
+			<Key ID="str_SATGv2_shopAmmoBought">
+				<Original>Have no idea how. But crate in my pocket.</Original>
+				<Russian>Непонимаю как, но ящик поместился в карман.</Russian>
+			</Key>					
 		</Container>		
 		
 		<Container name="Notifications">
@@ -133,6 +145,10 @@
 			<Key ID="str_SATGv2_menuShare">
 				<Original>Share 1000$</Original>
 				<Russian>Передать 1000$</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuAmmo">
+				<Original>Refill ammo</Original>
+				<Russian>Пополнить боезапас</Russian>
 			</Key>
 		</Container>
 		

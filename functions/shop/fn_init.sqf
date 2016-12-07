@@ -32,4 +32,5 @@ if (hasInterface) then {
 	trader addAction [localize "str_SATGv2_shopAction", {createDialog "shopUnified"}];
 	trader addAction [localize "str_SATGv2_shopTeaAction", {[] spawn SATGv2_fnc_skipTime}];
 	tableTool addAction [localize "str_SATGv2_shopToolsAction", {[] spawn SATGv2_fnc_toolkitBuy}];
+	tableAmmo addAction [localize "str_SATGv2_shopAmmoAction", {[] spawn SATGv2_fnc_ammoBuy}];	
 };
