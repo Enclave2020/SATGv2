@@ -2,6 +2,7 @@
 #include "dialogs\hud.hpp"
 #include "dialogs\shop.hpp"
 #include "dialogs\menu.hpp"
+#include "dialogs\perks.hpp"
 #include "functions.cpp"
 
 respawnOnStart = -1;

@@ -170,6 +170,16 @@ class CfgFunctions
 		};
 	};
 	
+	class SATGv2_Perks
+	{
+		class perks
+		{
+			class tree {};
+			class active {};
+			class show {};
+		};
+	};
+	
 	class SATGv2
 	{
 		class main

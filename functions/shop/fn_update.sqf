@@ -13,12 +13,20 @@
 		["B_MRAP_01_F", 4000],
 		["B_MRAP_01_hmg_F", 6000],
 		["B_MRAP_01_gmg_F", 8000],
-		["B_UGV_01_rcws_F", 8000],
+		["I_UGV_01_rcws_F", 8000],
 		["B_Heli_Light_01_F", 10000],
-		["B_APC_Wheeled_01_cannon_F", 15000],
 		["B_Heli_Transport_01_F", 15000],
-		["B_APC_Tracked_01_rcws_F", 20000],
-		["B_MBT_01_cannon_F", 50000]],
+		["O_APC_Wheeled_02_rcws_F", 15000],
+		["B_APC_Wheeled_01_cannon_F", 17000],
+		["I_Heli_light_03_F", 20000],
+		["I_APC_Wheeled_03_cannon_F", 20000],
+		["O_APC_Tracked_02_cannon_F", 25000],
+		["I_APC_tracked_03_cannon_F", 30000],
+		["B_APC_Tracked_01_rcws_F", 40000],
+		["O_MBT_02_cannon_F", 50000],
+		["B_MBT_01_cannon_F", 60000],
+		["I_MBT_03_cannon_F", 70000],
+		["B_MBT_01_TUSK_F", 80000]],
 		
 		// BACKPACKS
 		[["B_AssaultPack_blk", 1000],
@@ -26,9 +34,9 @@
 		["B_TacticalPack_blk", 3000],
 		["B_Kitbag_rgr", 4000],
 		["B_Carryall_oli", 5000],
-		["O_Mortar_01_support_F", 5000],
-		["O_Mortar_01_weapon_F", 5000],
-		["O_UAV_01_backpack_F", 7000],
+		["I_Mortar_01_support_F", 5000],
+		["I_Mortar_01_weapon_F", 5000],
+		["I_UAV_01_backpack_F", 7000],
 		["B_Bergen_hex_F", 10000]],
 		
 		// ITEMS
@@ -60,7 +68,7 @@
 		["B_IR_Grenade", 2000],
 		["H_HelmetB", 2000],
 		["V_PlateCarrier1_blk", 2000],
-		["O_UavTerminal", 3000],
+		["I_UavTerminal", 3000],
 		["Rangefinder", 3000],
 		["H_HelmetSpecB", 3000],
 		["V_PlateCarrier2_blk", 4000],
@@ -80,10 +88,10 @@
 		["U_O_FullGhillie_sard", 3000]],
 		
 		// WEAPONS
-		((1 / (chaosLevel * 0.2)) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, round ((_x select 1) * 1000), round ((_x select 1) * 125)]}),
+		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, _x select 1, (_x select 1) / 6]}),
 
 		// SIGHTS
-		((1 / (chaosLevel * 0.2)) call SATGv2_RandomEquip_fnc_sights apply {[_x select 0, round ((_x select 1) * 1000)]})
+		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_sights)
 	];
 	(_shopsContent select 2) pushBack ["launch_NLAW_F", 2000, 500];
 	

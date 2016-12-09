@@ -6,7 +6,6 @@
 	_price = (_item select _priceIndex) * shopMul;
 	
 	if (not (_price call SATGv2_Shop_fnc_canBuy)) exitWith {};
-	
 	_price call SATGv2_fnc_subMoney;
 	
 	_class = _item select 0;	
