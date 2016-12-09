@@ -181,7 +181,9 @@ class CfgFunctions
 			class enabled {};
 			class active {};
 			class disableAll {};
-			class wallhack {};
+			class wallhackMan {};
+			class wallhackVeh {};
+			class wallhackCrate {};
 			class show {};
 		};
 	};

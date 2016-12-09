@@ -10,4 +10,10 @@
 	profileNameSpace setVariable ["SATGv2Perks", _enabled + [_perk select 0]];
 	profileNameSpace setVariable ["SATGv2Level", [_level, _xp, _points - 1]];
 	
+	switch (_perk select 0) do {
+		case "wallhack_crate" : {call SATGv2_Perks_fnc_wallhackCrate};
+		case "wallhack_man" : {call SATGv2_Perks_fnc_wallhackMan};
+		case "wallhack_veh" : {call SATGv2_Perks_fnc_wallhackVeh};
+	};
+	
 	0 call SATGv2_Perks_fnc_show;
