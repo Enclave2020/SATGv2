@@ -181,6 +181,7 @@ class CfgFunctions
 			class enabled {};
 			class active {};
 			class disableAll {};
+			class wallhack {};
 			class show {};
 		};
 	};
@@ -218,7 +219,8 @@ class CfgFunctions
 			class ammoBuy {};
 			class ammoUse {};
 			class skipBriefing {preInit = 1;};
-			class init {postInit = 1;};								
+			class init {postInit = 1;};			
+			class xp {postInit = 1;};
 		};
 	};	
 };

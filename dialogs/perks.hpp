@@ -67,6 +67,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1601: RscButton
 		{
@@ -78,6 +79,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1602: RscButton
 		{
@@ -89,6 +91,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1603: RscButton
 		{
@@ -100,6 +103,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1604: RscButton
 		{
@@ -111,6 +115,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1605: RscButton
 		{
@@ -122,6 +127,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1606: RscButton
 		{
@@ -133,6 +139,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1607: RscButton
 		{
@@ -144,6 +151,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1608: RscButton
 		{
@@ -155,6 +163,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1609: RscButton
 		{
@@ -166,6 +175,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1610: RscButton
 		{
@@ -177,6 +187,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1611: RscButton
 		{
@@ -188,6 +199,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1612: RscButton
 		{
@@ -199,6 +211,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		class RscButton_1613: RscButton
 		{
@@ -210,6 +223,7 @@ class SATGv2Perks
 			h = 0.056 * safezoneH;
 			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
+			sizeEx = 0.03;
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END
