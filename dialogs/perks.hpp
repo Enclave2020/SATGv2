@@ -65,6 +65,7 @@ class SATGv2Perks
 			y = 0.192 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1601: RscButton
@@ -75,7 +76,7 @@ class SATGv2Perks
 			y = 0.262 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
-			onButtonDown = "hint str _this";
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1602: RscButton
@@ -86,6 +87,7 @@ class SATGv2Perks
 			y = 0.332 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1603: RscButton
@@ -96,6 +98,7 @@ class SATGv2Perks
 			y = 0.402 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1604: RscButton
@@ -106,6 +109,7 @@ class SATGv2Perks
 			y = 0.262 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1605: RscButton
@@ -116,6 +120,7 @@ class SATGv2Perks
 			y = 0.332 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1606: RscButton
@@ -126,6 +131,7 @@ class SATGv2Perks
 			y = 0.402 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1607: RscButton
@@ -136,6 +142,7 @@ class SATGv2Perks
 			y = 0.192 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1608: RscButton
@@ -146,6 +153,7 @@ class SATGv2Perks
 			y = 0.262 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1609: RscButton
@@ -156,6 +164,7 @@ class SATGv2Perks
 			y = 0.332 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1610: RscButton
@@ -166,6 +175,7 @@ class SATGv2Perks
 			y = 0.402 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1611: RscButton
@@ -176,6 +186,7 @@ class SATGv2Perks
 			y = 0.262 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1612: RscButton
@@ -186,6 +197,7 @@ class SATGv2Perks
 			y = 0.332 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		class RscButton_1613: RscButton
@@ -196,6 +208,7 @@ class SATGv2Perks
 			y = 0.402 * safezoneH + safezoneY;
 			w = 0.0948093 * safezoneW;
 			h = 0.056 * safezoneH;
+			onButtonDown = "[2, _this] call SATGv2_Perks_fnc_show";
 			onMouseEnter = "[1, _this] call SATGv2_Perks_fnc_show";
 		};
 		////////////////////////////////////////////////////////

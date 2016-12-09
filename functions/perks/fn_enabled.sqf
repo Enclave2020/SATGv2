@@ -1,0 +1,1 @@
+	profileNameSpace getVariable ["SATGv2Perks", [""]]

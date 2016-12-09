@@ -175,7 +175,12 @@ class CfgFunctions
 		class perks
 		{
 			class tree {};
+			class canEnable {};
+			class description {};
+			class enable {};
+			class enabled {};
 			class active {};
+			class disableAll {};
 			class show {};
 		};
 	};

@@ -81,11 +81,16 @@
 		["muzzle_snds_M", 5000],
 		["muzzle_snds_L", 5000],
 		["muzzle_snds_acp", 5000],
-		["V_PlateCarrierSpec_blk", 7000],
+		["Laserdesignator_03", 5000],
+		["V_PlateCarrierIA2_dgtl", 6000],
+		["V_PlateCarrierSpec_blk", 10000],
+		["H_HelmetLeaderO_oucamo", 10000],
+		["H_HelmetO_ViperSP_ghex_F", 20000],
 		
 		// UNIFORMS
-		["U_O_CombatUniform_oucamo", 500],
-		["U_O_FullGhillie_sard", 3000]],
+		["U_I_CombatUniform", 1000],
+		["U_I_pilotCoveralls", 2000],
+		["U_I_FullGhillie_sard", 3000]],
 		
 		// WEAPONS
 		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, _x select 1, (_x select 1) / 6]}),
