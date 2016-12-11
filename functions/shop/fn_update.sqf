@@ -95,7 +95,7 @@
 		["U_I_FullGhillie_sard", 3000]],
 		
 		// WEAPONS
-		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, _x select 1, (_x select 1) / 6]}),
+		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, _x select 1, (_x select 1) / 12]}),
 
 		// SIGHTS
 		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_sights)
