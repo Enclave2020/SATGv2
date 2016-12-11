@@ -61,6 +61,9 @@ if (hasInterface) then {
 	if ("wallhack_crate" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackCrate};
 	if ("wallhack_man" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackMan};
 	if ("wallhack_veh" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackVeh};
+	
+	// Add terrain
+	if (getTerrainGrid > 25) then {setTerrainGrid 25};
 };
 
 if (isServer) then {
