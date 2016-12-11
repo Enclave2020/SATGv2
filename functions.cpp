@@ -72,7 +72,7 @@ class CfgFunctions
 		{
 			class saturation {};
 			class world  {};
-			class init {postInit = 1;};		
+			class init {};		
 		};
 	};
 	
