@@ -11,7 +11,7 @@
 	["questTowerDemolition", "ASSIGNED", True] call BIS_FNC_taskSetState;
 	
 	[createGroup WEST, _missionCenter, 20, 40] call SATGv2_fnc_spawnUnits;
-	waitUntil {sleep 1; damage _tower > 0.05};
+	waitUntil {sleep 1; damage _tower > 0.3};
 	_tower setDammage 1;
 
 	["questTowerDemolition", "SUCCEEDED", True] call BIS_FNC_taskSetState;

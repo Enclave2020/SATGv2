@@ -19,20 +19,10 @@
 		_radioData = _data param [8, []];
 		_radioData spawn {
 			if (_this isEqualTo []) exitWith {};
-			
-			sleep 3;
+			sleep 5;
 			if (not call TFAR_fnc_haveSWRadio) exitWith {};
-			
-			player unlinkItem (call TFAR_fnc_activeSwRadio);
-			player linkItem "itemRadio";
-			TF_last_request_time = 0;
-			[] spawn TFAR_fnc_requestRadios;
-			
-			sleep 3;
 			[call TFAR_fnc_activeSwRadio, _this] call TFAR_fnc_setSwSettings;
 		};
 	};
-	
-	
 	
 	player setVariable ["ammoCount", (_data select 9)];

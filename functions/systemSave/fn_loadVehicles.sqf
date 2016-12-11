@@ -19,11 +19,5 @@
 					_vehicle setVehicleAmmo 0;
 					{_vehicle addMagazineTurret [_x select 0, _x select 1, _x select 2]} forEach _ammoInfo;
 				};
-				
-				// UAV
-				_isUAV = getNumber (configFile >> "CfgVehicles" >> _x select 0 >> "isUav") == 1;
-				if (_isUAV) then {
-					createVehicleCrew _vehicle;
-				};
 			};
 	} forEach _data;
