@@ -1,10 +1,5 @@
-if (hasInterface) then {
-	[objNull, 8] exec "THIRSK_Snow.sqs";
-};
-
 if (isServer) then {
 	setTimeMultiplier 4;
-	thirsk_snowdens = 0;
 	0 setFog [1, 0];
 		[] spawn {
 			if (objNull isEqualTo (profileNamespace getVariable ["SATGv2_World", objNull])) then {
