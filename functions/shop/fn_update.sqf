@@ -29,7 +29,9 @@
 		["B_MBT_01_TUSK_F", 80000]],
 		
 		// BACKPACKS
-		[["B_AssaultPack_blk", 1000],
+		[
+		["B_Parachute", 500],
+		["B_AssaultPack_blk", 1000],
 		["B_FieldPack_blk", 2000],
 		["B_TacticalPack_blk", 3000],
 		["B_Kitbag_rgr", 4000],
