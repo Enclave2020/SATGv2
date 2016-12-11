@@ -22,11 +22,14 @@
 		["I_APC_Wheeled_03_cannon_F", 20000],
 		["O_APC_Tracked_02_cannon_F", 25000],
 		["I_APC_tracked_03_cannon_F", 30000],
+		["I_UAV_02_F", 30000],
 		["B_APC_Tracked_01_rcws_F", 40000],
 		["O_MBT_02_cannon_F", 50000],
 		["B_MBT_01_cannon_F", 60000],
 		["I_MBT_03_cannon_F", 70000],
-		["B_MBT_01_TUSK_F", 80000]],
+		["B_MBT_01_TUSK_F", 80000],
+		["I_Plane_Fighter_03_CAS_F", 100000]
+		],
 		
 		// BACKPACKS
 		[
