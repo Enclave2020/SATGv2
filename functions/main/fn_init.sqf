@@ -64,6 +64,9 @@ if (hasInterface) then {
 	
 	// Add terrain
 	if (getTerrainGrid > 25) then {setTerrainGrid 25};
+
+	// Disable animals
+	enableEnvironment False;
 };
 
 if (isServer) then {
