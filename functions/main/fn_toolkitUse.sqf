@@ -6,8 +6,14 @@
 	
 	
 	player playAction "PutDown";
-	_toolkits = player getVariable ["ToolkitCount", 0];
-	player setVariable ["ToolkitCount", (_toolkits - 1) max 0];
+	
+	if ("prob_repair" call SATGv2_Perks_fnc_active) then {
+		if (random 1 < 0.5) then {
+			_toolkits = player getVariable ["ToolkitCount", 0];
+			player setVariable ["ToolkitCount", (_toolkits - 1) max 0];		
+		};
+	};
+
 	titleText [localize "str_SATGv2_toolkitUse", "PLAIN DOWN"];
 	
 	call SATGv2_Hud_fnc_update;

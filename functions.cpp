@@ -170,6 +170,24 @@ class CfgFunctions
 		};
 	};
 	
+	class SATGv2_Perks
+	{
+		class perks
+		{
+			class tree {};
+			class canEnable {};
+			class description {};
+			class enable {};
+			class enabled {};
+			class active {};
+			class disableAll {};
+			class wallhackMan {};
+			class wallhackVeh {};
+			class wallhackCrate {};
+			class show {};
+		};
+	};
+	
 	class SATGv2
 	{
 		class main
@@ -203,7 +221,8 @@ class CfgFunctions
 			class ammoBuy {};
 			class ammoUse {};
 			class skipBriefing {preInit = 1;};
-			class init {postInit = 1;};								
+			class init {postInit = 1;};			
+			class xp {postInit = 1;};
 		};
 	};	
 };

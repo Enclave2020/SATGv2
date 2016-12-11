@@ -16,15 +16,6 @@ if (hasInterface) then {
 		player setVariable ["temperature", 36];
 		player setUnitLoadout [["hgun_PDW2000_F","","","",["30Rnd_9x21_Mag",29],[],""],[],[],["U_BG_Guerrilla_6_1",[["FirstAidKit",1],["30Rnd_9x21_Mag",2,30]]],[],[],"","",[],["ItemMap","","","ItemCompass","",""]];
 	}];
-
-	player addEventHandler ["HandleDamage", {
-		_returnDamage = (_this select 2);
-		if ((side (_this select 0)) isEqualTo (side (_this select 3))) then
-		{
-			_returnDamage = 0;
-		};
-		_returnDamage
-	}];
 	
 	addMissionEventHandler ["PlayerDisconnected", {
 		"SATGv2" call SATGv2_Saves_fnc_Save;
@@ -49,6 +40,10 @@ if (hasInterface) then {
 			if (damage _injured < _damage) then {
 				_injured setDamage 0;
 			};
+			
+		if ("prob_heal" call SATGv2_Perks_fnc_active) then {
+			if (random 1 > 0.5) then {player addItem "FirstAidKit";};
+		};
 		};
 	}];
 	
@@ -59,6 +54,16 @@ if (hasInterface) then {
 	[player, "Quad"] call BIS_fnc_addCommMenuItem;
 	[player, "Ammo"] call BIS_fnc_addCommMenuItem;
 	//[player, "Art"] call BIS_fnc_addCommMenuItem;
+	
+	// PERKS
+	if ("disable_stamina" call SATGv2_Perks_fnc_active) then {player enableStamina False};
+	
+	if ("wallhack_crate" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackCrate};
+	if ("wallhack_man" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackMan};
+	if ("wallhack_veh" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackVeh};
+	
+	// Disable animals
+	enableEnvironment False;
 };
 
 if (isServer) then {

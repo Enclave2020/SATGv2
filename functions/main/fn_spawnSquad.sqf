@@ -11,6 +11,7 @@
 	if (chaosLevel > 0.4) then {_group setBehaviour "COMBAT"};
 	
 	
+	/*
 	// COPTERS
 	while {_points > 150} do {
 		_position = [position _logic, 1, 50, 5, 0, 20, 0] call BIS_fnc_findSafePos;
@@ -19,6 +20,7 @@
 		[[_position select 0, _position select 1, 100], 0, "B_Heli_Attack_01_F", _group] call bis_fnc_spawnvehicle;
 		_points = _points - 150;
 	};
+	*/
 	
 	// TANKS
 	while {_points > 50} do {

@@ -17,7 +17,9 @@
 					player setVariable ["temperature", 36 min (_tempPlayer + (4.2 / _timeCoeff))];
 				} else {
 					// 0.056
-					_mulT = (((abs call SATGv2_Temperature_fnc_world) - 5) * 0.028 + 0.7) / _timeCoeff;
+					_mulGlobal = 0.056;
+					if ("red_freezing" call SATGv2_Perks_fnc_active) then {_mulGlobal = _mulGlobal / 2};
+					_mulT = (((abs call SATGv2_Temperature_fnc_world) - 5) * _mulGlobal + 0.7) / _timeCoeff;
 					_mulRun = speed player * (0.13 / _timeCoeff);			
 					player setVariable ["temperature", 36 min (_tempPlayer - (_mulT - _mulRun))];
 					

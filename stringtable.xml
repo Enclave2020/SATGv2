@@ -226,19 +226,19 @@
 			</Key>		
 			
 			<Key ID="str_SATGv2_questTowerDemolition">
-				<Original>Destroy radiotower.</Original>
+				<Original>Destroy radio tower.</Original>
 				<Russian>Уничтожьте радиовышку.</Russian>
 			</Key>		
 			<Key ID="str_SATGv2_questTowerDemolition1">
-				<Original>I reported about one radio tower.</Original>
+				<Original>I received reports about radio tower.</Original>
 				<Russian>Мне тут сообщили об одной радиовышке.</Russian>
 			</Key>		
 			<Key ID="str_SATGv2_questTowerDemolition2">
-				<Original>Trought this tower enemy forces have link with out world.</Original>
+				<Original>Through this antennae enemy forces have communication with outer world.</Original>
 				<Russian>Через неё вражеские силы держат связь с внешним миром.</Russian>
 			</Key>		
 			<Key ID="str_SATGv2_questTowerDemolition3">
-				<Original>Destroy it to lower enemy force.</Original>
+				<Original>Destroy that Ant Farm to sabotage enemy comms.</Original>
 				<Russian>Если уничтожите её, то ослабите их влияние.</Russian>
 			</Key>		
 		</Container>			
@@ -257,7 +257,7 @@
 				<Russian>Нет поврежденной техники рядом.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_repairFixed">
-				<Original>Fixed using blue tape.</Original>
+				<Original>Fixed using adhesive tape.</Original>
 				<Russian>Заизолированно синей изолентой.</Russian>
 			</Key>
 		</Container>
@@ -268,11 +268,11 @@
 				<Russian>Перевязать палец</Russian>
 			</Key>
 			<Key ID="str_SATGv2_healOkay">
-				<Original>Uhm.. I'm allready fine.</Original>
-				<Russian>Хм.. передумал, мне и так хорошо.</Russian>
+				<Original>Uhm... I'm allready fine.</Original>
+				<Russian>Хм... передумал, мне и так хорошо.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_healFinished">
-				<Original>I'm ready!</Original>
+				<Original>Ready for action!</Original>
 				<Russian>Годен!</Russian>
 			</Key>
 		</Container>
@@ -284,10 +284,10 @@
 			</Key>
 			<Key ID="str_SATGv2_ammoTimeout">
 				<Original>I'm don't want search now.</Original>
-				<Russian>Я недавно искал, не хочу в опять.</Russian>
+				<Russian>Я недавно искал, не хочу опять.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_ammoFail">
-				<Original>Only trash here.</Original>
+				<Original>Only useless trash here.</Original>
 				<Russian>Тут только один мусор.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_ammoOkay">
@@ -302,7 +302,7 @@
 				<Russian>Посмотреть YouTube. (10 часов)</Russian>
 			</Key>
 			<Key ID="str_SATGv2_skipTimeout">
-				<Original>Only old videos avaible.</Original>
+				<Original>Only watched videos avaible.</Original>
 				<Russian>Новых видео нет.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_skipNotLeader">
@@ -310,8 +310,8 @@
 				<Russian>Нужно спросить у %1.</Russian>
 			</Key>
 			<Key ID="str_SATGv2_skipOkay">
-				<Original>AHAHAHA! Oh.. time to go.</Original>
-				<Russian>АХАХАХАХХА! Ох.. пора идти.</Russian>
+				<Original>AHAHAHA! Oh... time to go.</Original>
+				<Russian>АХАХАХАХХА! Ох... пора идти.</Russian>
 			</Key>
 		</Container>
 		
@@ -341,9 +341,148 @@
 				<Russian>Выберите точку обстрела (SHIFT + ЛКМ).</Russian>
 			</Key>	
 			<Key ID="str_SATGv2_dropArtFire">
-				<Original>Support in the way!</Original>
+				<Original>Artillery firing!</Original>
 				<Russian>Поддержка в пути!</Russian>
 			</Key>				
 		</Container>		
+		
+		<Container name="Perks">
+			<Key ID="str_Perks_Menu">
+				<Original>Abilities</Original>
+				<Russian>Способности</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_needPoints">
+				<Original>Need more experience.</Original>
+				<Russian>Нужно больше опыта.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_one_man_army">
+				<Original>ONE MAN ARMY</Original>
+				<Russian>ЧЕЛОВЕК-АРМИЯ</Russian>
+			</Key>
+			<Key ID="str_Perks_one_man_army_desc">
+				<Original>From childhood you want to be a hero.</Original>
+				<Russian>Вы с детства мечтали стать героем боевиков.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_prob_heal">
+				<Original>True bandaging</Original>
+				<Russian>Правильная перевязка</Russian>
+			</Key>
+			<Key ID="str_Perks_prob_heal_desc">
+				<Original>Thanks to experience of bandaging finder, you learned to accurately measure length of bandages. Probability not consume FAK.</Original>
+				<Russian>Благодоря опыту перевязки пальцев Вы научились точно отмерять количество нужных бинтов. Вероятность не использовать аптечку.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_red_damage">
+				<Original>Scar skin</Original>
+				<Russian>Рубцовая кожа</Russian>
+			</Key>
+			<Key ID="str_Perks_red_damage_desc">
+				<Original>You hited so many bullets, so all skin in scars. Reduced damage by 33%</Original>
+				<Russian>В Вас попало столько пуль, что вся кожа в рубцах. Понижение урона на 33%.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_second_chance">
+				<Original>Second chance</Original>
+				<Russian>Второй шанс</Russian>
+			</Key>
+			<Key ID="str_Perks_second_chance_desc">
+				<Original>You aren't ready to die. Second life after die every 15 minutes.</Original>
+				<Russian>Вы еще не готовы умирать. Вторая жизнь при смерти каждые 15 минут.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_wallhack_crate">
+				<Original>Technologies I</Original>
+				<Russian>Технологии I</Russian>
+			</Key>
+			<Key ID="str_Perks_wallhack_crate_desc">
+				<Original>You have implanted link with satelite. Now you can see crates in 100 meters.</Original>
+				<Russian>В Вас установили имплант связи со спутником. Вы видите местоположение ящиков в радиусе 100 метров.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_wallhack_man">
+				<Original>Technologies II</Original>
+				<Russian>Технологии II</Russian>
+			</Key>
+			<Key ID="str_Perks_wallhack_man_desc">
+				<Original>Now with function of enemy detection in 20 meters.</Original>
+				<Russian>Теперь с функцией обнаружения врагов в 20 метрах.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_wallhack_veh">
+				<Original>Technologies III</Original>
+				<Russian>Технологии III</Russian>
+			</Key>
+			<Key ID="str_Perks_wallhack_veh_desc">
+				<Original>Now with function of vehicle detection in 200 meters.</Original>
+				<Russian>Теперь с функцией обнаружения транспорта в радиусе 200 метров.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_adaptation">
+				<Original>ADAPTATION</Original>
+				<Russian>АДАПТАЦИЯ</Russian>
+			</Key>
+			<Key ID="str_Perks_adaptation_desc">
+				<Original>All your life was in severe conditions.</Original>
+				<Russian>Всю жизнь Вы находились в суровых условиях.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_cd_fireplace">
+				<Original>Wood saving</Original>
+				<Russian>Экономия дров</Russian>
+			</Key>
+			<Key ID="str_Perks_cd_fireplace_desc">
+				<Original>You knows how much wood you need to make campfire. -50% cooldown of campfire.</Original>
+				<Russian>Вы знаете точно сколько дров нужно чтобы разжечь костер. -50% ожидание костра.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_red_freezing">
+				<Original>Sibirean man</Original>
+				<Russian>Сибирский человек</Russian>
+			</Key>
+			<Key ID="str_Perks_red_freezing_desc">
+				<Original>Warm clothes for wimps! -50% to freezing time.</Original>
+				<Russian>Теплая одежда для слабаков! -50% к скорости замерзания.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_disable_stamina">
+				<Original>Advanced training</Original>
+				<Russian>Продвинутая подготовка</Russian>
+			</Key>
+			<Key ID="str_Perks_disable_stamina_desc">
+				<Original>You running so much, so you stop to tire.</Original>
+				<Russian>Вы так много бегаете, что перестали уставать.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_prob_repair">
+				<Original>Gold hands</Original>
+				<Russian>Золотые руки</Russian>
+			</Key>
+			<Key ID="str_Perks_prob_repair_desc">
+				<Original>Now you not always brokes tools from repair kits. 50% chance to not consume toolkit.</Original>
+				<Russian>Теперь Вы не всегда ломаете ключи из ремкомплекта. 50% шанс не использовать ремнабор.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_prob_ammo">
+				<Original>Improved reloading</Original>
+				<Russian>Улучшенная зарядка</Russian>
+			</Key>
+			<Key ID="str_Perks_prob_ammo_desc">
+				<Original>You decide periodically take bullets from floor. 50% to not use ammo box.</Original>
+				<Russian>Вы решили время от времени все же поднимать пули с пола. 50% шанс не использовать ящик патронов.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_barter">
+				<Original>Barter</Original>
+				<Russian>Бартер</Russian>
+			</Key>		
+			<Key ID="str_Perks_barter_desc">
+				<Original>Once you was trader too.. But you trade papers. -33% price.</Original>
+				<Russian>Когда-то Вы тоже были торговцем. Правда торговали Вы газетами. -33% к ценам.</Russian>
+			</Key>		
+		</Container>	
+		
 	</Package>
 </Project>

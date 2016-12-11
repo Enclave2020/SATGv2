@@ -11,6 +11,9 @@ Features:
 * 170 sectors to capture! (with different difficulty and loot).
 * Temperature. (your temperature will decrease depending on world temperature).
 * Random equip and weapons at enemy.
+* Quests.
+* Random events.
+* Perks.
 
 #Required addons: (clickable)
 * [CBA3](http://www.armaholic.com/page.php?id=18767)
