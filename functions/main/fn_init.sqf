@@ -62,8 +62,8 @@ if (hasInterface) then {
 	if ("wallhack_man" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackMan};
 	if ("wallhack_veh" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackVeh};
 	
-	// Disable animals
-	enableEnvironment False;
+	// Add terrain
+	if (getTerrainGrid > 25) then {setTerrainGrid 25};
 };
 
 if (isServer) then {
