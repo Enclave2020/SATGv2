@@ -22,11 +22,14 @@
 		["I_APC_Wheeled_03_cannon_F", 20000],
 		["O_APC_Tracked_02_cannon_F", 25000],
 		["I_APC_tracked_03_cannon_F", 30000],
+		["I_UAV_02_F", 30000],
 		["B_APC_Tracked_01_rcws_F", 40000],
 		["O_MBT_02_cannon_F", 50000],
 		["B_MBT_01_cannon_F", 60000],
 		["I_MBT_03_cannon_F", 70000],
-		["B_MBT_01_TUSK_F", 80000]],
+		["B_MBT_01_TUSK_F", 80000],
+		["I_Plane_Fighter_03_CAS_F", 100000]
+		],
 		
 		// BACKPACKS
 		[
@@ -95,7 +98,7 @@
 		["U_I_FullGhillie_sard", 3000]],
 		
 		// WEAPONS
-		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, _x select 1, (_x select 1) / 6]}),
+		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, _x select 1, (_x select 1) / 12]}),
 
 		// SIGHTS
 		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_sights)
