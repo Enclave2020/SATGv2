@@ -1,0 +1,1 @@
+	(isNil (missionNameSpace getVariable ["SATGv2CurrentQuest", nil]))

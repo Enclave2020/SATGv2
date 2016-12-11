@@ -1,97 +1,94 @@
 #include "dialogs\defines.hpp"
 #include "dialogs\hud.hpp"
 #include "dialogs\shop.hpp"
+#include "dialogs\menu.hpp"
+#include "dialogs\perks.hpp"
+#include "functions.cpp"
 
 respawnOnStart = -1;
+
+allowFunctionsLog = 1;
+allowFunctionsRecompile = 1;
+
+OnLoadName = "SATGv2";
+loadScreen = "logo.paa";
+
+skipLobby = 1;
+disableRandomization[] = {"All"};
+showSquadRadar = 1;
 
 class CfgNotifications
 {
 	class SectorCaptured
 	{
-		title = "SECTOR CAPTURED";
+		title = $STR_SATGv2_notfCapturedTitle;
 		iconPicture = "images\notificationCaptured.paa";
 		description = "+%1$";
 		color[] = {0.44,0.96,0,1};
 	};
 	class SpawnCreated
 	{
-		title = "RESPAWN POINT ADDED";
+		title = $STR_SATGv2_notfSpawnTitle;
 		iconPicture = "images\notificationTent.paa";
-		description = "You have additional respawn point avaible!";
+		description = $str_SATGv2_notfSpawnText;
+		color[] = {1,1,1,1};
+	};
+	class ShopInfo
+	{
+		title = $STR_SATGv2_notfShopTitle;
+		iconPicture = "images\notificationShop.paa";
+		description = "%1";
 		color[] = {1,1,1,1};
 	};
 };
 
-class CfgSounds
+class CfgHints
 {
-	class money
+	class SATGv2
 	{
-		sound[] = {"\fx\money.ogg", 10, 1};
-		titles[] = {0,""};
-	};
-	class bought
-	{
-		sound[] = {"\fx\bought.ogg", 10, 1};
-		titles[] = {0,""};
+		class Temperature
+		{
+			displayName = "Температура тела";
+			description = "Находясь на улице, температура Вашего тела падает. На %11 влияет несколько факторов:<br/>%2Время суток.<br/>%2Снежность.<br/>%2Скорость перемещения.<br/><br/>Переохлаждение влияет на скорость движения и действий, вплоть до смерти.<br/>Следите за %12 в правом нижнем углу экрана!";
+			tip = "Чтобы согреться побегайте, разведите костер или побудьте в помещении.";
+			arguments[] = {
+                {"температуру мира"},
+				{"индикатором"},
+			};
+			image = "images\hudTemp0.paa";
+		};
+		class Trader
+		{
+			displayName = "ТОРГОВЛЯ";
+			description = "";
+			tip = "Чтобы согреться побегайте, разведите костер или побудьте в помещении.";
+			arguments[] = {
+                {"температуру мира"},
+				{"индикатором"},
+			};
+			image = "images\notificationShop.paa";
+		};
 	};
 };
 
-class CfgMusic
+class CfgCommunicationMenu
 {
-	// RADIO
-
-	class stray
+	class Quad
 	{
-		sound[] = {"\radio\stray.ogg", db+1, 2.0};
+		text = $STR_SATGv2_dropQuad;
+		expression = "0 call SATGv2_fnc_paraDrop";
+		icon = "\A3\Soft_F\Quadbike_01\Data\UI\map_Quad_CA.paa";
 	};
-
-	class radio0
+	class Ammo
 	{
-		sound[] = {"\radio\0.ogg", db+0, 1.0};
+		text = $STR_SATGv2_dropAmmo;
+		expression = "1 call SATGv2_fnc_paraDrop";
+		icon = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\supplydrop_ca.paa";
 	};
-	
-	class radio1
+	class Art
 	{
-		sound[] = {"\radio\1.ogg", db+0, 1.0};
-	};
-	
-	class radio2
-	{
-		sound[] = {"\radio\2.ogg", db+0, 1.0};
-	};
-	
-	class radio3
-	{
-		sound[] = {"\radio\3.ogg", db+0, 1.0};
-	};
-
-	class radio4
-	{
-		sound[] = {"\radio\4.ogg", db+0, 1.0};
-	};
-
-	class radio5
-	{
-		sound[] = {"\radio\5.ogg", db+0, 1.0};
-	};
-
-	class radio6
-	{
-		sound[] = {"\radio\6.ogg", db+0, 1.0};
-	};
-
-	class radio7
-	{
-		sound[] = {"\radio\7.ogg", db+0, 1.0};
-	};
-
-	class radio8
-	{
-		sound[] = {"\radio\8.ogg", db+0, 1.0};
-	};
-
-	class radio9
-	{
-		sound[] = {"\radio\9.ogg", db+0, 1.0};
+		text = $STR_SATGv2_dropArt;
+		expression = "call SATGv2_fnc_artShotEx";
+		icon = "\a3\ui_f\data\GUI\Cfg\CommunicationMenu\mortar_ca.paa";
 	};
 };

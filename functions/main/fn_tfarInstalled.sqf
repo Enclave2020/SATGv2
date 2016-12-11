@@ -1,0 +1,1 @@
+	isClass (configFile >> "cfgPatches" >> "task_force_radio")

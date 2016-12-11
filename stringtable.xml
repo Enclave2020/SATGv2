@@ -1,0 +1,488 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Project name="SATGv2">
+	<Package name="Text">
+		<Container name="Main">
+			<Key ID="str_SATGv2_campFireDone">
+				<Original>You placed some campfire.</Original>
+				<Russian>Вы развели костер.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_campFireWait">
+				<Original>You can't place campfire now.</Original>
+				<Russian>Вы не можете развести костер сейчас.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoRepacked">
+				<Original>You repacked mags from you'r primary weapon.</Original>
+				<Russian>Вы перепаковали магазины основного оружия.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_toolkitUse">
+				<Original>You fixed this dolly-tub.</Original>
+				<Russian>Вы починили это корыто.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_toolkitCantUse">
+				<Original>Looks like I can broke this!</Original>
+				<Russian>Думаю я могу это сломать!</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shareFail">
+				<Original>Throw money away?</Original>
+				<Russian>Деньги на ветер?</Russian>
+			</Key>							
+		</Container>
+		
+		<Container name="Shop">
+			<Key ID="str_SATGv2_shopUpdated">
+				<Original>Shop's got new stuff.</Original>
+				<Russian>Ассортимент обновлен.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopSales">
+				<Original>Flash sale, 10 minutes only. -%1%2.</Original>
+				<Russian>Распродажа на 10 минут! -%1%2.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopSalesEnd">
+				<Original>Sale is over.</Original>
+				<Russian>Распродажа закончилась.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopBuy">
+				<Original>BUY</Original>
+				<Russian>КУПИТЬ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopAmmo">
+				<Original>AMMO</Original>
+				<Russian>ПАТРОНЫ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopClose">
+				<Original>Close</Original>
+				<Russian>Закрыть</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopCost">
+				<Original>%1&lt;br/&gt;Price: %2</Original>
+				<Russian>%1'&lt;br/&gt;Цена: %2</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shopCostAmmo">
+				<Original>%1&lt;br/&gt;Mag cost: %2</Original>
+				<Russian>%1&lt;br/&gt;Цена обоймы: %2</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopAction">
+				<Original>Exchange</Original>
+				<Russian>Торговать</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopTeaNeedMoney">
+				<Original>You can't afford this tea!</Original>
+				<Russian>Вы не можете позволить себе этот чай!</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopTeaAction">
+				<Original>Drink tea (5000$)</Original>
+				<Russian>Выпить чаю (5000$)</Russian>
+			</Key>			
+			<Key ID="str_SATGv2_shopToolsAction">
+				<Original>Buy toolkit (6000$)</Original>
+				<Russian>Купить ремкомплект (6000$)</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_shopToolsNeedMoney">
+				<Original>I need more money!</Original>
+				<Russian>Мне нужно больше денег!</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopToolsBought">
+				<Original>You bought toolkit.</Original>
+				<Russian>Вы купили ремкомплект.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopVehiclePoint">
+				<Original>Choose drop point (SHIFT + LMB).</Original>
+				<Russian>Выберите точку сброса (SHIFT + ЛКМ).</Russian>
+			</Key>
+			<Key ID="str_SATGv2_shopVehicleDroped">
+				<Original>Vehicle droped.</Original>
+				<Russian>Техника сброшена.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_shopAmmoAction">
+				<Original>Buy vehicle ammo (10000$)</Original>
+				<Russian>Купить боеприпасы для техники (10000$)</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_ammoUse">
+				<Original>Just not let down ammo crate.</Original>
+				<Russian>Чуть не уронил ящик с ракетами...</Russian>
+			</Key>			
+			<Key ID="str_SATGv2_shopAmmoBought">
+				<Original>Have no idea how. But crate in my pocket.</Original>
+				<Russian>Непонимаю как, но ящик поместился в карман.</Russian>
+			</Key>					
+		</Container>		
+		
+		<Container name="Notifications">
+			<Key ID="str_SATGv2_notfCapturedTitle">
+				<Original>SECTOR CLEAR</Original>
+				<Russian>СЕКТОР ЗАХВАЧЕН</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfSpawnTitle">
+				<Original>RESPAWN POINTS</Original>
+				<Russian>ТОЧКИ ВОЗРОЖДЕНИЯ</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfSpawnText">
+				<Original>New spawn points is available.</Original>
+				<Russian>Доступен новый лагерь для возрождения!</Russian>
+			</Key>
+			<Key ID="str_SATGv2_notfShopTitle">
+				<Original>SHOP INFO</Original>
+				<Russian>МАГАЗИН</Russian>
+			</Key>
+		
+		<Container name="Menu">
+			<Key ID="str_SATGv2_menuClose">
+				<Original>Close</Original>
+				<Russian>Закрыть</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuMakeCamp">
+				<Original>Set a campfire</Original>
+				<Russian>Развести огонь</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuRepackMags">
+				<Original>Repack mags</Original>
+				<Russian>Перепаковать магазины</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuRepair">
+				<Original>Use repair kit</Original>
+				<Russian>Использовать ремкомплект</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuShare">
+				<Original>Share 1000$</Original>
+				<Russian>Передать 1000$</Russian>
+			</Key>
+			<Key ID="str_SATGv2_menuAmmo">
+				<Original>Refill ammo</Original>
+				<Russian>Пополнить боезапас</Russian>
+			</Key>
+		</Container>
+		
+		<Container name="Quest">
+			<Key ID="str_SATGv2_questName">
+				<Original>Trader</Original>
+				<Russian>Торговец</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo1">
+				<Original>All right lads, you ain't first who's trying to bring down current folks in high places.</Original>
+				<Russian>Значит так, вы не первые и не последние кто пытается свергнуть текущую власть.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo2">
+				<Original>Around five years ago, when local guerrilla forces was in good stance they have their own HQ.</Original>
+				<Russian>Лет пять назад, когда ополчение было в силе, у них был свой лагерь - неприступная крепость.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo3">
+				<Original>Bravo. Bloody simple name for a place like that.</Original>
+				<Russian>Называли его просто - лагерь 'Браво'</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questCampBravo4">
+				<Original>I will pull some strings to make an arrangement with a informator.</Original>
+				<Russian>Я сведу вас с человеком что знает о его местоположении.</Russian>
+			</Key>
+			
+			<Key ID="str_SATGv2_questCampTask1">
+				<Original>Learn whereabouts of informator.</Original>
+				<Russian>Найдите информатора знающего о лагере 'Браво'.</Russian>
+			</Key>			
+			<Key ID="str_SATGv2_questCampTask2">
+				<Original>Find data about camp 'Bravo' position.</Original>
+				<Russian>Найдите данные о местоположении лагеря.</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_questCampTask3">
+				<Original>Recon site A.</Original>
+				<Russian>Проверьте местоположение A.</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_questCampTask4">
+				<Original>Recon site B.</Original>
+				<Russian>Проверьте местоположение B.</Russian>
+			</Key>				
+			<Key ID="str_SATGv2_questCampTask5">
+				<Original>Recon site C.</Original>
+				<Russian>Проверьте местоположение C.</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_questCampTask6">
+				<Original>Secure Bravo camp.</Original>
+				<Russian>Захватите лагерь 'Браво'.</Russian>
+			</Key>	
+			
+			<Key ID="str_SATGv2_questOldFriend1">
+				<Original>I have one good supplier.</Original>
+				<Russian>У меня есть хороший поставщик.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldFriend2">
+				<Original>... he droped me some goods with reasonable prices.</Original>
+				<Russian>... он продавал мне товар по хорошим ценам.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldFriend3">
+				<Original>Not long time ago he was caught, this fool was trying to sell fighter jet.</Original>
+				<Russian>Недавно его разоблачили. Не стоило продавать истребитель.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldFriend4">
+				<Original>Rescue him.</Original>
+				<Russian>Спасите его.</Russian>
+			</Key>
+			
+			<Key ID="str_SATGv2_questOldTask1">
+				<Original>Find dealer.</Original>
+				<Russian>Найдите поставщика.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_questOldTask2">
+				<Original>Deliver dealer to Trader.</Original>
+				<Russian>Доставьте поставщика к продавцу.</Russian>
+			</Key>		
+			
+			<Key ID="str_SATGv2_questTowerDemolition">
+				<Original>Destroy radio tower.</Original>
+				<Russian>Уничтожьте радиовышку.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_questTowerDemolition1">
+				<Original>I received reports about radio tower.</Original>
+				<Russian>Мне тут сообщили об одной радиовышке.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_questTowerDemolition2">
+				<Original>Through this antennae enemy forces have communication with outer world.</Original>
+				<Russian>Через неё вражеские силы держат связь с внешним миром.</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_questTowerDemolition3">
+				<Original>Destroy that Ant Farm to sabotage enemy comms.</Original>
+				<Russian>Если уничтожите её, то ослабите их влияние.</Russian>
+			</Key>		
+		</Container>			
+			
+		<Container name="Repair">
+			<Key ID="str_SATGv2_actionRepair">
+				<Original>Repair</Original>
+				<Russian>Починить</Russian>
+			</Key>
+			<Key ID="str_SATGv2_repairNoVehicles">
+				<Original>No vehicles nearby.</Original>
+				<Russian>Нет техники рядом.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_repairNoDamaged">
+				<Original>All vehicles is okay.</Original>
+				<Russian>Нет поврежденной техники рядом.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_repairFixed">
+				<Original>Fixed using adhesive tape.</Original>
+				<Russian>Заизолированно синей изолентой.</Russian>
+			</Key>
+		</Container>
+		
+		<Container name="Heal">
+			<Key ID="str_SATGv2_actionHeal">
+				<Original>Bandage finger</Original>
+				<Russian>Перевязать палец</Russian>
+			</Key>
+			<Key ID="str_SATGv2_healOkay">
+				<Original>Uhm... I'm allready fine.</Original>
+				<Russian>Хм... передумал, мне и так хорошо.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_healFinished">
+				<Original>Ready for action!</Original>
+				<Russian>Годен!</Russian>
+			</Key>
+		</Container>
+
+		<Container name="Ammo">
+			<Key ID="str_SATGv2_actionAmmo">
+				<Original>Search for ammo</Original>
+				<Russian>Поискать патроны</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoTimeout">
+				<Original>I'm don't want search now.</Original>
+				<Russian>Я недавно искал, не хочу опять.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoFail">
+				<Original>Only useless trash here.</Original>
+				<Russian>Тут только один мусор.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_ammoOkay">
+				<Original>Yees! Ammo!</Original>
+				<Russian>Кооороообоооочкааааа!</Russian>
+			</Key>
+		</Container>
+		
+		<Container name="Skip">
+			<Key ID="str_SATGv2_actionSkip">
+				<Original>Watch YouTube. (10 hours)</Original>
+				<Russian>Посмотреть YouTube. (10 часов)</Russian>
+			</Key>
+			<Key ID="str_SATGv2_skipTimeout">
+				<Original>Only watched videos avaible.</Original>
+				<Russian>Новых видео нет.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_skipNotLeader">
+				<Original>I need to ask %1.</Original>
+				<Russian>Нужно спросить у %1.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_skipOkay">
+				<Original>AHAHAHA! Oh... time to go.</Original>
+				<Russian>АХАХАХАХХА! Ох... пора идти.</Russian>
+			</Key>
+		</Container>
+		
+		<Container name="Drop">
+			<Key ID="str_SATGv2_dropQuad">
+				<Original>Quadbike paradrop (2000$)</Original>
+				<Russian>Сброс квадроцикла (2000$)</Russian>
+			</Key>
+			<Key ID="str_SATGv2_dropAmmo">
+				<Original>Ammo drop (8000$)</Original>
+				<Russian>Сброс патронов (8000$)</Russian>
+			</Key>
+			<Key ID="str_SATGv2_dropNeedMoney">
+				<Original>I need a dollar.</Original>
+				<Russian>Нужно больше золота.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_dropOkay">
+				<Original>Package inbound.</Original>
+				<Russian>Посылка в пути.</Russian>
+			</Key>
+			<Key ID="str_SATGv2_dropArt">
+				<Original>Mortar fire. (5000$)</Original>
+				<Russian>Арт. обстрел. (5000$)</Russian>
+			</Key>		
+			<Key ID="str_SATGv2_dropArtSelect">
+				<Original>Choose fire point (SHIFT + LMB).</Original>
+				<Russian>Выберите точку обстрела (SHIFT + ЛКМ).</Russian>
+			</Key>	
+			<Key ID="str_SATGv2_dropArtFire">
+				<Original>Artillery firing!</Original>
+				<Russian>Поддержка в пути!</Russian>
+			</Key>				
+		</Container>		
+		
+		<Container name="Perks">
+			<Key ID="str_Perks_Menu">
+				<Original>Abilities</Original>
+				<Russian>Способности</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_needPoints">
+				<Original>Need more experience.</Original>
+				<Russian>Нужно больше опыта.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_one_man_army">
+				<Original>ONE MAN ARMY</Original>
+				<Russian>ЧЕЛОВЕК-АРМИЯ</Russian>
+			</Key>
+			<Key ID="str_Perks_one_man_army_desc">
+				<Original>From childhood you want to be a hero.</Original>
+				<Russian>Вы с детства мечтали стать героем боевиков.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_prob_heal">
+				<Original>True bandaging</Original>
+				<Russian>Правильная перевязка</Russian>
+			</Key>
+			<Key ID="str_Perks_prob_heal_desc">
+				<Original>Thanks to experience of bandaging finder, you learned to accurately measure length of bandages. Probability not consume FAK.</Original>
+				<Russian>Благодоря опыту перевязки пальцев Вы научились точно отмерять количество нужных бинтов. Вероятность не использовать аптечку.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_red_damage">
+				<Original>Scar skin</Original>
+				<Russian>Рубцовая кожа</Russian>
+			</Key>
+			<Key ID="str_Perks_red_damage_desc">
+				<Original>You hited so many bullets, so all skin in scars. Reduced damage by 33%</Original>
+				<Russian>В Вас попало столько пуль, что вся кожа в рубцах. Понижение урона на 33%.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_second_chance">
+				<Original>Second chance</Original>
+				<Russian>Второй шанс</Russian>
+			</Key>
+			<Key ID="str_Perks_second_chance_desc">
+				<Original>You aren't ready to die. Second life after die every 15 minutes.</Original>
+				<Russian>Вы еще не готовы умирать. Вторая жизнь при смерти каждые 15 минут.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_wallhack_crate">
+				<Original>Technologies I</Original>
+				<Russian>Технологии I</Russian>
+			</Key>
+			<Key ID="str_Perks_wallhack_crate_desc">
+				<Original>You have implanted link with satelite. Now you can see crates in 100 meters.</Original>
+				<Russian>В Вас установили имплант связи со спутником. Вы видите местоположение ящиков в радиусе 100 метров.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_wallhack_man">
+				<Original>Technologies II</Original>
+				<Russian>Технологии II</Russian>
+			</Key>
+			<Key ID="str_Perks_wallhack_man_desc">
+				<Original>Now with function of enemy detection in 20 meters.</Original>
+				<Russian>Теперь с функцией обнаружения врагов в 20 метрах.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_wallhack_veh">
+				<Original>Technologies III</Original>
+				<Russian>Технологии III</Russian>
+			</Key>
+			<Key ID="str_Perks_wallhack_veh_desc">
+				<Original>Now with function of vehicle detection in 200 meters.</Original>
+				<Russian>Теперь с функцией обнаружения транспорта в радиусе 200 метров.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_adaptation">
+				<Original>ADAPTATION</Original>
+				<Russian>АДАПТАЦИЯ</Russian>
+			</Key>
+			<Key ID="str_Perks_adaptation_desc">
+				<Original>All your life was in severe conditions.</Original>
+				<Russian>Всю жизнь Вы находились в суровых условиях.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_cd_fireplace">
+				<Original>Wood saving</Original>
+				<Russian>Экономия дров</Russian>
+			</Key>
+			<Key ID="str_Perks_cd_fireplace_desc">
+				<Original>You knows how much wood you need to make campfire. -50% cooldown of campfire.</Original>
+				<Russian>Вы знаете точно сколько дров нужно чтобы разжечь костер. -50% ожидание костра.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_red_freezing">
+				<Original>Sibirean man</Original>
+				<Russian>Сибирский человек</Russian>
+			</Key>
+			<Key ID="str_Perks_red_freezing_desc">
+				<Original>Warm clothes for wimps! -50% to freezing time.</Original>
+				<Russian>Теплая одежда для слабаков! -50% к скорости замерзания.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_disable_stamina">
+				<Original>Advanced training</Original>
+				<Russian>Продвинутая подготовка</Russian>
+			</Key>
+			<Key ID="str_Perks_disable_stamina_desc">
+				<Original>You running so much, so you stop to tire.</Original>
+				<Russian>Вы так много бегаете, что перестали уставать.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_prob_repair">
+				<Original>Gold hands</Original>
+				<Russian>Золотые руки</Russian>
+			</Key>
+			<Key ID="str_Perks_prob_repair_desc">
+				<Original>Now you not always brokes tools from repair kits. 50% chance to not consume toolkit.</Original>
+				<Russian>Теперь Вы не всегда ломаете ключи из ремкомплекта. 50% шанс не использовать ремнабор.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_prob_ammo">
+				<Original>Improved reloading</Original>
+				<Russian>Улучшенная зарядка</Russian>
+			</Key>
+			<Key ID="str_Perks_prob_ammo_desc">
+				<Original>You decide periodically take bullets from floor. 50% to not use ammo box.</Original>
+				<Russian>Вы решили время от времени все же поднимать пули с пола. 50% шанс не использовать ящик патронов.</Russian>
+			</Key>
+			
+			<Key ID="str_Perks_barter">
+				<Original>Barter</Original>
+				<Russian>Бартер</Russian>
+			</Key>		
+			<Key ID="str_Perks_barter_desc">
+				<Original>Once you was trader too.. But you trade papers. -33% price.</Original>
+				<Russian>Когда-то Вы тоже были торговцем. Правда торговали Вы газетами. -33% к ценам.</Russian>
+			</Key>		
+		</Container>	
+		
+	</Package>
+</Project>

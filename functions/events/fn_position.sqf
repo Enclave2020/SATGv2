@@ -1,0 +1,1 @@
+	(position selectRandom allPlayers)
