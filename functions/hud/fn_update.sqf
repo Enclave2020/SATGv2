@@ -16,4 +16,4 @@
 	_text = _display displayCtrl 1004;
 	(profileNameSpace getVariable ["SATGv2Level", [0, 0, 0]]) params ["_level", "_xp", "_points"];
 	_xpNextLevel = ((_level + 1) ^ 3) * 10;
-	_text ctrlSetStructuredText parseText Format ["%1 XP (%2)", round (_xpNextLevel - _xp), _points];
+	_text ctrlSetStructuredText parseText Format ["%1 XP (%2)", _xpNextLevel - _xp, _points];
