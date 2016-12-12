@@ -29,4 +29,10 @@
 		};
 	};
 	
+	// UAV
+	_isUAV = getNumber (configFile >> "CfgVehicles" >> _type >> "isUav") == 1;
+	if (_isUAV) then {
+		createVehicleCrew _vehicle;
+	};
+	
 	titleText [localize "str_SATGv2_shopVehicleDroped", "PLAIN DOWN"];

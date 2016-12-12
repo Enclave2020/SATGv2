@@ -93,9 +93,14 @@
 		["H_HelmetO_ViperSP_ghex_F", 20000],
 		
 		// UNIFORMS
-		["U_I_CombatUniform", 1000],
-		["U_I_pilotCoveralls", 2000],
-		["U_I_FullGhillie_sard", 3000]],
+		["U_I_CombatUniform", 3000],
+		["U_I_pilotCoveralls", 3000],
+		["U_I_C_Soldier_Para_3_F", 3000],
+		["U_I_C_Soldier_Para_4_F", 3000],
+		["U_BG_Guerilla2_3", 3000],
+		["U_BG_Guerilla2_1", 3000],
+		["U_BG_Guerilla2_2", 3000],
+		["U_I_FullGhillie_sard", 4000]],
 		
 		// WEAPONS
 		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_weapons apply {[_x select 0, _x select 1, (_x select 1) / 12]}),
