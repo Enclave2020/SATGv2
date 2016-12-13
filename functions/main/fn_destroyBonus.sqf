@@ -8,3 +8,6 @@
 	};
 	
 	_bonus remoteExec ["SATGv2_fnc_addMoney", owner _killer];
+	["xpAdd", _bonus / 10] remoteExec ["CBA_fnc_localEvent", owner _killer];
+	
+	

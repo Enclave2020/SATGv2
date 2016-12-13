@@ -15,6 +15,7 @@
 		case "wallhack_man" : {call SATGv2_Perks_fnc_wallhackMan};
 		case "wallhack_veh" : {call SATGv2_Perks_fnc_wallhackVeh};
 		case "disable_stamina" : {player enableStamina False};
+		case "red_damage" : {call SATGv2_Perks_fnc_reduceDamage};
 	};
 	
 	0 call SATGv2_Perks_fnc_show;

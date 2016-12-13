@@ -4,7 +4,7 @@
 	WEST call SATGv2_RandomEquip_fnc_RandomizeSide;
 	call SATGv2_Score_fnc_Init;
 	
-	[_group, _position, _defendRadius] call CBA_fnc_taskDefend;
+	//[_group, _position, _defendRadius] call CBA_fnc_taskDefend;
 	
 	{
 		_x addEventHandler ["Killed", {call SATGv2_fnc_unitKilled}];

@@ -184,6 +184,7 @@ class CfgFunctions
 			class wallhackMan {};
 			class wallhackVeh {};
 			class wallhackCrate {};
+			class reduceDamage {};
 			class show {};
 		};
 	};
@@ -220,6 +221,7 @@ class CfgFunctions
 			class artShotEx {};
 			class ammoBuy {};
 			class ammoUse {};
+			class remoteHeal {};
 			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};			
 			class xp {postInit = 1;};

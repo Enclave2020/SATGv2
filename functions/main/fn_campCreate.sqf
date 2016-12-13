@@ -7,7 +7,8 @@
 	};
 	
 	[missionNamespace, position _object] call BIS_fnc_addRespawnPosition;
-	"_cwa_lamp" createVehicle position _object;
+	_camp = "_cwa_lamp" createVehicle position _object;
+	_camp addEventHandler ["HandleDamage", {0}];
 	_respawnPoints = missionNamespace getVariable ["SATGv2Respawns", []];
 	_respawnPoints pushBack position _object;
 	
