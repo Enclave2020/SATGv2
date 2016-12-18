@@ -16,10 +16,12 @@
 		["I_UGV_01_rcws_F", 8000],
 		["B_Heli_Light_01_F", 10000],
 		["B_Heli_Transport_01_F", 15000],
+		["O_Heli_Transport_04_F", 15000],
 		["O_APC_Wheeled_02_rcws_F", 15000],
 		["B_APC_Wheeled_01_cannon_F", 17000],
 		["I_Heli_light_03_F", 20000],
 		["I_APC_Wheeled_03_cannon_F", 20000],
+		["I_UAV_02_CAS_F", 25000],
 		["O_APC_Tracked_02_cannon_F", 25000],
 		["I_APC_tracked_03_cannon_F", 30000],
 		["I_UAV_02_F", 30000],
@@ -86,7 +88,7 @@
 		["muzzle_snds_M", 5000],
 		["muzzle_snds_L", 5000],
 		["muzzle_snds_acp", 5000],
-		["Laserdesignator_03", 5000],
+		["Laserdesignator_03", 5000, 100],
 		["V_PlateCarrierIA2_dgtl", 6000],
 		["V_PlateCarrierSpec_blk", 10000],
 		["H_HelmetLeaderO_oucamo", 10000],
@@ -108,7 +110,7 @@
 		// SIGHTS
 		((10000 / chaosLevel) call SATGv2_RandomEquip_fnc_sights)
 	];
-	(_shopsContent select 2) pushBack ["launch_NLAW_F", 2000, 500];
+	(_shopsContent select 2) pushBack [["launch_NLAW_F", 1000, 500], ["launch_B_Titan_short_F", 5000, 1000]];
 	
 	shopContent = [];
 	{

@@ -28,7 +28,7 @@ if (hasInterface) then {
 	[25, [false, false, false], {if (not dialog) then {createDialog "SATGv2Menu"}}] call CBA_fnc_addKeyHandler;
 	
 	// Silent mode
-	enableSentences False;
+	//enableSentences False;
 	
 	// Health to 100%
 	player addEventHandler ["HandleHeal", {
