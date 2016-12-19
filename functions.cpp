@@ -166,6 +166,7 @@ class CfgFunctions
 			class insertion {};
 			class position {};
 			class start {};
+			class crash {};
 			class init {postInit = 1;};
 		};
 	};
