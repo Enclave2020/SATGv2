@@ -28,7 +28,7 @@ if (hasInterface) then {
 	[25, [false, false, false], {if (not dialog) then {createDialog "SATGv2Menu"}}] call CBA_fnc_addKeyHandler;
 	
 	// Silent mode
-	enableSentences False;
+	//enableSentences False;
 	
 	// Health to 100%
 	player addEventHandler ["HandleHeal", {
@@ -38,12 +38,12 @@ if (hasInterface) then {
 			_damage = damage _injured;
 			waitUntil {damage _injured != _damage};
 			if (damage _injured < _damage) then {
-				_injured setDamage 0;
+				_injured remoteExec ["SATGv2_fnc_remoteHeal", 2];
 			};
 			
-		if ("prob_heal" call SATGv2_Perks_fnc_active) then {
-			if (random 1 > 0.5) then {player addItem "FirstAidKit";};
-		};
+			if ("prob_heal" call SATGv2_Perks_fnc_active) then {
+				if (random 1 > 0.5) then {player addItem "FirstAidKit";};
+			};
 		};
 	}];
 	
@@ -61,7 +61,11 @@ if (hasInterface) then {
 	if ("wallhack_crate" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackCrate};
 	if ("wallhack_man" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackMan};
 	if ("wallhack_veh" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_wallhackVeh};
+	if ("red_damage" call SATGv2_Perks_fnc_active) then {call SATGv2_Perks_fnc_reduceDamage};
 	
+	// Add terrain
+	if (getTerrainGrid > 25) then {setTerrainGrid 25};
+
 	// Disable animals
 	enableEnvironment False;
 };

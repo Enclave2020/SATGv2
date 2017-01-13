@@ -77,7 +77,7 @@ FAR_Player_Init =
 	FAR_PlayerSide = side player;
 
 	// Clear event handler before adding it
-	player removeAllEventHandlers "HandleDamage";
+	//player removeAllEventHandlers "HandleDamage";
 
 	player addEventHandler ["HandleDamage", FAR_HandleDamage_EH];
 	/*

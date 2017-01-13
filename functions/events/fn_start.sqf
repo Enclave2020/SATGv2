@@ -1,7 +1,8 @@
 	// FROM LOW TO HIGH
 	_events = [
 		[{}, 0],
-		[{[] spawn SATGv2_Events_fnc_flyBy}, 0.7]
+		[{[] spawn SATGv2_Events_fnc_flyBy}, 0.7],
+		[{[] spawn SATGv2_Events_fnc_insertion}, 0.75]
 	];
 	
 	_index = 0;

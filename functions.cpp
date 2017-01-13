@@ -72,7 +72,7 @@ class CfgFunctions
 		{
 			class saturation {};
 			class world  {};
-			class init {postInit = 1;};		
+			class init {};		
 		};
 	};
 	
@@ -166,6 +166,7 @@ class CfgFunctions
 			class insertion {};
 			class position {};
 			class start {};
+			class crash {};
 			class init {postInit = 1;};
 		};
 	};
@@ -184,6 +185,7 @@ class CfgFunctions
 			class wallhackMan {};
 			class wallhackVeh {};
 			class wallhackCrate {};
+			class reduceDamage {};
 			class show {};
 		};
 	};
@@ -220,6 +222,7 @@ class CfgFunctions
 			class artShotEx {};
 			class ammoBuy {};
 			class ammoUse {};
+			class remoteHeal {};
 			class skipBriefing {preInit = 1;};
 			class init {postInit = 1;};			
 			class xp {postInit = 1;};

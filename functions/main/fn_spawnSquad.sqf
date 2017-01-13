@@ -6,10 +6,6 @@
 	_grade = _logic getVariable ["sectorGrade", 0];
 	_points = (_grade + 1) ^ 3 * chaosLevel;
 	
-	// BEHAVIOUR
-	if (chaosLevel < 0.3) then {_group setBehaviour "SAFE"};	
-	if (chaosLevel > 0.4) then {_group setBehaviour "COMBAT"};
-	
 	
 	/*
 	// COPTERS
@@ -44,5 +40,10 @@
 		clearItemCargoGlobal _x;
 		clearBackpackCargoGlobal _x;
 	} forEach _groupVehicles;
+	
+	// REPLACED CBA3 TASK
+	[_group, position _logic, 150] call BIS_fnc_taskPatrol;
+	// BEHAVIOUR
+	if (chaosLevel > 0.4) then {_group setBehaviour "COMBAT"};
 	
 	_group

@@ -7,6 +7,6 @@
 
 	addMissionEventHandler ["Draw3D", { 
 		{
-			drawIcon3D ["\a3\ui_f\data\gui\cfg\CommunicationMenu\defend_ca.paa", [1, 1, 1, 0.66], position _x, 1, 1, 0]; 	
+			drawIcon3D [getText (configFile >> "CfgVehicles" >> typeOf _x >> "picture"), [1, 1, 1, 0.66], (position _x) vectorDiff (getCenterOfMass _x), 1, 1, 0]; 	
 		} forEach whPoolVeh;
 	}];	
